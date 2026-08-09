@@ -75,7 +75,3 @@ python main.py
 * **Filtros por Categoría y Tokenización:** Búsqueda rápida por palabras clave o segmentación por familias de productos.
 * **Calculadora Rápida Integrada:** Consulta automatizada de márgenes y precios sugeridos basados en el benchmarking consolidado.
 * **Exportación y Depuración:** Generación de reportes limpios y archivos de depuración asíncronos (`debug_scan_raw.xlsx`).
-
-```
-
-```
