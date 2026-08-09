@@ -4,7 +4,7 @@ Módulo core de escritorio de la **Sistema Cotizaciones Suite**, diseñado para 
 
 ---
 
-## 🚀 Capacidades y Rendimiento Probado
+## Capacidades y Rendimiento Probado
 Este motor ha sido optimizado y validado en entornos reales de producción con cargas masivas:
 * **Escaneo Concurrente:** Procesamiento de más de **900+ archivos Excel** y **2,000+ hojas válidas** en paralelo mediante hilos (`ThreadPoolExecutor`).
 * **Volumen Soportado:** Extracción y cálculo fluido de más de **14,000+ filas crudas** de cotización.
@@ -14,7 +14,7 @@ Este motor ha sido optimizado y validado en entornos reales de producción con c
 
 ---
 
-## 🛠️ Tecnologías y Dependencias
+## Tecnologías y Dependencias
 * **Python 3.12+**
 * **CustomTkinter:** Interfaz gráfica moderna con modo oscuro nativo.
 * **Pandas & NumPy:** Procesamiento y vectorización de datos tabulares.
@@ -22,7 +22,7 @@ Este motor ha sido optimizado y validado en entornos reales de producción con c
 
 ---
 
-## 📁 Estructura del Módulo
+## Estructura del Módulo
 
 ```text
 01-escaneo-masivo-cotizaciones/
@@ -39,7 +39,7 @@ Este motor ha sido optimizado y validado en entornos reales de producción con c
 ```
 ---
 
-## ⚙️ Instalación y Configuración
+## Instalación y Configuración
 
 Clona el repositorio principal:
 ```bash
@@ -61,7 +61,7 @@ pip install -r requirements.txt
 
 ---
 
-## 🚀 Ejecución
+## Ejecución
 
 Para arrancar la interfaz gráfica del motor de escaneo:
 ```bash
@@ -69,7 +69,7 @@ python main.py
 ```
 ---
 
-## 📋 Características Principales de la Interfaz
+## Características Principales de la Interfaz
 
 * **Selector de Directorio de Datos:** Apunta dinámicamente a la carpeta contenedora de los excels históricos.
 * **Filtros por Categoría y Tokenización:** Búsqueda rápida por palabras clave o segmentación por familias de productos.

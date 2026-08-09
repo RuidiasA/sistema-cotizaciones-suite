@@ -1,10 +1,10 @@
-# 🏢 Sistema Cotizaciones Suite (COMPIPRO / COMPINA)
+# Sistema Cotizaciones Suite (COMPIPRO / COMPINA)
 
 Suite de automatización y procesamiento masivo de cotizaciones desarrollada para optimizar el flujo comercial, reduciendo el tiempo de generación de cotizaciones de **3-4 horas manuales** a procesos automatizados de alta velocidad. Este monorepo recopila el trabajo de ingeniería realizado durante las prácticas preprofesionales en **COMPINA / COMPIPRO**.
 
 ---
 
-## 🚀 Contexto del Problema y Fases del Proyecto
+## Contexto del Problema y Fases del Proyecto
 La empresa manejaba un histórico masivo de más de **800+ / 900+ archivos Excel** de cotizaciones (desde antes de 2010 hasta 2025), con estructuras irregulares, celdas combinadas y descripciones inconsistentes. El reto consistió en estructurar este conocimiento histórico en 4 fases técnicas:
 
 1. **Fase Inicial y Análisis:** Estandarización de más de 20,000 productos de proveedores nacionales e internacionales, agrupándolos en categorías con un margen de ganancia mínimo del 30% y un rango de error tolerado de $\pm 2$ soles.
@@ -15,7 +15,7 @@ La empresa manejaba un histórico masivo de más de **800+ / 900+ archivos Excel
 
 ---
 
-## 📁 Estructura del Monorepo
+## Estructura del Monorepo
 
 ```text
 sistema-cotizaciones-suite/
@@ -26,7 +26,7 @@ sistema-cotizaciones-suite/
 
 ---
 
-## 📦 Módulos Disponibles
+## Módulos Disponibles
 
 ### 01 - Motor de Escaneo Masivo y Benchmarking
 
@@ -37,7 +37,7 @@ Módulo encargado de la ingesta masiva de excels históricos.
 
 ---
 
-## ⚙️ Configuración General del Repositorio
+## Configuración General del Repositorio
 
 1. **Clonar el repositorio:**
 ```bash
