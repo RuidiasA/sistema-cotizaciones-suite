@@ -1,0 +1,54 @@
+# ==========================================
+# Python & Ambientes (Aplica en cualquier nivel)
+# ==========================================
+**/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+**/env/
+**/venv/
+**/.venv/
+
+# ==========================================
+# Archivos de salida pesados, temporales y checkpoints
+# ==========================================
+~$*.*
+**/~$*.*
+*.xlsx
+*.xls
+!**/Margenes_*.xlsx
+!Margenes_*.xlsx
+scan_checkpoint.json
+**/scan_checkpoint.json
+debug_scan_raw*.xlsx
+**/debug_scan_raw*.xlsx
+log_errores.txt
+**/log_errores.txt
+data/*.xlsx
+**/data/*.xlsx
+*.csv
+**/*.csv
+
+# ==========================================
+# Entorno y configuraciones locales
+# ==========================================
+.env
+**/.env
+.vscode/
+**/.vscode/
+.idea/
+**/.idea/
+
+# ==========================================
+# Sistema Operativo
+# ==========================================
+Thumbs.db
+Desktop.ini
+.DS_Store
+**/Thumbs.db
+**/Desktop.ini
+**/.DS_Store
