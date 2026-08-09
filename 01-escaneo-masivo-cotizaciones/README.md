@@ -24,7 +24,6 @@ Este motor ha sido optimizado y validado en entornos reales de producción con c
 
 ## 📁 Estructura del Módulo
 
-```text
 01-escaneo-masivo-cotizaciones/
 ├── docs/                     # Especificaciones y reportes de implementación
 ├── scripts/                  # Scripts auxiliares (headless y búsqueda de prueba)
@@ -42,39 +41,26 @@ Este motor ha sido optimizado y validado en entornos reales de producción con c
 ## ⚙️ Instalación y Configuración
 
 Clona el repositorio principal:
-
-```bash
 git clone https://github.com/RuidiasA/sistema-cotizaciones-suite.git
 cd sistema-cotizaciones-suite/01-escaneo-masivo-cotizaciones
 
-```
 
 Crea y activa un entorno virtual:
-
-```bash
 python -m venv .venv
 # En Windows (PowerShell):
 .venv\Scripts\Activate
 
-```
 
 Instala las dependencias:
-
-```bash
 pip install -r requirements.txt
 
-```
 
 ---
 
 ## 🚀 Ejecución
 
 Para arrancar la interfaz gráfica del motor de escaneo:
-
-```bash
 python main.py
-
-```
 
 ---
 
