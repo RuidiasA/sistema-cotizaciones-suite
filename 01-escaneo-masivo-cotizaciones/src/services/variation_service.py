@@ -24,6 +24,8 @@ class VariationService:
         """
         self._variaciones = variaciones_por_categoria
         self._cached_global_pack: Optional[Dict[str, List[str]]] = None
+        self._cached_all_variations: Optional[List[str]] = None
+        self._cached_category_packs: Dict[str, Dict[str, Any]] = {}
 
     def get_categories(self) -> List[str]:
         """Obtiene la lista formateada de categorías para la interfaz gráfica.
@@ -124,6 +126,38 @@ class VariationService:
         self._cached_global_pack = {"tags": tags_unicos, "exclude": []}
         return self._cached_global_pack
 
+    def _compile_pattern(self, terms: List[str]) -> Optional[re.Pattern]:
+        normalized_terms = sorted({normalizar_texto(term) for term in terms if term}, key=len, reverse=True)
+        if not normalized_terms:
+            return None
+        pattern = r"\b(?:" + "|".join(map(re.escape, normalized_terms)) + r")\b"
+        return re.compile(pattern)
+
+    def _get_category_pack(self, categoria: str) -> Dict[str, Any]:
+        category_key = (categoria or "").strip()
+        if category_key in self._cached_category_packs:
+            return self._cached_category_packs[category_key]
+
+        clusters = self._get_clusters(category_key)
+        macro, _ = self._resolve_category(category_key)
+        global_excludes = self._variaciones.get(macro, {}).get("global_exclude", []) if macro else []
+
+        tags: List[str] = []
+        excludes: List[str] = []
+        for cluster in clusters:
+            tags.extend(cluster.get("tags", []))
+            excludes.extend(cluster.get("exclude", []))
+        excludes.extend(global_excludes)
+
+        pack = {
+            "tags": tags,
+            "exclude": excludes,
+            "compiled_tags": self._compile_pattern(tags),
+            "compiled_excludes": self._compile_pattern(excludes),
+        }
+        self._cached_category_packs[category_key] = pack
+        return pack
+
     def matches_category(self, categoria: str, texto_producto: str) -> bool:
         """Verifica si el texto de un producto pertenece a una categoría dada.
 
@@ -137,34 +171,24 @@ class VariationService:
         if not categoria:
             return True
 
-        clusters = self._get_clusters(categoria)
-        if not clusters:
+        pack = self._get_category_pack(categoria)
+        if not pack["tags"] and not pack["exclude"]:
             return True
 
         texto_norm = normalizar_texto(texto_producto or "")
         if not texto_norm:
             return False
 
-        tags: List[str] = []
-        excludes: List[str] = []
-        macro, _ = self._resolve_category(categoria)
-        global_excludes = self._variaciones.get(macro, {}).get("global_exclude", []) if macro else []
+        compiled_excludes = pack.get("compiled_excludes")
+        if compiled_excludes is not None and compiled_excludes.search(texto_norm):
+            return False
 
-        for cluster in clusters:
-            tags.extend(cluster.get("tags", []))
-            excludes.extend(cluster.get("exclude", []))
+        compiled_tags = pack.get("compiled_tags")
+        if compiled_tags is not None and compiled_tags.search(texto_norm):
+            return True
 
-        excludes.extend(global_excludes)
-
-        for exc in excludes:
-            exc_norm = normalizar_texto(exc)
-            if exc_norm and re.search(rf"\b{re.escape(exc_norm)}\b", texto_norm):
+        if compiled_tags is None:
                 return False
-
-        for tag in tags:
-            tag_norm = normalizar_texto(tag)
-            if tag_norm and re.search(rf"\b{re.escape(tag_norm)}\b", texto_norm):
-                return True
 
         return False
 
@@ -188,9 +212,13 @@ class VariationService:
         return False
 
     def _all_variations(self) -> List[str]:
+        if self._cached_all_variations is not None:
+            return self._cached_all_variations
+
         flat_list = []
         for subcategorias in self._variaciones.values():
             for clusters in subcategorias.get("subcategorias", {}).values():
                 for cluster in clusters:
                     flat_list.extend(cluster.get("tags", []))
+        self._cached_all_variations = flat_list
         return flat_list

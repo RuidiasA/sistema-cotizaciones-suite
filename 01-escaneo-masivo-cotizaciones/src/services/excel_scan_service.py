@@ -12,7 +12,7 @@ Principios aplicados:
 from __future__ import annotations
 
 from collections import deque
-from concurrent.futures import ThreadPoolExecutor, as_completed
+from concurrent.futures import FIRST_COMPLETED, ThreadPoolExecutor, wait
 from itertools import islice
 import json
 import math
@@ -102,6 +102,7 @@ class ExcelScanService:
 
         reports: List[FileScanReport] = []
         raw_records: List[Dict[str, object]] = []
+        compiled_search_pack = self._prepare_search_pack(search_pack)
 
         total = len(archivos_pendientes)
         if total == 0:
@@ -118,7 +119,7 @@ class ExcelScanService:
         def _scan_one(ruta: str) -> Tuple[FileScanReport, List[Dict[str, object]], float]:
             local_raw: List[Dict[str, object]] = []
             t0 = time.time()
-            report = self.scan_file(ruta, search_pack, local_raw)
+            report = self.scan_file(ruta, compiled_search_pack, local_raw)
             return report, local_raw, time.time() - t0
 
         max_workers = min(6, os.cpu_count() or 1)
@@ -133,51 +134,66 @@ class ExcelScanService:
 
             completed = 0
             recent_times: deque[float] = deque(maxlen=10)
+            pending = set(futures)
 
-            for future in as_completed(futures):
-                ruta = futures[future]
-                file_name = os.path.basename(ruta)
+            while pending:
+                if stop_event.is_set():
+                    for future in pending:
+                        future.cancel()
+                    break
 
+                done, pending = wait(pending, timeout=0.2, return_when=FIRST_COMPLETED)
+                if not done:
+                    continue
+
+                for future in done:
+                    ruta = futures[future]
+                    file_name = os.path.basename(ruta)
+
+                    try:
+                        report, local_raw, file_elapsed = future.result()
+                    except Exception as exc:
+                        report = FileScanReport(file_name=file_name, error_message=f"Error Crítico del Motor: {str(exc)}")
+                        local_raw = []
+                        file_elapsed = 0.0
+
+                    with lock:
+                        reports.append(report)
+                        raw_records.extend(local_raw)
+
+                        if report.error_message:
+                            with open(error_log_path, "a", encoding="utf-8") as err_file:
+                                err_file.write(f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] {file_name} -> {report.error_message}\n")
+                        elif file_name not in procesados:
+                            procesados.append(file_name)
+
+                        completed += 1
+                        recent_times.append(file_elapsed)
+
+                        elapsed = time.time() - start_all
+                        avg = elapsed / completed if completed > 0 else 0
+                        recent_avg = sum(recent_times) / len(recent_times) if recent_times else avg
+                        avg_use = recent_avg if completed >= 3 else avg
+                        remaining = max(0, total - completed)
+                        eta = remaining * avg_use
+                        eta_str = f"{eta:.0f}s" if eta < 60 else f"{eta/60:.1f} min"
+
+                        if progress_callback:
+                            progress_callback(completed, total, file_name, eta_str)
+
+                        if completed % 50 == 0 or completed == total:
+                            try:
+                                with open(checkpoint_path, "w", encoding="utf-8") as f:
+                                    json.dump(procesados, f, ensure_ascii=False, indent=2)
+                            except Exception:
+                                pass
+
+            if completed > 0:
                 try:
-                    report, local_raw, file_elapsed = future.result()
-                except Exception as exc:
-                    report = FileScanReport(file_name=file_name, error_message=f"Error Crítico del Motor: {str(exc)}")
-                    local_raw = []
-                    file_elapsed = 0.0
-
-                with lock:
-                    reports.append(report)
-                    raw_records.extend(local_raw)
-
-                    if report.error_message:
-                        with open(error_log_path, "a", encoding="utf-8") as err_file:
-                            err_file.write(f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] {file_name} -> {report.error_message}\n")
-                    elif file_name not in procesados:
-                        procesados.append(file_name)
-
-                    completed += 1
-                    recent_times.append(file_elapsed)
-
-                    elapsed = time.time() - start_all
-                    avg = elapsed / completed if completed > 0 else 0
-                    recent_avg = sum(recent_times) / len(recent_times) if recent_times else avg
-                    avg_use = recent_avg if completed >= 3 else avg
-                    remaining = max(0, total - completed)
-                    eta = remaining * avg_use
-                    eta_str = f"{eta:.0f}s" if eta < 60 else f"{eta/60:.1f} min"
-
-                    # Disparar callback a la UI en tiempo real
-                    if progress_callback:
-                        progress_callback(completed, total, file_name, eta_str)
-
-                    if completed % 50 == 0 or completed == total:
-                        try:
-                            with open(checkpoint_path, "w", encoding="utf-8") as f:
-                                json.dump(procesados, f, ensure_ascii=False, indent=2)
-                            self._last_raw_records = raw_records
-                            self.export_raw_scan_dataframe(self.get_last_raw_scan_dataframe(), folder_path)
-                        except Exception:
-                            pass
+                    with open(checkpoint_path, "w", encoding="utf-8") as f:
+                        json.dump(procesados, f, ensure_ascii=False, indent=2)
+                except Exception:
+                    pass
 
         finally:
             executor.shutdown(wait=False)
@@ -259,9 +275,9 @@ class ExcelScanService:
                     else:
                         df_temp["texto_consolidado"] = ""
 
-                    mask = df_temp.apply(lambda row: self._cumple_busqueda_tokenizada(row, search_pack), axis=1)
+                    mask = self._build_search_mask(df_temp, search_pack)
 
-                    if int(mask.sum()) > 0:
+                    if bool(mask.any()):
                         sheets_processed.append(sheet_name)
                         col_map = {
                             "cant": c_cant,
@@ -270,7 +286,7 @@ class ExcelScanService:
                             "detalle": c_detalle,
                             "proveedor_col": c_proveedor,
                         }
-                        self._process_rows(df_temp, col_map, search_pack, report, file_path, sheet_name, raw_records)
+                        self._process_rows(df_temp.loc[mask].copy(), col_map, report, file_path, sheet_name, raw_records)
 
             if not report.matched_rows and not report.failed_rows:
                 report.error_message = "No se detectó una tabla válida."
@@ -332,26 +348,42 @@ class ExcelScanService:
                 return int(idx)
         return None
 
-    def _cumple_busqueda_tokenizada(self, fila: pd.Series, search_pack: dict) -> bool:
-        if "compiled_tags" not in search_pack:
-            tags = search_pack.get("tags", [])
-            tags_norm = list({normalizar_texto(tag) for tag in tags if tag})
-            if tags_norm:
-                tags_norm.sort(key=len, reverse=True)
-                pattern = r"\b(?:" + "|".join(map(re.escape, tags_norm)) + r")\b"
-                search_pack["compiled_tags"] = re.compile(pattern)
-            else:
-                search_pack["compiled_tags"] = None
+    def _compile_search_pattern(self, terms: Sequence[str]) -> Optional[re.Pattern]:
+        normalized_terms = sorted({normalizar_texto(term) for term in terms if term}, key=len, reverse=True)
+        if not normalized_terms:
+            return None
+        pattern = r"\b(?:" + "|".join(map(re.escape, normalized_terms)) + r")\b"
+        return re.compile(pattern)
 
-        if "compiled_excludes" not in search_pack:
-            base_excludes = search_pack.get("exclude", []) + self.KEYWORDS_DESCARTAR
-            excludes_norm = list({normalizar_texto(exc) for exc in base_excludes if exc})
-            if excludes_norm:
-                excludes_norm.sort(key=len, reverse=True)
-                pattern = r"\b(?:" + "|".join(map(re.escape, excludes_norm)) + r")\b"
-                search_pack["compiled_excludes"] = re.compile(pattern)
-            else:
-                search_pack["compiled_excludes"] = None
+    def _prepare_search_pack(self, search_pack: Optional[dict]) -> dict:
+        base_pack = dict(search_pack or {})
+        tags = list(base_pack.get("tags", []))
+        excludes = list(base_pack.get("exclude", [])) + self.KEYWORDS_DESCARTAR
+        return {
+            "tags": tags,
+            "exclude": excludes,
+            "compiled_tags": self._compile_search_pattern(tags),
+            "compiled_excludes": self._compile_search_pattern(excludes),
+        }
+
+    def _build_search_mask(self, df: pd.DataFrame, search_pack: dict) -> pd.Series:
+        compiled_tags = search_pack.get("compiled_tags")
+        compiled_excludes = search_pack.get("compiled_excludes")
+
+        if compiled_tags is None and compiled_excludes is None:
+            return pd.Series(True, index=df.index)
+
+        texto = df.get("texto_consolidado", pd.Series("", index=df.index)).fillna("").astype(str).map(normalizar_texto)
+        mask = pd.Series(True, index=df.index)
+        if compiled_excludes is not None:
+            mask &= ~texto.str.contains(compiled_excludes, regex=True, na=False)
+        if compiled_tags is not None:
+            mask &= texto.str.contains(compiled_tags, regex=True, na=False)
+        return mask
+
+    def _cumple_busqueda_tokenizada(self, fila: pd.Series, search_pack: dict) -> bool:
+        if "compiled_tags" not in search_pack or "compiled_excludes" not in search_pack:
+            search_pack = self._prepare_search_pack(search_pack)
 
         if "texto_consolidado" in fila:
             contenido_norm = normalizar_texto(str(fila.get("texto_consolidado", "")))
@@ -410,7 +442,6 @@ class ExcelScanService:
         self,
         df: pd.DataFrame,
         col_map: Dict[str, object],
-        search_pack: dict,
         report: FileScanReport,
         file_path: str,
         sheet_name: str,
@@ -420,13 +451,25 @@ class ExcelScanService:
         stats = PriceStats()
         col_detalle = col_map.get("detalle")
         col_proveedor = col_map.get("proveedor_col")
+        col_names = list(df.columns)
+        col_index = {c: i for i, c in enumerate(col_names)}
 
         cols_detalle_real = [
-            c for c in df.columns if any(k in str(c).lower() for k in ["detalle", "detalles", "descripcion", "observac", "obs"])
+            c for c in col_names if any(k in str(c).lower() for k in ["detalle", "detalles", "descripcion", "observac", "obs"])
         ]
         cols_producto_plan_b = [
-            c for c in df.columns if any(k in str(c).lower() for k in ["articulo", "art.", "producto", "item"]) and c not in cols_detalle_real
+            c for c in col_names if any(k in str(c).lower() for k in ["articulo", "art.", "producto", "item"]) and c not in cols_detalle_real
         ]
+        col_detalle_idx = col_index.get(col_detalle, len(col_names)) if col_detalle is not None else len(col_names)
+        cols_finals_validas = [c for c in col_map.get("finals", []) if c in col_index and col_index[c] < col_detalle_idx]
+        prov_start_idx = next(
+            (i for i, c in enumerate(col_names) if any(kw in str(c).lower() for kw in ["proveedor", "costo s/."])), None
+        )
+        if prov_start_idx is None:
+            idx_cant = next((i for i, c in enumerate(col_names) if "cant" in str(c).lower()), None)
+            prov_start_idx = min(idx_cant + 1, len(col_names)) if idx_cant is not None else 0
+        window_cols = col_names[prov_start_idx : min(prov_start_idx + 15, len(col_names))]
+        prov_cols = [pc for pc in col_map.get("provs", []) if pc in col_index]
 
         def es_identificador_o_numero(v: object) -> bool:
             s = str(v).strip()
@@ -440,9 +483,6 @@ class ExcelScanService:
             return len(s) < 20 and " " not in s
 
         for idx, fila in df.iterrows():
-            if not self._cumple_busqueda_tokenizada(fila, search_pack):
-                continue
-
             try:
                 cantidad = limpiar_y_entero(fila[col_map["cant"]])
 
@@ -482,25 +522,11 @@ class ExcelScanService:
                     )
                     continue
 
-                col_names = list(df.columns)
-
                 # FASE 1: Extracción defensiva del precio cliente (v2)
-                col_detalle_idx = next(
-                    (i for i, c in enumerate(col_names) if col_detalle is not None and str(c) == str(col_detalle)), len(col_names)
-                )
-                cols_finals_validas = [c for c in col_map.get("finals", []) if c in col_names and col_names.index(c) < col_detalle_idx]
                 v2 = float(self._buscar_precio_cliente(fila, cols_finals_validas, 0.0) or 0.0)
 
                 # FASE 2: Radar financiero y Checksum para hallar el costo del proveedor (v1)
                 v1 = 0.0
-                prov_start_idx = next(
-                    (i for i, c in enumerate(col_names) if any(kw in str(c).lower() for kw in ["proveedor", "costo s/."])), None
-                )
-                if prov_start_idx is None:
-                    idx_cant = next((i for i, c in enumerate(col_names) if "cant" in str(c).lower()), None)
-                    prov_start_idx = min(idx_cant + 1, len(col_names)) if idx_cant is not None else 0
-
-                window_cols = col_names[prov_start_idx : min(prov_start_idx + 15, len(col_names))]
                 bloque_final: List[float] = []
 
                 for col in window_cols:
@@ -522,8 +548,8 @@ class ExcelScanService:
                         v1 = round(float(base_candidate), 2)
 
                 if v1 == 0.0:
-                    for pc in col_map.get("provs", []):
-                        if pc in col_names:
+                    for pc in prov_cols:
+                        if pc in col_index:
                             ok, candidate = self._extract_number(fila.get(pc))
                             if ok and candidate > 0.0:
                                 v1 = round(candidate, 2)

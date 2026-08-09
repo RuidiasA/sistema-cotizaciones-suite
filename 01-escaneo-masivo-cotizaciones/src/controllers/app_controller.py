@@ -224,18 +224,20 @@ class AppController:
             self._view.add_rows(filas_globales)
             self._last_scan_rows = list(filas_globales)
 
-            if self._enable_raw_debug_export:
-                raw_df = self._scan_service.get_last_raw_scan_dataframe()
-                if not raw_df.empty:
-                    def _async_debug_save():
-                        try:
-                            output_folder = self._last_scan_folder or os.getcwd()
-                            output_file = self._scan_service.export_raw_scan_dataframe(raw_df, output_folder)
-                            self._view.after(0, lambda: self._view.append_log(f"🧪 Debug raw export: {output_file}"))
-                        except Exception as exc:
-                            self._view.after(0, lambda: self._view.append_log(f"⚠️ Debug raw export falló: {exc}"))
-                    
-                    threading.Thread(target=_async_debug_save, daemon=True).start()
+            if self._enable_raw_debug_export and not self._stop_event.is_set():
+                def _async_debug_save() -> None:
+                    try:
+                        raw_df = self._scan_service.get_last_raw_scan_dataframe()
+                        if raw_df.empty:
+                            return
+
+                        output_folder = self._last_scan_folder or os.getcwd()
+                        output_file = self._scan_service.export_raw_scan_dataframe(raw_df, output_folder)
+                        self._view.after(0, lambda: self._view.append_log(f"🧪 Debug raw export: {output_file}"))
+                    except Exception as exc:
+                        self._view.after(0, lambda: self._view.append_log(f"⚠️ Debug raw export falló: {exc}"))
+
+                threading.Thread(target=_async_debug_save, daemon=True).start()
 
             self._matched_total = len(filas_globales)
             self._view.set_stats_text(self._format_stats(self._matched_total))
@@ -403,7 +405,14 @@ class AppController:
                 self._view.after(0, lambda: self._view.append_log(f"🗂️ Archivo: {output_file}"))
                 self._view.after(0, lambda: self._view.set_status("Benchmarking Exportado"))
             except Exception as exc:
-                self._view.after(0, lambda: self._view.set_status(f"Error: {exc}"))
+                self._view.after(
+                    0, 
+                    lambda e=exc: (
+                        self._view.set_benchmarking_state(False),
+                        self._view.set_status(f"Error: {e}"),
+                    )
+                )
+                return
 
         self._executor.submit(_async_export)
 

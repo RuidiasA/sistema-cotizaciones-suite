@@ -1,452 +1,256 @@
 # Architecture
 
-## 1. Resumen del Sistema y Propósito
+## 1. Propósito y Estado Actual
 
-El proyecto implementa un sistema de gestión de cotizaciones y análisis masivo de archivos Excel orientado a extraer productos, calcular márgenes y construir una base de conocimiento comercial para cotización rápida y benchmarking. La aplicación está pensada para trabajar sobre carpetas con grandes volúmenes de archivos de Excel, detectar tablas válidas de forma automática, normalizar descripciones de productos y devolver resultados procesados en una interfaz de escritorio.
+`01-escaneo-masivo-cotizaciones` es el módulo de escritorio de **Compipro 2.0** dedicado al escaneo masivo de archivos Excel históricos, la extracción de filas de cotización, la construcción de benchmarking por arquetipos y la cotización rápida con soporte de márgenes históricos.
 
-El valor funcional del sistema se concentra en cuatro capacidades:
+El sistema está orientado a cargas grandes: cientos de archivos Excel y más de 14,000 filas crudas por corrida. La arquitectura actual prioriza tres objetivos operativos:
 
-1. Procesamiento de datos masivos desde una carpeta de Excel con escaneo recursivo.
-2. Lectura inteligente de hojas y detección de tablas sin estructura uniforme.
-3. Motor de cotización basado en márgenes históricos, categorías y benchmarking por arquetipos.
-4. Visualización operativa de resultados en una UI de escritorio con controles para escaneo, benchmarking, exportación y cotización rápida.
+1. Mantener la UI fluida mientras se procesan lotes grandes.
+2. Reducir el costo algorítmico en filtrado, normalización y benchmarking.
+3. Conservar una separación MVC práctica, aunque con algunas responsabilidades de orquestación concentradas en el controlador.
 
-En términos de negocio, el sistema resuelve el problema de analizar cotizaciones históricas dispersas y heterogéneas para transformarlas en información utilizable: permite encontrar productos por familias semánticas, calcular márgenes por volumen y producir reportes exportables a Excel para toma de decisiones.
+## 2. Arquitectura General
 
-## 2. Arquitectura de Software y Patrón de Diseño
+La solución sigue un MVC pragmático apoyado por servicios de dominio.
 
-La aplicación sigue una arquitectura modular con patrón MVC práctico, reforzado por una capa de servicios independientes.
+- **Modelos**: encapsulan datos de negocio y resultados de procesamiento.
+- **Servicios**: contienen la lógica pesada de escaneo, normalización, benchmarking, cotización y matching semántico.
+- **Controlador**: orquesta el flujo entre UI, servicios, cancelación y exportación.
+- **Vistas**: presentan datos y capturan eventos del usuario.
 
-- **Modelos**: encapsulan la estructura de los datos de negocio y los contenedores del procesamiento.
-- **Servicios**: contienen la lógica pesada de negocio, parsing, normalización textual, escaneo Excel, agrupación por arquetipos y cálculo de cotizaciones.
-- **Controlador**: coordina UI, servicios, hilos, cancelación y exportación.
-- **Vistas**: implementan la interfaz gráfica con `customtkinter` y `ttk`, sin lógica de negocio crítica.
+### Directorios principales
 
-### Estructura de directorios
+- `src/models/`: entidades y constantes.
+- `src/services/`: motor de escaneo, benchmarking, variaciones, cotización y utilidades textuales.
+- `src/controllers/`: coordinación del ciclo de vida de escaneo/benchmarking/exportación.
+- `src/views/`: composición visual y renderizado de resultados.
 
-#### Raíz del proyecto
+## 3. Flujo de Ejecución
 
-- `main.py`: punto de entrada de la aplicación de escritorio.
-- `requirements.txt`: dependencias runtime.
-- `busqueda_productos.py`: script independiente de exploración y extracción de productos desde Excel.
-- `scripts/headless_scan_check.py`: verificación rápida sin UI del motor de escaneo.
-- `tools/run_scanner.py`: ejecutor headless para escaneo de carpeta.
-- `docs/`: documentación funcional y técnica del proyecto.
+### 3.1 Arranque
 
-#### `src/controllers`
+1. `main.py` instancia `AppController`.
+2. `AppController` construye servicios y vista principal.
+3. `MainView` compone `ScanControls`, `QuoteView` y `ResultsView`.
+4. La aplicación entra en `mainloop()`.
 
-- `app_controller.py`: orquestador central del sistema.
-- Responsabilidad: inicializar servicios, levantar la vista principal, coordinar escaneo, benchmarking, cotización y exportación.
-- Es la capa que conecta la interacción del usuario con la lógica de negocio.
+### 3.2 Escaneo masivo
 
-#### `src/models`
+1. El usuario define carpeta, categoría y keyword desde `ScanControls`.
+2. `ScanControls` llama a `AppController.handle_scan(...)`.
+3. El controlador limpia estado, deshabilita exportación, activa modo de escaneo y construye el `search_pack`.
+4. `AppController` delega en `ExcelScanService.scan_folder(...)` mediante `ThreadPoolExecutor`.
+5. `ExcelScanService` recorre archivos, detecta hojas válidas, lee encabezados y procesa filas.
+6. La UI recibe progreso incremental con `after(0, ...)` para no bloquear el hilo principal.
+7. Al terminar, `AppController._on_scan_done(...)` consolida filas, estadísticas y logs.
 
-- `constants.py`: catálogo de categorías, exclusiones, tags y folder por defecto.
-- `entities.py`: dataclasses de dominio y contenedores de resultados.
-- Responsabilidad: representar la estructura de datos sin acoplarla a la UI ni a la persistencia externa.
+### 3.3 Benchmarking
 
-#### `src/services`
+1. `ScanControls` solicita benchmarking o cambio de categoría.
+2. `AppController.handle_benchmarking(...)` filtra la última tanda de filas.
+3. `BenchmarkingService.generar_benchmarking(...)` agrupa por arquetipo y tier.
+4. `ResultsView` muestra la matriz como tabla de benchmarking.
 
-- `variation_service.py`: gestión de categorías, tags, exclusiones y matching semántico.
-- `excel_scan_service.py`: motor de lectura, detección de tablas, extracción de filas y generación de reportes.
-- `benchmarking_service.py`: construcción de arquetipos, agrupación por tier y matriz de benchmarking.
-- `quote_service.py`: cálculo de cotización rápida con margen aplicado.
-- `text_utils.py`: limpieza, normalización, extracción de arquetipos y filtros de ruido.
-- Responsabilidad: ejecutar la lógica compleja del dominio sin depender de widgets ni de eventos de interfaz.
+### 3.4 Cotización rápida
 
-#### `src/views`
+1. `QuoteView` captura producto, cantidad y costo proveedor.
+2. `AppController.handle_quote(...)` intenta resolver el arquetipo en benchmarking.
+3. Si existe coincidencia, se aplica el margen del tier correspondiente.
+4. Si no existe, se usa `QuoteService.create_quote(...)` con estadísticas acumuladas.
 
-- `main_view.py`: ventana principal y composición de la interfaz.
-- `scan_controls.py`: panel lateral de búsqueda, categoría, escaneo, benchmarking y exportación.
-- `results_view.py`: tabla de resultados, tarjetas KPI y consola de logs.
-- `quote_view.py`: formulario rápido para calcular cotizaciones.
-- Responsabilidad: presentar información y enviar eventos al controlador.
+## 4. Auditoría MVC del Estado Actual
 
-## 3. Flujo de Datos y Comunicación entre Clases
+### 4.1 Modelos
 
-### 3.1 Arranque de la aplicación
+Los modelos se mantienen limpios y sin dependencia de UI.
 
-El arranque es directo:
+- `ScanRow`: representa una fila normalizada.
+- `FileScanReport`: agrupa el resultado de un archivo.
+- `PriceStats`: acumula márgenes por tier.
+- `ArchetypeData`: consolida el benchmarking por arquetipo.
+- `BenchmarkingMatrix`: agrupa la matriz de benchmarking y expone búsquedas normalizadas.
 
-- `main.py` instancia `AppController`.
-- `AppController` crea los servicios de dominio y la vista principal.
-- `MainView` ensambla `ScanControls`, `QuoteView` y `ResultsView`.
-- La UI entra en el loop principal con `mainloop()`.
+### 4.2 Servicios
 
-### 3.2 Flujo de escaneo de cotizaciones
+La lógica de negocio vive correctamente fuera de la UI.
 
-1. El usuario selecciona carpeta, categoría y palabra clave desde `ScanControls`.
-2. `ScanControls` invoca `AppController.handle_scan(folder, categoria, keyword)`.
-3. El controlador:
-   - limpia el estado de cancelación,
-   - actualiza la UI a modo procesamiento,
-   - deshabilita exportación,
-   - construye un `search_pack` con `VariationService`.
-4. `AppController` delega el escaneo a `ExcelScanService.scan_folder(...)` usando `ThreadPoolExecutor` para no bloquear la interfaz.
-5. `ExcelScanService`:
-   - busca archivos `.xlsx` y `.xls` de forma recursiva,
-   - omite archivos temporales y archivos generados por debug,
-   - recupera checkpoints previos si existen,
-   - procesa varios archivos en paralelo,
-   - detecta hojas válidas,
-   - localiza cabeceras,
-   - normaliza valores,
-   - extrae cantidad, costo proveedor, precio cliente y margen,
-   - construye `ScanRow` y `FileScanReport`.
-6. Cuando el futuro termina, `AppController._on_scan_done(...)` consolida los reportes:
-   - agrega logs por archivo,
-   - suma estadísticas (`PriceStats`),
-   - ordena el resultado global por artículo,
-   - actualiza `ResultsView` con las filas finales,
-   - guarda `self._last_scan_rows` para reutilizarlas en benchmarking.
-7. Si la exportación de debug está activa, se genera `debug_scan_raw.xlsx` con las filas crudas del último escaneo.
+- `ExcelScanService`: lectura, filtrado, extracción y consolidación de filas.
+- `VariationService`: categorías, tags, exclusiones y matching semántico.
+- `BenchmarkingService`: agrupación por arquetipo y reglas de inferencia de márgenes.
+- `QuoteService`: cálculo simple de cotización.
+- `text_utils.py`: normalización y extracción textual.
 
-### 3.3 Flujo de benchmarking
+### 4.3 Vistas
 
-1. El usuario presiona `Generar Benchmarking` o cambia la categoría después de tener datos en memoria.
-2. `ScanControls` invoca `AppController.handle_benchmarking(categoria)`.
-3. El controlador filtra `self._last_scan_rows` con `VariationService.matches_category(...)`.
-4. Se ejecuta `BenchmarkingService.generar_benchmarking(...)` en segundo plano.
-5. El servicio:
-   - descarta filas inválidas,
-   - excluye servicios/logística,
-   - extrae arquetipos con `extraer_arquetipo(...)`,
-   - clasifica por tier de cantidad,
-   - agrupa con pandas,
-   - infiere márgenes faltantes,
-   - calcula confianza,
-   - devuelve una `BenchmarkingMatrix`.
-6. `AppController._on_benchmarking_done(...)` convierte la matriz en filas de vista con `_benchmarking_rows_from_matrix(...)`.
-7. `ResultsView` recibe esas filas y las muestra como una tabla de benchmarking con alternancia visual por bloques.
-8. Se habilita la exportación a Excel.
+Las vistas siguen actuando como fachada visual y capturador de eventos.
 
-### 3.4 Flujo de cotización rápida
+- `MainView` expone métodos públicos para cambiar estado, limpiar resultados y actualizar la interfaz.
+- `ScanControls` valida rutas y reenvía acciones al controlador.
+- `QuoteView` valida entrada numérica y dispara la cotización.
+- `ResultsView` renderiza tabla, KPIs y consola de logs.
 
-1. El usuario ingresa producto, cantidad y costo proveedor en `QuoteView`.
-2. `QuoteView` valida los tipos y llama a `AppController.handle_quote(...)`.
-3. El controlador intenta reconocer el producto como arquetipo mediante `BenchmarkingService.extraer_arquetipo(...)`.
-4. Si hay una matriz de benchmarking cargada y el arquetipo existe, se usa el margen del tier correspondiente.
-5. Si no existe benchmarking aplicable, se usa `QuoteService.create_quote(...)` con `PriceStats` y un margen de respaldo.
-6. `ResultsView` muestra el resultado en las tarjetas KPI y la UI actualiza el log si el producto fue reconocido por benchmarking.
+### 4.4 Controlador
 
-### 3.5 Eventos clave del sistema
+El controlador mantiene el rol de orquestador, pero concentra más trabajo del deseable para un MVC estricto:
 
-- Inicio de escaneo de carpeta.
-- Cancelación del escaneo por señal de interrupción.
-- Generación de benchmarking desde resultados ya cargados.
-- Cambio de categoría con reutilización de datos en memoria.
-- Exportación de benchmarking a Excel.
-- Cotización rápida desde formulario lateral.
+- coordina hilos y cancelación,
+- administra exportación de benchmarking,
+- consolida resultados de escaneo,
+- y arma parte del `search_pack` a partir de la taxonomía.
 
-## 4. Catálogo de Componentes y Clases Principales
+Esto es correcto para el producto actual, pero deja una zona gris en la frontera entre orquestación y lógica de dominio.
 
-### 4.1 `AppController`
+## 5. Optimización de Rendimiento
+
+### 5.1 UI Chunking en `ResultsView`
+
+La vista de resultados ya no inserta miles de filas de una sola vez.
+
+- `ResultsView.add_rows(...)` carga una lista pendiente.
+- `_render_next_row_batch()` inserta subconjuntos de filas de forma incremental.
+- `_row_batch_size` controla el tamaño del lote y el reingreso al loop de eventos se hace con `after(1, ...)`.
+
+Efecto operativo: el `mainloop` recupera control entre lotes y evita congelamientos al final de corridas grandes.
+
+### 5.2 Vectorización y regex compilada en `ExcelScanService`
+
+El motor de escaneo ahora evita trabajo repetitivo por fila donde es posible.
+
+- `search_pack` se prepara una vez con `_prepare_search_pack(...)`.
+- Los tags y exclusiones se convierten en patrones compilados.
+- `_build_search_mask(...)` aplica el filtrado sobre `DataFrame` antes del loop de extracción.
+- `_process_rows(...)` precalcula índices, columnas relevantes y ventanas de búsqueda.
+
+Efecto operativo: menos costo de normalización repetida, menos búsqueda lineal por columna y mejor rendimiento en hojas grandes.
+
+### 5.3 Caché de variaciones en `VariationService`
+
+La taxonomía semántica ahora se reutiliza.
+
+- `_get_category_pack(...)` construye y cachea tags, exclusiones y regex compiladas por categoría.
+- `_cached_global_pack` evita reconstruir el paquete global.
+- `_cached_all_variations` evita recalcular la lista plana de tags conocidos.
+
+Efecto operativo: el filtrado de benchmarking y el reconocimiento de productos conocidos dejan de reconstruir la taxonomía en cada consulta.
+
+### 5.4 Concurrencia y cancelación adaptativa
+
+- `ExcelScanService.scan_folder(...)` usa `ThreadPoolExecutor` y espera incremental con `wait(..., timeout=0.2, return_when=FIRST_COMPLETED)`.
+- `stop_event` actúa como señal de cancelación compartida.
+- La exportación de depuración se ejecuta en un hilo daemon separado para no bloquear la UI.
+
+Efecto operativo: la aplicación puede reportar progreso parcial y responder mejor al botón de cancelar, aunque la cancelación siga siendo cooperativa y no forzada.
+
+## 6. Componentes y Responsabilidades
+
+### `AppController`
 
 Archivo: `src/controllers/app_controller.py`
 
-Responsabilidad: coordinar toda la aplicación.
+Responsabilidad: coordinar la interacción entre UI y servicios.
 
-Métodos centrales:
+Funciones relevantes:
 
-- `__init__()`: instancia `VariationService`, `ExcelScanService`, `QuoteService`, `BenchmarkingService` y la UI principal.
-- `run()`: inicia el loop de la interfaz.
-- `handle_scan(folder, categoria, keyword)`: prepara el escaneo y lanza el procesamiento en background.
-- `handle_cancel()`: activa el evento de detención.
-- `_on_scan_done(future)`: consume resultados del escaneo y actualiza la UI.
-- `handle_quote(product_name, cantidad, precio_prov)`: calcula una cotización rápida.
-- `handle_benchmarking(categoria)`: genera benchmarking a partir del último escaneo.
-- `_on_benchmarking_done(future)`: renderiza la matriz de benchmarking en la UI.
-- `handle_export_benchmarking(folder_path)`: exporta la matriz a Excel.
-- `_export_benchmarking_by_blocks(...)`: escribe el archivo Excel segmentado por bloques.
-- `_benchmarking_rows_from_matrix(...)`: transforma la matriz a filas de tabla.
+- `handle_scan(...)`
+- `handle_cancel()`
+- `_on_scan_done(...)`
+- `handle_quote(...)`
+- `handle_benchmarking(...)`
+- `_on_benchmarking_done(...)`
+- `handle_export_benchmarking(...)`
 
-Entradas: folder, categoría, keyword, producto, cantidad, precio proveedor.
-
-Salidas: actualización de UI, matrices de benchmarking, reportes Excel y logs.
-
-Dependencias directas: `VariationService`, `ExcelScanService`, `QuoteService`, `BenchmarkingService`, `MainView`, `ScanRow`, `PriceStats`, `BenchmarkingMatrix`.
-
-### 4.2 `VariationService`
-
-Archivo: `src/services/variation_service.py`
-
-Responsabilidad: resolver categorías y paquetes de búsqueda semántica.
-
-Métodos centrales:
-
-- `get_categories()`: devuelve la lista de macrocategorías y subcategorías formateadas.
-- `get_variations(categoria, keyword)`: devuelve tags y exclusiones del clúster correspondiente.
-- `get_global_search_pack()`: construye un paquete global de búsqueda sin exclusiones por categoría.
-- `matches_category(categoria, texto_producto)`: valida si un texto pertenece a una categoría.
-- `is_known_product(product_name)`: detecta si un producto coincide con alguna variación conocida.
-
-Entradas: categoría, keyword, texto de producto.
-
-Salidas: search packs, booleanos de coincidencia y listas de categorías.
-
-Dependencias directas: `normalizar_texto` y `MACRO_CATEGORIAS`.
-
-### 4.3 `ExcelScanService`
+### `ExcelScanService`
 
 Archivo: `src/services/excel_scan_service.py`
 
-Responsabilidad: escaneo de archivos Excel, detección de tablas y extracción de filas de cotización.
+Responsabilidad: leer Excels, detectar tablas y generar reportes.
 
-Métodos centrales:
+Funciones relevantes:
 
-- `scan_folder(folder_path, search_pack, stop_event)`: orquesta el escaneo recursivo de una carpeta.
-- `scan_file(file_path, search_pack, raw_records=None)`: procesa un archivo individual y devuelve un `FileScanReport`.
-- `_list_excel_files(folder_path)`: localiza archivos Excel válidos en subcarpetas.
-- `_open_workbook_data_only(file_path)`: abre libros compatibles con `openpyxl` en modo solo lectura y solo valores.
-- `_read_sheet_data_only(...)`: convierte una hoja a `DataFrame` desde valores ya resueltos.
-- `_detect_header_row(df_check)`: identifica la fila de cabeceras por heurística.
-- `_cumple_busqueda_tokenizada(fila, search_pack)`: decide si una fila pasa el filtro semántico.
-- `_process_rows(...)`: extrae filas válidas, calcula margen y llena `ScanRow`.
-- `get_last_raw_scan_dataframe()`: expone el DataFrame crudo del último escaneo.
-- `export_raw_scan_dataframe(df, output_path)`: escribe el debug raw a Excel.
+- `scan_folder(...)`
+- `scan_file(...)`
+- `_prepare_search_pack(...)`
+- `_build_search_mask(...)`
+- `_process_rows(...)`
+- `get_last_raw_scan_dataframe()`
+- `export_raw_scan_dataframe(...)`
 
-Entradas: carpeta, archivo, search pack, evento de cancelación.
+### `VariationService`
 
-Salidas: `FileScanReport`, `PriceStats`, `ScanRow`, archivo `debug_scan_raw.xlsx` y `scan_checkpoint.json`.
+Archivo: `src/services/variation_service.py`
 
-Dependencias directas: `pandas`, `openpyxl`, `ScanRow`, `FileScanReport`, `PriceStats`, `text_utils`.
+Responsabilidad: matching semántico y taxonomía de categorías.
 
-### 4.4 `BenchmarkingService`
+Funciones relevantes:
+
+- `get_categories()`
+- `get_variations(...)`
+- `get_global_search_pack()`
+- `_get_category_pack(...)`
+- `matches_category(...)`
+- `is_known_product(...)`
+
+### `BenchmarkingService`
 
 Archivo: `src/services/benchmarking_service.py`
 
-Responsabilidad: construir benchmarking por arquetipos y tiers de cantidad.
+Responsabilidad: agrupar filas válidas y construir la matriz de benchmarking.
 
-Métodos centrales:
-
-- `extraer_arquetipo(fila_detalle, keyword='')`: limpia la descripción y deriva un arquetipo comercial.
-- `es_servicio_excluido(articulo)`: filtra servicios/logística.
-- `generar_benchmarking(scan_rows, categoria, keyword='')`: agrupa datos, calcula márgenes y genera `BenchmarkingMatrix`.
-- `_inferir_margenes(...)`: completa tiers faltantes respetando monotonicidad y piso dinámico.
-- `_weighted_avg(...)`: calcula promedios ponderados.
-- `calcular_confianza(casos_totales)`: estima nivel de confianza del arquetipo.
-- `_tier_para_cantidad(cantidad)`: clasifica en 100, 500 o 1000.
-
-Entradas: filas escaneadas, categoría, keyword.
-
-Salidas: `BenchmarkingMatrix` con `ArchetypeData`.
-
-Dependencias directas: `pandas`, `ScanRow`, `ArchetypeData`, `BenchmarkingMatrix`, utilidades de texto.
-
-### 4.5 `QuoteService`
+### `QuoteService`
 
 Archivo: `src/services/quote_service.py`
 
-Responsabilidad: cálculo de cotización básica a partir de una referencia de costo y un margen.
+Responsabilidad: cálculo de cotización simple.
 
-Método central:
-
-- `create_quote(product_name, cantidad, precio_prov, stats, margen_defecto=35.0)`: calcula margen, precio unitario y total.
-
-Entradas: nombre de producto, cantidad, costo proveedor, estadísticas agregadas.
-
-Salidas: diccionario con `margen`, `precio_unit` y `total`.
-
-Dependencias directas: `PriceStats`.
-
-### 4.6 `PriceStats`
-
-Archivo: `src/models/entities.py`
-
-Responsabilidad: acumular márgenes por rango de cantidad.
-
-Métodos centrales:
-
-- `add_margin(cantidad, margen)`: acumula el margen en el tier correspondiente.
-- `promedio_para_cantidad(cantidad, margen_defecto=35.0)`: calcula el promedio para 1000, 500 o resto.
-- `merge(other)`: fusiona estadísticas parciales.
-
-Entradas: cantidad y margen.
-
-Salidas: promedios por tier.
-
-### 4.7 `ScanRow`
-
-Archivo: `src/models/entities.py`
-
-Responsabilidad: representar una fila normalizada del escaneo.
-
-Campos principales:
-
-- `fila_id`
-- `articulo`
-- `cantidad`
-- `precio_prov`
-- `precio_cli`
-- `margen`
-- `motivo`
-- `arquetipo`
-- `margen_fila`
-
-### 4.8 `FileScanReport`
-
-Archivo: `src/models/entities.py`
-
-Responsabilidad: contener el resultado de un archivo procesado.
-
-Campos principales:
-
-- `file_name`
-- `sheet_name`
-- `matched_rows`
-- `failed_rows`
-- `stats`
-- `error_message`
-
-### 4.9 `ArchetypeData`
-
-Archivo: `src/models/entities.py`
-
-Responsabilidad: representar un arquetipo con métricas por tier.
-
-Campos principales:
-
-- `nombre_arquetipo`
-- `categoria`
-- `margen_tier_100`
-- `margen_tier_500`
-- `margen_tier_1000`
-- `casos_tier_100`
-- `casos_tier_500`
-- `casos_tier_1000`
-- `costo_avg_100`
-- `costo_avg_500`
-- `costo_avg_1000`
-- `precio_avg_100`
-- `precio_avg_500`
-- `precio_avg_1000`
-- `actualizado_en`
-- `confianza_general`
-
-### 4.10 `BenchmarkingMatrix`
-
-Archivo: `src/models/entities.py`
-
-Responsabilidad: agrupar los arquetipos de una categoría completa.
-
-Métodos centrales:
-
-- `get_arquetipo_por_nombre(nombre)`: búsqueda exacta normalizada.
-- `get_margen_para_cantidad(nombre_arquetipo, cantidad)`: devuelve el margen sugerido por tier.
-
-### 4.11 Vistas principales
-
-#### `MainView`
-
-Archivo: `src/views/main_view.py`
-
-Responsabilidad: componer la ventana principal y actuar como fachada visual.
-
-Métodos clave:
-
-- `set_scanning_state(is_scanning)`
-- `set_benchmarking_state(is_benchmarking)`
-- `enable_export(enabled)`
-- `set_status(text)`
-- `clear_results()`
-- `clear_quote_cards()`
-- `append_log(text)`
-- `add_rows(rows)`
-- `set_stats_text(text)`
-- `show_quote_result(res, known)`
-- `update_quote_cards(margen, precio_unit, total)`
-
-#### `ScanControls`
-
-Archivo: `src/views/scan_controls.py`
-
-Responsabilidad: exponer la interacción operativa del usuario.
-
-Funciones clave:
-
-- selección de carpeta,
-- selección de categoría,
-- entrada de keyword,
-- inicio de escaneo,
-- cancelación,
-- generación de benchmarking,
-- exportación.
-
-#### `ResultsView`
+### `ResultsView`
 
 Archivo: `src/views/results_view.py`
 
-Responsabilidad: renderizar KPIs, tabla de resultados y logs.
+Responsabilidad: renderizar KPIs, logs y filas por lotes.
 
-Métodos clave:
+### `ScanControls`
 
-- `clear()`
-- `append_log(text)`
-- `add_rows(rows)`
-- `set_group_size(size)`
-- `set_stats_text(text)`
-- `update_quote_cards(margen, precio_unit, total)`
+Archivo: `src/views/scan_controls.py`
 
-#### `QuoteView`
+Responsabilidad: capturar acciones del usuario y validarlas antes de delegar.
+
+### `QuoteView`
 
 Archivo: `src/views/quote_view.py`
 
-Responsabilidad: capturar el formulario de cotización rápida.
+Responsabilidad: formulario de cotización rápida.
 
-Métodos clave:
+### `Entities`
 
-- `_handle_quote()`
-- `_handle_clear()`
-- `show_result(result, known_product)`
+Archivo: `src/models/entities.py`
 
-## 5. Manejo de Datos Masivos y Rendimiento
+Responsabilidad: mantener los contenedores de datos del dominio.
 
-El sistema está diseñado para manejar volúmenes altos de archivos y filas, incluyendo escenarios de más de 14 mil registros, con varias medidas de rendimiento.
+## 7. Estado Real del MVC
 
-### 5.1 Estrategia de lectura masiva
+La arquitectura en producción sigue siendo MVC, pero con una aplicación práctica y no purista.
 
-- El escaneo recorre la carpeta de forma recursiva con `Path.rglob()`.
-- Se filtran archivos temporales de Excel y archivos generados por el propio motor.
-- Se procesa cada archivo en paralelo con un `ThreadPoolExecutor` interno limitado a `min(6, cpu_count)`.
-- El controlador ejecuta el trabajo pesado fuera del hilo principal de la UI.
+Lo que está bien:
 
-### 5.2 Lectura eficiente de Excel
+- Las vistas no contienen lógica pesada de escaneo ni benchmarking.
+- Los modelos no conocen la UI.
+- Los servicios encapsulan la lógica de negocio y de parsing.
 
-- Se usa `pandas.ExcelFile` para inspeccionar hojas.
-- Cuando es posible, se abre un workbook con `openpyxl.load_workbook(..., data_only=True, read_only=True)`.
-- Se lee un pequeño bloque inicial para detectar la fila de cabeceras antes de cargar toda la hoja.
-- Se trabaja con `DataFrame` para normalizar, filtrar y extraer columnas de forma vectorizada cuando es viable.
+Lo que conviene vigilar:
 
-### 5.3 Normalización y detección semántica
+- El controlador todavía concentra exportación y parte del armado de búsqueda semántica.
+- El render de la UI depende de callbacks `after(...)` desde varios puntos del flujo.
+- El filtrado de benchmarking recorre `self._last_scan_rows` en memoria, lo cual es aceptable hoy, pero puede crecer en costo si el histórico en RAM aumenta.
 
-- `text_utils.normalizar_texto()` elimina tildes, signos y ruido ortográfico.
-- Las búsquedas se hacen con expresiones regulares compiladas una vez por `search_pack`.
-- Se usan límites de palabra para reducir falsos positivos.
-- Los campos relevantes se reconstruyen con columnas de detalle, artículo y código, cuando existen.
+## 8. Riesgos y Deuda Técnica
 
-### 5.4 Robustez ante datos sucios
+1. **Cancelación cooperativa, no determinista**: `stop_event` detiene nuevas unidades de trabajo, pero no garantiza aborto inmediato de tareas ya tomadas por un worker.
+2. **Exportación en controlador**: la escritura de benchmarking sigue viviendo en `AppController`, lo que diluye SRP.
+3. **Manejo amplio de excepciones**: aún hay `except Exception` defensivos que ocultan diagnóstico fino.
+4. **Caminos legados**: existe código de búsqueda por fila que quedó desplazado por la vía vectorizada y puede simplificarse en una próxima limpieza.
 
-- Se detectan cantidades inválidas, márgenes nulos, precios incoherentes y duplicados.
-- Se registran filas rechazadas con un motivo concreto.
-- Se aplica un techo de margen para evitar outliers extremos.
-- Se excluyen servicios y logística por palabras clave.
-
-### 5.5 Persistencia de soporte operativo
-
-El motor no usa base de datos. La persistencia auxiliar es archivo local:
-
-- `scan_checkpoint.json`: lista de archivos ya procesados.
-- `debug_scan_raw.xlsx`: exportación cruda del último escaneo.
-- `log_errores.txt`: bitácora de fallos por archivo.
-
-### 5.6 Benchmarking y agregación
-
-- Los márgenes se agrupan por arquetipo y tier de cantidad.
-- Se usan `groupby`, `value_counts` y agregaciones de pandas para consolidar resultados.
-- Se infieren tiers faltantes con un piso dinámico y reglas de monotonicidad.
-- La exportación final a Excel se produce con `openpyxl` y formato visual por bloques.
-
-## 6. Diagrama de Módulos
+## 9. Diagrama de Módulos
 
 ```mermaid
 graph TD
@@ -484,28 +288,18 @@ graph TD
     R --> B
 
     S[busqueda_productos.py] -. script independiente .-> T[Excel consolidado]
-    U[tools/run_scanner.py] -. smoke/headless .-> H
-    V[scripts/headless_scan_check.py] -. smoke/headless .-> H
+    U[scripts/headless_scan_check.py] -. smoke/headless .-> H
+    V[tools/run_scanner.py] -. smoke/headless .-> H
 ```
 
-## 7. Observaciones Técnicas
+## 10. Resumen Ejecutivo
 
-- El sistema está desacoplado de cualquier backend web o base de datos; toda la operación vive en memoria y archivos Excel.
-- La UI está construida con `customtkinter`, mientras que el render de tabla se apoya en `ttk.Treeview`.
-- El controlador es el único componente que conoce simultáneamente la UI y la lógica de negocio.
-- Los servicios son relativamente puros y reutilizables, lo que permite ejecutar el motor de escaneo de forma headless.
-- El proyecto ya incluye scripts auxiliares para comprobación manual y extracción consolidada, lo que confirma que el núcleo del sistema es el procesamiento de Excel y no la interfaz.
+El módulo ha evolucionado hacia una variante MVC práctica, optimizada para cargas masivas y UI de escritorio. La arquitectura actual ya incorpora:
 
-## 8. Resumen Ejecutivo de Arquitectura
+- render por lotes en la tabla,
+- vectorización y regex compilada para búsquedas,
+- caché de taxonomía por categoría,
+- concurrencia cooperativa con `stop_event`,
+- y separación razonable entre UI, dominio y procesamiento.
 
-La arquitectura final es una variante modular de MVC con fuerte separación entre interfaz y procesamiento. La capa de servicios concentra la inteligencia del dominio: búsqueda semántica, lectura de Excel, extracción de filas, cálculo de márgenes, benchmarking y exportación. El controlador administra la experiencia del usuario, la concurrencia y el paso de datos entre capas. Las vistas se limitan a representar estado y emitir eventos.
-
-El diseño es adecuado para escenarios de alto volumen porque:
-
-- procesa en background,
-- compila reglas de búsqueda,
-- usa lectura selectiva de Excel,
-- conserva checkpoints,
-- y evita bloquear la UI mientras analiza datos masivos.
-
-La consecuencia práctica es un sistema de escritorio orientado a cotización y benchmarking que puede trabajar sobre históricos amplios sin depender de infraestructura externa.
+La principal deuda pendiente no es funcional, sino arquitectural: terminar de aislar exportaciones y endurecer el modelo de cancelación para que el control del ciclo de vida sea más claro y predecible.

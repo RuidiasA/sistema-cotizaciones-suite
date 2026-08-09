@@ -10,7 +10,7 @@ Principios aplicados:
 
 import re
 from tkinter import ttk
-from typing import Iterable
+from typing import Iterable, List, Optional
 import customtkinter as ctk
 
 from ..models.entities import ScanRow
@@ -88,6 +88,10 @@ class ResultsView(ctk.CTkFrame):
         self._table.tag_configure("group_gray", background="#FFCAAD", foreground="#2c3e50")
 
         self._group_size = 1
+        self._row_batch_size = 250
+        self._row_insert_job: Optional[str] = None
+        self._pending_rows: List[ScanRow] = []
+        self._pending_row_offset = 0
 
         # Consola de Logs
         self._log = ctk.CTkTextbox(self, height=100, fg_color="#ffffff", border_color="#bdc3c7", border_width=1, font=("Consolas", 11))
@@ -131,6 +135,7 @@ class ResultsView(ctk.CTkFrame):
 
     def clear(self) -> None:
         """Limpia las entradas de la consola, la tabla y restablece los KPI."""
+        self._cancel_pending_row_render()
         self._log.delete("1.0", "end")
         for item in self._table.get_children():
             self._table.delete(item)
@@ -151,7 +156,27 @@ class ResultsView(ctk.CTkFrame):
         Args:
             rows: Colección de ScanRow a insertar.
         """
-        for i, row in enumerate(rows):
+        self._cancel_pending_row_render()
+        self._pending_rows = list(rows)
+        self._pending_row_offset = 0
+        if not self._pending_rows:
+            return
+        self._render_next_row_batch()
+
+    def _cancel_pending_row_render(self) -> None:
+        if self._row_insert_job is not None:
+            try:
+                self.after_cancel(self._row_insert_job)
+            except Exception:
+                pass
+            self._row_insert_job = None
+        self._pending_rows = []
+        self._pending_row_offset = 0
+
+    def _render_next_row_batch(self) -> None:
+        batch_end = min(self._pending_row_offset + self._row_batch_size, len(self._pending_rows))
+        for i in range(self._pending_row_offset, batch_end):
+            row = self._pending_rows[i]
             group = (i % 2) if self._group_size <= 1 else ((i // self._group_size) % 2)
             tag = "group_gray" if group == 1 else "group_white"
 
@@ -168,6 +193,13 @@ class ResultsView(ctk.CTkFrame):
                 ),
                 tags=(tag,),
             )
+
+        self._pending_row_offset = batch_end
+        if self._pending_row_offset < len(self._pending_rows):
+            self._row_insert_job = self.after(1, self._render_next_row_batch)
+        else:
+            self._row_insert_job = None
+            self._pending_rows = []
 
     def set_group_size(self, size: int) -> None:
         """Configura la cantidad de filas consecutivas por bloque de color.
