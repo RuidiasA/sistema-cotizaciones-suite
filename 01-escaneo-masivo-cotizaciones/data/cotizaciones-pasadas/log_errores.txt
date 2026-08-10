@@ -1,0 +1,67 @@
+[2026-08-10 16:54:25] Copia de Copia de SOLICITUD DE COTIZACION (1).....xlsx -> No se detectó una tabla válida.
+[2026-08-10 16:54:25] Copia de Copia de SOLICITUD DE COTIZACION (1)...xlsx -> No se detectó una tabla válida.
+[2026-08-10 16:54:25] Copia de Copia de SOLICITUD DE COTIZACION (1).xlsx -> No se detectó una tabla válida.
+[2026-08-10 16:54:25] Benchmarking_General.xlsx -> No se detectó una tabla válida.
+[2026-08-10 16:54:26] Copia de Cotizacion_Karla Bernal_Caramelos Publicitarios_29-02-12.xlsx -> No se detectó una tabla válida.
+[2026-08-10 16:54:31] cotizacion de encomiendas.xlsx -> No se detectó una tabla válida.
+[2026-08-10 16:54:43] Cotizacion _INBP.xlsx -> No se detectó una tabla válida.
+[2026-08-10 16:54:53] COTIZACION_FESTI_AVENTURA.xlsx -> No se detectó una tabla válida.
+[2026-08-10 16:54:54] Cotizacion_Karla Bernal_Caramelos Publicitarios_29-02-12.xlsx -> No se detectó una tabla válida.
+[2026-08-10 16:54:58] Cotización MAP230216-06_Tarifario - Compras Recurrentes_ Marketing 2023_COMPIPRO.xlsx -> No se detectó una tabla válida.
+[2026-08-10 16:54:59] COTIZACIÓN PROPUESTA_MEDIA IMPACT_2023.xlsx -> No se detectó una tabla válida.
+[2026-08-10 16:55:10] CotizaciónResumen_CorporacionDiez_2016.xlsx -> No se detectó una tabla válida.
+[2026-08-10 16:55:17] Cotizador de Polos_05.12.19.xlsx -> No se detectó una tabla válida.
+[2026-08-10 16:55:22] Cotizador_MTC-ATU_CASACAS Y PANTALONES_2023.xlsx -> No se detectó una tabla válida.
+[2026-08-10 16:55:25] Direcciones_Sedes_TASA.xlsx -> No se detectó una tabla válida.
+[2026-08-10 16:55:25] Direcciones_Sedes_TASA_Actualizado_22.02.22.xlsx -> No se detectó una tabla válida.
+[2026-08-10 16:55:26] FORMATO DE COTIZACION - PROTECTOR.xlsx -> No se detectó una tabla válida.
+[2026-08-10 16:55:26] Estatus entregas_Uniformes Happyland OC 2816_Casacas Operarios.xlsx -> No se detectó una tabla válida.
+[2026-08-10 16:55:27] FORMATO DE COTIZACIÓN - SERVICIOS.xlsx -> No se detectó una tabla válida.
+[2026-08-10 16:55:27] Formato_COTIZACIÓN - Libros del Serv. Obstetricia.xlsx -> No se detectó una tabla válida.
+[2026-08-10 16:55:38] Formato_ResumenCotizador_GrupoGea_2019.xlsx -> No se detectó una tabla válida.
+[2026-08-10 16:55:41] Formato_ResumenCotizador_JUZGADO DE PAZ DE TUMBES_2025.xlsx -> No se detectó una tabla válida.
+[2026-08-10 16:55:48] Formato_ResumenCotizador_POLYARQ_2020.xlsx -> No se detectó una tabla válida.
+[2026-08-10 16:55:56] Formato_ResumenCotizador_SOLGAS_2019.xlsx -> No se detectó una tabla válida.
+[2026-08-10 16:56:01] Formato_ResumenCotizador_Z ADITIVOS_2019.xlsx -> No se detectó una tabla válida.
+[2026-08-10 16:56:01] OC-240507-01_COPEINCA_150 cuadernos, lapiceros, bolsa mochila y 600 mochila cruzada.xlsx -> No se detectó una tabla válida.
+[2026-08-10 16:56:01] OC-240110-PRO-05_EMBAJADA REPUBLICA DE COREA_Gorra, Polos y bolsimochilas.xlsx -> No se detectó una tabla válida.
+[2026-08-10 16:56:04] OC-251126-PRO-03_AGROVET_200 Bolsimochilas_200 Gorros drill_100 gorros bull demin_F.xlsx -> No se detectó una tabla válida.
+[2026-08-10 16:56:10] Proceso Proyecto_CELIMA_300 mochilas cruzadas.xlsx -> No se detectó una tabla válida.
+[2026-08-10 16:56:13] Proceso Proyecto_GRUAS Y TRANSPORTES SAN LORENZO_122 casacas cortaviento.xlsx -> No se detectó una tabla válida.
+[2026-08-10 16:56:21] Proceso Proyecto_TASA_15_Kits_Corporativos.xlsx -> No se detectó una tabla válida.
+[2026-08-10 16:56:24] Proceso Proyecto_TASA_2800_Mini_Mochila_Campera_Dia_Trabajo.xlsx -> No se detectó una tabla válida.
+[2026-08-10 16:56:34] ProcesoProyecto_LEDVANCE_13_Plaxas_Instalacion_Mochilas.xlsx -> No se detectó una tabla válida.
+[2026-08-10 16:56:36] ProcesoProyecto_LEDVANCE_Servicio de bordado de 12 casacas.xlsx -> No se detectó una tabla válida.
+[2026-08-10 16:57:09] ProcesoProyect_Statkraft_5 casacas softseft _FINAL.xlsx -> No se detectó una tabla válida.
+[2026-08-10 16:57:09] ProcesoProyect_Statkraft_20 casacas softseft _FINAL.xlsx -> No se detectó una tabla válida.
+[2026-08-10 16:57:10] progrma de entregas casacas y camisas.xlsx -> No se detectó una tabla válida.
+[2026-08-10 16:57:13] Copia de Cuadro de Cotizacion.xls -> No se detectó una tabla válida.
+[2026-08-10 16:57:15] COTIZACION PRODAC 101118- Articulos Publicitarios-COMPINA.xls -> No se detectó una tabla válida.
+[2026-08-10 16:57:16] Cotizacion resumen Plus deportiva.xls -> No se detectó una tabla válida.
+[2026-08-10 16:57:22] Cotizacion resumen_DUMAS_2013.xls -> No se detectó una tabla válida.
+[2026-08-10 16:57:30] Cotizacion Resumen_PAPADICE_Activaciones2.xls -> No se detectó una tabla válida.
+[2026-08-10 16:57:30] Cotizacion Resumen_PAPADICE_Activaciones.xls -> No se detectó una tabla válida.
+[2026-08-10 16:57:31] Cotizacion resumen_REDICE.xls -> No se detectó una tabla válida.
+[2026-08-10 16:57:58] Cotización resumen_Colegio Salcantay.xls -> No se detectó una tabla válida.
+[2026-08-10 16:58:06] Cotización resumen_EMSEMSA.xls -> No se detectó una tabla válida.
+[2026-08-10 16:58:10] Cotización resumen_GLOBAL WINES S.A.C..xls -> No se detectó una tabla válida.
+[2026-08-10 16:58:16] Cotización resumen_Javier Villar.xls -> No se detectó una tabla válida.
+[2026-08-10 16:58:50] Cotización Resumen_Union Europea.xls -> No se detectó una tabla válida.
+[2026-08-10 16:58:55] Cotización Wincha_22.04.10.xls -> No se detectó una tabla válida.
+[2026-08-10 16:59:16] Cotización_IBC_Servilleteros Acrilicos.xls -> No se detectó una tabla válida.
+[2026-08-10 16:59:27] Cotizacióon resumen_HOTEL SHERATON.xls -> No se detectó una tabla válida.
+[2026-08-10 16:59:34] Cotizador ARGENTINA.xls -> No se detectó una tabla válida.
+[2026-08-10 16:59:50] Cotizador_BODY SLIM.xls -> No se detectó una tabla válida.
+[2026-08-10 16:59:54] COTIZADOR_FREDY_EXCEL.xls -> No se detectó una tabla válida.
+[2026-08-10 16:59:54] COTIZADOR_FREDY_listo.xls -> No se detectó una tabla válida.
+[2026-08-10 16:59:57] Cotizador_ISDATA.xls -> No se detectó una tabla válida.
+[2026-08-10 17:00:05] Cuadro Cotización (1).xls -> No se detectó una tabla válida.
+[2026-08-10 17:00:05] Cuadro Cotización.xls -> No se detectó una tabla válida.
+[2026-08-10 17:00:06] Cuadro Cotización_Grupo Compina SAC.xls -> No se detectó una tabla válida.
+[2026-08-10 17:00:06] Cuadro de Cotizacion - Bien.xls -> No se detectó una tabla válida.
+[2026-08-10 17:00:06] Cuadro de Cotizacion.xls -> No se detectó una tabla válida.
+[2026-08-10 17:00:06] Cuadro de Cotizacion - Bien_GRUPO DOEL SAC.xls -> No se detectó una tabla válida.
+[2026-08-10 17:00:10] FORMATO DE COTIZACION - BIENES.xls -> No se detectó una tabla válida.
+[2026-08-10 17:00:10] FORMATO DE COTIZACION - impresión de banner.xls -> No se detectó una tabla válida.
+[2026-08-10 17:00:11] FORMATO DE COTIZACION - TDR.xls -> No se detectó una tabla válida.
+[2026-08-10 17:00:11] Formato de Cotización - Roll Screen.xls -> No se detectó una tabla válida.

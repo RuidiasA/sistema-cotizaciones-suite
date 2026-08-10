@@ -1,11 +1,11 @@
 {
   "CAMISA_DENIM": {
-    "nombre_comercial": "Camisa Denim / Jean",
-    "macro_categoria": "TEXTIL",
-    "subcategoria": "CAMISAS",
+    "nombre_comercial": "Camisa Denim",
     "filtros_prenda": [
       "camisa",
-      "blusa"
+      "camisas",
+      "blusa",
+      "blusas"
     ],
     "filtros_material": [
       "denim",
@@ -17,19 +17,21 @@
       "10": 57.2,
       "25": 45.7,
       "100": 36.7
-    }
+    },
+    "productos_especificos": []
   },
   "CAMISA_OXFORD": {
     "nombre_comercial": "Camisa Oxford",
-    "macro_categoria": "TEXTIL",
-    "subcategoria": "CAMISAS",
     "filtros_prenda": [
       "camisa",
-      "blusa"
+      "camisas",
+      "blusa",
+      "blusas"
     ],
     "filtros_material": [
       "oxford",
       "oxfor",
+      "oxfurd",
       "paracas",
       "san jacinto"
     ],
@@ -41,15 +43,16 @@
       "250": 30.8,
       "500": 30.2,
       "1000": 29.6
-    }
+    },
+    "productos_especificos": []
   },
   "CAMISA_POPELINA": {
     "nombre_comercial": "Camisa Popelina",
-    "macro_categoria": "TEXTIL",
-    "subcategoria": "CAMISAS",
     "filtros_prenda": [
       "camisa",
-      "blusa"
+      "camisas",
+      "blusa",
+      "blusas"
     ],
     "filtros_material": [
       "popelina",
@@ -61,20 +64,21 @@
       "50": 47.0,
       "500": 40.6,
       "1000": 39.8
-    }
+    },
+    "productos_especificos": []
   },
   "CASACA_NYLON": {
     "nombre_comercial": "Casaca Nylon",
-    "macro_categoria": "TEXTIL",
-    "subcategoria": "CASACAS",
     "filtros_prenda": [
       "casaca",
+      "casacas",
       "chamarra"
     ],
     "filtros_material": [
       "nylon",
       "nailon",
-      "nailom"
+      "nailom",
+      "nylom"
     ],
     "margenes": {
       "10": 44.2,
@@ -83,41 +87,41 @@
       "100": 39.3,
       "250": 38.3,
       "500": 37.5
-    }
+    },
+    "productos_especificos": []
   },
   "CASACA_SOFTSHELL": {
     "nombre_comercial": "Casaca Softshell",
-    "macro_categoria": "TEXTIL",
-    "subcategoria": "CASACAS",
     "filtros_prenda": [
       "casaca",
+      "casacas",
       "chamarra"
     ],
     "filtros_material": [
       "softshell",
       "softsel",
+      "soft_shell",
       "sofsel"
     ],
     "margenes": {
       "10": 38.9,
       "50": 27.8,
       "100": 24.5
-    }
+    },
+    "productos_especificos": []
   },
   "CASACA_TASLAN": {
     "nombre_comercial": "Casaca Taslan",
-    "macro_categoria": "TEXTIL",
-    "subcategoria": "CASACAS",
     "filtros_prenda": [
       "casaca",
-      "chamarra",
-      "corta viento",
-      "impermeable"
+      "casacas",
+      "chamarra"
     ],
     "filtros_material": [
       "taslan",
       "taslam",
-      "tazlan"
+      "tazlan",
+      "tazlam"
     ],
     "margenes": {
       "10": 50.6,
@@ -128,21 +132,22 @@
       "500": 33.3,
       "1000": 32.6,
       "2000": 31.9
-    }
+    },
+    "productos_especificos": []
   },
   "CHALECO": {
     "nombre_comercial": "Chaleco",
-    "macro_categoria": "TEXTIL",
-    "subcategoria": "CHALECOS",
     "filtros_prenda": [
-      "chaleco"
+      "chaleco",
+      "chalecos"
     ],
     "filtros_material": [
       "drill",
       "taslan",
+      "nylon",
       "puffer",
-      "geologo",
-      "reportero"
+      "periodista",
+      "institucional"
     ],
     "margenes": {
       "10": 84.7,
@@ -153,17 +158,15 @@
       "500": 35.8,
       "1000": 25.1,
       "2000": 24.6
-    }
+    },
+    "productos_especificos": []
   },
   "GORRO_DRILL": {
     "nombre_comercial": "Gorro Drill",
-    "macro_categoria": "TEXTIL",
-    "subcategoria": "GORROS",
     "filtros_prenda": [
       "gorro",
-      "gorra",
-      "chavito",
-      "visera"
+      "gorros",
+      "gorra"
     ],
     "filtros_material": [
       "drill",
@@ -178,20 +181,34 @@
       "1000": 38.0,
       "2000": 26.6,
       "5000": 20.7
-    }
+    },
+    "productos_especificos": [
+      {
+        "nombre_sistema": "Gorro Trucker",
+        "tokens_producto": [
+          "gorro",
+          "gorra",
+          "trucker",
+          "truker"
+        ],
+        "tokens_filtro_inc": [],
+        "tokens_filtro_exc": []
+      }
+    ]
   },
   "GORRO_TASLAN": {
     "nombre_comercial": "Gorro Taslan",
-    "macro_categoria": "TEXTIL",
-    "subcategoria": "GORROS",
     "filtros_prenda": [
       "gorro",
+      "gorros",
       "gorra"
     ],
     "filtros_material": [
       "taslan",
+      "taslan",
       "taslam",
-      "tazlan"
+      "tazlan",
+      "tazlam"
     ],
     "margenes": {
       "25": 111.8,
@@ -204,12 +221,11 @@
       "3000": 19.8,
       "5000": 19.5,
       "10000": 19.1
-    }
+    },
+    "productos_especificos": []
   },
   "LOGISTICA_Y_SERVICIOS": {
-    "nombre_comercial": "Servicios y Logística",
-    "macro_categoria": "SERVICIOS",
-    "subcategoria": "LOGISTICA",
+    "nombre_comercial": "Servicios, Movilidad y Logistica",
     "filtros_prenda": [
       "servicio",
       "serv.",
@@ -222,17 +238,24 @@
       "10": 85.6,
       "100": 79.9,
       "250": 77.8
-    }
+    },
+    "productos_especificos": []
   },
   "MANDIL": {
-    "nombre_comercial": "Mandil / Delantal",
-    "macro_categoria": "TEXTIL",
-    "subcategoria": "INDUMENTARIA",
+    "nombre_comercial": "Mandil",
     "filtros_prenda": [
       "mandil",
-      "delantal"
+      "mandiles",
+      "delantal",
+      "delantales"
     ],
-    "filtros_material": [],
+    "filtros_material": [
+      "drill",
+      "dril",
+      "publicitario",
+      "poliseda",
+      "popelina"
+    ],
     "margenes": {
       "10": 125.7,
       "25": 88.0,
@@ -241,17 +264,12 @@
       "500": 35.0,
       "1000": 34.3,
       "2000": 33.6
-    }
+    },
+    "productos_especificos": []
   },
   "MERCHANDISING_GENERAL": {
-    "nombre_comercial": "Merchandising General",
-    "macro_categoria": "MERCHANDISING",
-    "subcategoria": "GENERAL",
-    "filtros_prenda": [
-      "caja",
-      "tarjeta",
-      "estuche"
-    ],
+    "nombre_comercial": "Articulos de Merchandising General",
+    "filtros_prenda": [],
     "filtros_material": [],
     "margenes": {
       "10": 50.0,
@@ -269,12 +287,27 @@
       "30000": 35.9,
       "50000": 25.1,
       "100000": 17.6
-    }
+    },
+    "productos_especificos": [
+      {
+        "nombre_sistema": "Portafotocheck",
+        "tokens_producto": [
+          "portafotocheck"
+        ],
+        "tokens_filtro_inc": [],
+        "tokens_filtro_exc": [
+          "kit",
+          "pack",
+          "set",
+          "welcome",
+          "paquete",
+          "combo"
+        ]
+      }
+    ]
   },
   "MERCH_ALMOHADA_VIAJE": {
-    "nombre_comercial": "Almohadillas de Viaje",
-    "macro_categoria": "MERCHANDISING",
-    "subcategoria": "VIAJE",
+    "nombre_comercial": "Almohadillas de Cuello y Viaje",
     "filtros_prenda": [
       "almohada",
       "almoada",
@@ -287,12 +320,11 @@
       "100": 141.0,
       "500": 98.7,
       "1000": 96.7
-    }
+    },
+    "productos_especificos": []
   },
   "MERCH_ANTIESTRES": {
-    "nombre_comercial": "Antiestrés",
-    "macro_categoria": "MERCHANDISING",
-    "subcategoria": "VARIOS",
+    "nombre_comercial": "Articulos Antiestres",
     "filtros_prenda": [
       "antiestres",
       "antistress",
@@ -310,12 +342,11 @@
       "3000": 49.5,
       "5000": 39.2,
       "10000": 38.4
-    }
+    },
+    "productos_especificos": []
   },
   "MERCH_BOLSA_NOTEX": {
-    "nombre_comercial": "Bolsas de Notex",
-    "macro_categoria": "MERCHANDISING",
-    "subcategoria": "BOLSAS",
+    "nombre_comercial": "Bolsas de Notex y Cambrell",
     "filtros_prenda": [
       "notex",
       "cambrell"
@@ -334,18 +365,21 @@
       "5000": 47.5,
       "10000": 46.6,
       "30000": 32.6
-    }
+    },
+    "productos_especificos": []
   },
   "MERCH_BOLSA_PAPEL_OTROS": {
-    "nombre_comercial": "Bolsas de Papel / Plástico",
-    "macro_categoria": "MERCHANDISING",
-    "subcategoria": "BOLSAS",
+    "nombre_comercial": "Bolsas de Papel, Plastico y Basura",
     "filtros_prenda": [
       "bolsa de papel",
       "bolsa de plastico",
       "bolsa couche",
       "bolsa rpet",
-      "bolsa lyner"
+      "bolsa lyner",
+      "bolsas t shirt",
+      "bolsa para basura",
+      "bolsa de basura",
+      "tacho para auto"
     ],
     "filtros_material": [],
     "margenes": {
@@ -355,12 +389,11 @@
       "500": 38.0,
       "1000": 26.8,
       "2000": 26.3
-    }
+    },
+    "productos_especificos": []
   },
   "MERCH_BOLSA_TOCUYO": {
     "nombre_comercial": "Bolsas de Tocuyo",
-    "macro_categoria": "MERCHANDISING",
-    "subcategoria": "BOLSAS",
     "filtros_prenda": [
       "tocuyo"
     ],
@@ -376,12 +409,11 @@
       "2000": 33.9,
       "5000": 33.0,
       "10000": 32.3
-    }
+    },
+    "productos_especificos": []
   },
   "MERCH_CARTUCHERA_NECESER": {
-    "nombre_comercial": "Cartucheras y Neceseres",
-    "macro_categoria": "MERCHANDISING",
-    "subcategoria": "ORGANIZADORES",
+    "nombre_comercial": "Cartucheras, Neceres y Organizadores",
     "filtros_prenda": [
       "cartuchera",
       "neceser",
@@ -400,12 +432,11 @@
       "2000": 34.4,
       "3000": 34.0,
       "5000": 23.8
-    }
+    },
+    "productos_especificos": []
   },
   "MERCH_CUADERNO_LIBRETA": {
-    "nombre_comercial": "Cuadernos y Libretas",
-    "macro_categoria": "MERCHANDISING",
-    "subcategoria": "PAPELERIA",
+    "nombre_comercial": "Cuadernos, Libretas y Agendas",
     "filtros_prenda": [
       "cuaderno",
       "libreta",
@@ -426,12 +457,11 @@
       "3000": 25.6,
       "5000": 25.2,
       "10000": 24.7
-    }
+    },
+    "productos_especificos": []
   },
   "MERCH_KITS": {
-    "nombre_comercial": "Kits y Welcome Packs",
-    "macro_categoria": "MERCHANDISING",
-    "subcategoria": "KITS",
+    "nombre_comercial": "Kits, Sets y Welcome Packs",
     "filtros_prenda": [
       "kit",
       "pack",
@@ -452,12 +482,11 @@
       "5000": 24.3,
       "10000": 23.8,
       "30000": 23.0
-    }
+    },
+    "productos_especificos": []
   },
   "MERCH_LAPICERO_UTILES": {
-    "nombre_comercial": "Lapiceros y Útiles",
-    "macro_categoria": "MERCHANDISING",
-    "subcategoria": "ESCRITORIO",
+    "nombre_comercial": "Lapiceros y Utensilios de Escritorio",
     "filtros_prenda": [
       "lapicero",
       "lapiz",
@@ -481,18 +510,18 @@
       "30000": 75.0,
       "50000": 65.0,
       "100000": 63.7
-    }
+    },
+    "productos_especificos": []
   },
   "MERCH_LLAVERO_PIN": {
-    "nombre_comercial": "Llaveros y Pines",
-    "macro_categoria": "MERCHANDISING",
-    "subcategoria": "ACCESORIOS",
+    "nombre_comercial": "Llaveros, Pines y Solaperos",
     "filtros_prenda": [
       "llavero",
       "pin",
       "pines",
       "solapero",
-      "parche bordado"
+      "parche bordado",
+      "yoyo"
     ],
     "filtros_material": [],
     "margenes": {
@@ -510,19 +539,19 @@
       "20000": 54.5,
       "30000": 53.9,
       "50000": 37.7
-    }
+    },
+    "productos_especificos": []
   },
   "MERCH_MOCHILAS_MALETINES": {
-    "nombre_comercial": "Mochilas y Maletines",
-    "macro_categoria": "MERCHANDISING",
-    "subcategoria": "MOCHILAS",
+    "nombre_comercial": "Mochilas, Maletines y Canguros",
     "filtros_prenda": [
       "mochila",
       "maletin",
       "canguro",
       "mochirrueda",
       "morral",
-      "cooler"
+      "cooler",
+      "cangurera"
     ],
     "filtros_material": [],
     "margenes": {
@@ -537,18 +566,69 @@
       "3000": 15.6,
       "5000": 10.9,
       "30000": 10.0
-    }
+    },
+    "productos_especificos": [
+      {
+        "nombre_sistema": "Mochila Portalaptop Importada",
+        "tokens_producto": [
+          "portalaptop",
+          "porta laptop"
+        ],
+        "tokens_filtro_inc": [
+          "importado",
+          "importada",
+          "premium",
+          "china"
+        ],
+        "tokens_filtro_exc": [
+          "nacional",
+          "confeccion",
+          "gamarra"
+        ]
+      },
+      {
+        "nombre_sistema": "Canguro Comercial",
+        "tokens_producto": [
+          "canguro",
+          "cangurera"
+        ],
+        "tokens_filtro_inc": [
+          "comercial",
+          "publicitario",
+          "economico",
+          "basico",
+          "estandar",
+          "promocional",
+          "masivo"
+        ],
+        "tokens_filtro_exc": [
+          "premium",
+          "vip",
+          "ejecutivo",
+          "alta gama",
+          "lujo",
+          "exclusivo",
+          "cuero"
+        ]
+      }
+    ]
   },
   "MERCH_PUBLICIDAD_VISUAL": {
-    "nombre_comercial": "Publicidad Visual",
-    "macro_categoria": "MERCHANDISING",
-    "subcategoria": "VISUAL",
+    "nombre_comercial": "Banners, Roll Screens y Afiches",
     "filtros_prenda": [
       "banner",
       "roll screen",
+      "rollscreen",
       "backing",
       "afiche",
-      "gigantografia"
+      "gigantografia",
+      "marco selfie",
+      "cuadro selfie",
+      "ruleta",
+      "dado",
+      "letreros",
+      "folder",
+      "tag de productos"
     ],
     "filtros_material": [],
     "margenes": {
@@ -561,23 +641,36 @@
       "1000": 45.7,
       "2000": 44.8,
       "5000": 43.6
-    }
+    },
+    "productos_especificos": []
   },
   "MERCH_RECREACION_Y_VARIOS": {
-    "nombre_comercial": "Recreación y Varios",
-    "macro_categoria": "MERCHANDISING",
-    "subcategoria": "VARIOS",
+    "nombre_comercial": "Juegos, Variedades y Regalos Finos",
     "filtros_prenda": [
       "funko",
       "peluche",
       "rompecabezas",
+      "barajas",
+      "globos",
+      "suculenta",
       "pastillero",
+      "gel antibacterial",
+      "espejo",
+      "sorbete",
+      "mini ramito",
       "pisco",
-      "lentes",
+      "lantes",
       "delantal",
       "cepillo",
+      "caramelos",
+      "botella de agua",
+      "tacho",
       "paraguas",
-      "wincha"
+      "cafetera",
+      "wincha",
+      "tetera",
+      "ventilador",
+      "pastillero"
     ],
     "filtros_material": [],
     "margenes": {
@@ -590,12 +683,11 @@
       "1000": 59.2,
       "2000": 41.4,
       "3000": 36.0
-    }
+    },
+    "productos_especificos": []
   },
   "MERCH_RESALTADOR": {
-    "nombre_comercial": "Resaltadores",
-    "macro_categoria": "MERCHANDISING",
-    "subcategoria": "ESCRITORIO",
+    "nombre_comercial": "Resaltadores Multitono",
     "filtros_prenda": [
       "resaltador",
       "resaltadores"
@@ -612,12 +704,11 @@
       "3000": 47.7,
       "5000": 46.6,
       "10000": 40.8
-    }
+    },
+    "productos_especificos": []
   },
   "MERCH_TAZA_VASO": {
-    "nombre_comercial": "Tazas y Vasos",
-    "macro_categoria": "MERCHANDISING",
-    "subcategoria": "TAZAS",
+    "nombre_comercial": "Tazas y Vasos de Ceramica/Vidrio",
     "filtros_prenda": [
       "taza",
       "vaso",
@@ -637,22 +728,26 @@
       "3000": 30.5,
       "5000": 30.1,
       "10000": 29.5
-    }
+    },
+    "productos_especificos": []
   },
   "MERCH_TECNOLOGIA_GADGETS": {
-    "nombre_comercial": "Tecnología y Gadgets",
-    "macro_categoria": "MERCHANDISING",
-    "subcategoria": "TECNOLOGIA",
+    "nombre_comercial": "Articulos de Tecnologia y Carga",
     "filtros_prenda": [
       "power bank",
       "powerbank",
       "cargador",
       "cable",
+      "mini lampara",
       "parlante",
       "usb",
       "memoria",
       "pop socket",
-      "mouse pad"
+      "pop_socket",
+      "tablet tend",
+      "mouse pad",
+      "mousepad",
+      "pad mouse"
     ],
     "filtros_material": [],
     "margenes": {
@@ -666,12 +761,11 @@
       "2000": 28.1,
       "3000": 25.1,
       "5000": 24.7
-    }
+    },
+    "productos_especificos": []
   },
   "MERCH_TOALLAS_TEXTIL_PROMO": {
-    "nombre_comercial": "Toallas Promocionales",
-    "macro_categoria": "MERCHANDISING",
-    "subcategoria": "TEXTIL_PROMO",
+    "nombre_comercial": "Toallas y Mantas Promocionales",
     "filtros_prenda": [
       "toalla",
       "manta"
@@ -691,12 +785,11 @@
       "10000": 37.3,
       "20000": 28.6,
       "30000": 28.3
-    }
+    },
+    "productos_especificos": []
   },
   "MERCH_TOMATODO_TERMO": {
     "nombre_comercial": "Tomatodos y Termos",
-    "macro_categoria": "MERCHANDISING",
-    "subcategoria": "DRINKWARE",
     "filtros_prenda": [
       "tomatodo",
       "termo",
@@ -714,12 +807,11 @@
       "500": 40.2,
       "1000": 28.5,
       "2000": 22.2
-    }
+    },
+    "productos_especificos": []
   },
   "MERCH_TOMATODO_TERMO_COMERCIAL": {
     "nombre_comercial": "Tomatodos y Termos Comerciales",
-    "macro_categoria": "MERCHANDISING",
-    "subcategoria": "DRINKWARE",
     "filtros_prenda": [
       "tomatodo",
       "termo",
@@ -741,16 +833,16 @@
       "5000": 46.6,
       "10000": 36.9,
       "30000": 35.7
-    }
+    },
+    "productos_especificos": []
   },
   "MERCH_TROFEOS_PLACAS": {
-    "nombre_comercial": "Trofeos y Placas",
-    "macro_categoria": "MERCHANDISING",
-    "subcategoria": "RECONOCIMIENTO",
+    "nombre_comercial": "Trofeos, Placas y Reconocimientos",
     "filtros_prenda": [
       "trofeo",
       "placa",
-      "reconocimiento"
+      "reconocimiento",
+      "recordatoria"
     ],
     "filtros_material": [],
     "margenes": {
@@ -760,38 +852,46 @@
       "250": 33.5,
       "500": 32.8,
       "1000": 32.1
-    }
+    },
+    "productos_especificos": []
   },
   "OVERALL_MAMELUCO": {
     "nombre_comercial": "Overall / Mameluco",
-    "macro_categoria": "TEXTIL",
-    "subcategoria": "INDUSTRIAL",
     "filtros_prenda": [
       "overall",
       "mameluco",
-      "overol"
+      "overol",
+      "mamelucos",
+      "overoles"
     ],
-    "filtros_material": [],
+    "filtros_material": [
+      "drill",
+      "dril",
+      "termico",
+      "industrial",
+      "seguridad"
+    ],
     "margenes": {
       "10": 25.6,
       "25": 24.9,
       "50": 24.4,
       "100": 23.9
-    }
+    },
+    "productos_especificos": []
   },
   "PANTALON_DENIM": {
-    "nombre_comercial": "Pantalón Denim / Jean",
-    "macro_categoria": "TEXTIL",
-    "subcategoria": "PANTALONES",
+    "nombre_comercial": "Pantalón Denim",
     "filtros_prenda": [
       "pantalon",
       "pantalones",
-      "jean"
+      "jean",
+      "jeans"
     ],
     "filtros_material": [
       "denim",
       "jean",
-      "14 onzas"
+      "14 onzas",
+      "12 onzas"
     ],
     "margenes": {
       "10": 95.5,
@@ -799,20 +899,20 @@
       "50": 46.8,
       "100": 34.5,
       "500": 30.7
-    }
+    },
+    "productos_especificos": []
   },
   "PANTALON_DRILL": {
     "nombre_comercial": "Pantalón Drill",
-    "macro_categoria": "TEXTIL",
-    "subcategoria": "PANTALONES",
     "filtros_prenda": [
       "pantalon",
-      "pantalones",
-      "cargo"
+      "pantalones"
     ],
     "filtros_material": [
       "drill",
-      "dril"
+      "dril",
+      "tecnologia",
+      "san jacinto"
     ],
     "margenes": {
       "10": 59.5,
@@ -820,18 +920,25 @@
       "50": 30.4,
       "100": 29.3,
       "250": 28.5
-    }
+    },
+    "productos_especificos": []
   },
   "POLERA": {
-    "nombre_comercial": "Polera / Hoodie",
-    "macro_categoria": "TEXTIL",
-    "subcategoria": "POLERAS",
+    "nombre_comercial": "Polera",
     "filtros_prenda": [
       "polera",
+      "poleras",
       "hoodie",
+      "hoodies",
       "sudadera"
     ],
-    "filtros_material": [],
+    "filtros_material": [
+      "algodon",
+      "franela",
+      "perchado",
+      "reactivo",
+      "poliester"
+    ],
     "margenes": {
       "25": 54.7,
       "50": 53.6,
@@ -839,20 +946,20 @@
       "250": 26.9,
       "500": 24.5,
       "1000": 17.1
-    }
+    },
+    "productos_especificos": []
   },
   "POLO_20_1": {
-    "nombre_comercial": "Polo 20/1 / Camisero",
-    "macro_categoria": "TEXTIL",
-    "subcategoria": "POLOS",
+    "nombre_comercial": "Polo 20/1",
     "filtros_prenda": [
-      "polo"
+      "polo",
+      "polos"
     ],
     "filtros_material": [
       "20/1",
       "20 o 1",
-      "pique",
-      "camisero"
+      "jersey 20",
+      "veinte uno"
     ],
     "margenes": {
       "10": 70.8,
@@ -865,14 +972,14 @@
       "2000": 17.2,
       "3000": 12.0,
       "5000": 10.0
-    }
+    },
+    "productos_especificos": []
   },
   "POLO_24_1": {
     "nombre_comercial": "Polo 24/1",
-    "macro_categoria": "TEXTIL",
-    "subcategoria": "POLOS",
     "filtros_prenda": [
-      "polo"
+      "polo",
+      "polos"
     ],
     "filtros_material": [
       "24/1",
@@ -887,20 +994,19 @@
       "1000": 48.5,
       "3000": 33.9,
       "5000": 23.7
-    }
+    },
+    "productos_especificos": []
   },
   "POLO_30_1": {
     "nombre_comercial": "Polo 30/1",
-    "macro_categoria": "TEXTIL",
-    "subcategoria": "POLOS",
     "filtros_prenda": [
       "polo",
-      "remera"
+      "polos"
     ],
     "filtros_material": [
       "30/1",
-      "jersey 30",
-      "algodon"
+      "30 o 1",
+      "jersey 30"
     ],
     "margenes": {
       "25": 84.2,
@@ -912,17 +1018,18 @@
       "2000": 21.5,
       "3000": 15.0,
       "5000": 10.5
-    }
+    },
+    "productos_especificos": []
   },
   "POLO_40_1": {
-    "nombre_comercial": "Polo 40/1 Pima",
-    "macro_categoria": "TEXTIL",
-    "subcategoria": "POLOS",
+    "nombre_comercial": "Polo 40/1",
     "filtros_prenda": [
-      "polo"
+      "polo",
+      "polos"
     ],
     "filtros_material": [
       "40/1",
+      "40 o 1",
       "pyma",
       "pima"
     ],
@@ -930,6 +1037,7 @@
       "100": 16.0,
       "500": 15.3,
       "1000": 15.0
-    }
+    },
+    "productos_especificos": []
   }
 }

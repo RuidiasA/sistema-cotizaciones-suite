@@ -1,0 +1,3 @@
+[2026-08-10 17:26:21] ResumenCotizador_ACNUR_2026.xlsx -> No se detectó una tabla válida.
+[2026-08-10 17:26:29] ResumenCotizador_SOCIEDAD COMERCIAL BERACA _2026_LADY.xlsx -> No se detectó una tabla válida.
+[2026-08-10 17:26:29] ResumenCotizador_SOCIEDAD COMERCIAL BERACA_2026_LADY.xlsx -> No se detectó una tabla válida.

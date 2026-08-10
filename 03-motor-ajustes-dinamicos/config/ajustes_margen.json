@@ -1,0 +1,6160 @@
+[
+  {
+    "id_ajuste": 1,
+    "producto": "GORRO_DRILL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 75.0,
+    "condiciones": [
+      {
+        "variable": "cantidad",
+        "condicion": "menor o igual",
+        "valor_referencia": 15
+      }
+    ]
+  },
+  {
+    "id_ajuste": 2,
+    "producto": "MERCH_TOMATODO_TERMO_COMERCIAL",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 8.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "1xbet"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 3,
+    "producto": "MERCH_TOMATODO_TERMO_COMERCIAL",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 5.5,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "full color"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 4,
+    "producto": "MERCH_TOMATODO_TERMO_COMERCIAL",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 6.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "dtf"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 5,
+    "producto": "MERCH_TOMATODO_TERMO_COMERCIAL",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 4.5,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "logo"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 6,
+    "producto": "MERCH_TOMATODO_TERMO_COMERCIAL",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 3.5,
+    "condiciones": [
+      {
+        "variable": "cantidad",
+        "condicion": "mayor o igual",
+        "valor_referencia": 120
+      }
+    ]
+  },
+  {
+    "id_ajuste": 7,
+    "producto": "MERCH_TOMATODO_TERMO_COMERCIAL",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 3.0,
+    "condiciones": [
+      {
+        "variable": "cantidad",
+        "condicion": "menor que",
+        "valor_referencia": 245
+      }
+    ]
+  },
+  {
+    "id_ajuste": 8,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 16.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "1200 ml"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 9,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 14.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "de metal 2019"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 10,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 15.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "vaso mug thermo"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 11,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 12.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "termico 1"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 12,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 14.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "con colgante"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 13,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 12.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "tapa transparente antiderrames"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 14,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 14.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "kero"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 15,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 14.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "termo digital"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 16,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 12.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "para sublimacion"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 17,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 12.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "opc.2"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 18,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 18.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "posavaso"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 19,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 12.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "jarro mug de acero"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 20,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 16.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "mug vasco"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 21,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 15.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "mug zenna"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 22,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 14.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "antiderrame"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 23,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 14.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "borosilicato"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 24,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 15.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "conexion usb"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 25,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 12.0,
+    "condiciones": [
+      {
+        "variable": "cantidad",
+        "condicion": "menor o igual",
+        "valor_referencia": 30
+      }
+    ]
+  },
+  {
+    "id_ajuste": 26,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 12.0,
+    "condiciones": [
+      {
+        "variable": "cantidad",
+        "condicion": "igual",
+        "valor_referencia": 40
+      }
+    ]
+  },
+  {
+    "id_ajuste": 27,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 15.0,
+    "condiciones": [
+      {
+        "variable": "cantidad",
+        "condicion": "igual",
+        "valor_referencia": 50
+      }
+    ]
+  },
+  {
+    "id_ajuste": 28,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 10.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "vaso termico"
+      },
+      {
+        "variable": "cantidad",
+        "condicion": "mayor o igual",
+        "valor_referencia": 100
+      }
+    ]
+  },
+  {
+    "id_ajuste": 29,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 10.0,
+    "condiciones": [
+      {
+        "variable": "cantidad",
+        "condicion": "igual",
+        "valor_referencia": 200
+      }
+    ]
+  },
+  {
+    "id_ajuste": 30,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 16.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "fibra de trigo + bamb"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 31,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 18.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "acrilico trasclucido"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 32,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 15.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "oro rosa"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 33,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 14.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "base de corcho"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 34,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 14.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "sorbete interior blanco"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 35,
+    "producto": "MERCH_LAPICERO_UTILES",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 6.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "lapicero"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 36,
+    "producto": "MERCH_LAPICERO_UTILES",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 185.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "lapiz semilla"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 37,
+    "producto": "MERCH_LAPICERO_UTILES",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 7.5,
+    "condiciones": [
+      {
+        "variable": "cantidad",
+        "condicion": "menor",
+        "valor_referencia": 100
+      }
+    ]
+  },
+  {
+    "id_ajuste": 38,
+    "producto": "MERCH_LAPICERO_UTILES",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 8.5,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "tarjeta"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 39,
+    "producto": "MERCH_LAPICERO_UTILES",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 166.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "3d"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 40,
+    "producto": "MERCH_LAPICERO_UTILES",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 70.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "tinta liquida"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 41,
+    "producto": "MERCH_LAPICERO_UTILES",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 73.75,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "4 en 1"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 42,
+    "producto": "MERCH_LAPICERO_UTILES",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 65.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "cubo"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 43,
+    "producto": "MERCH_LAPICERO_UTILES",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 75.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "bambu"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 44,
+    "producto": "MERCH_LAPICERO_UTILES",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 70.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "con punta touch"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 45,
+    "producto": "MERCH_LLAVERO_PIN",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 12.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "1mm"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 46,
+    "producto": "MERCH_LLAVERO_PIN",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 8.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "resinado"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 47,
+    "producto": "MERCH_ALMOHADA_VIAJE",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 49.0,
+    "condiciones": [
+      {
+        "variable": "cantidad",
+        "condicion": "mayor o igual",
+        "valor_referencia": 1000
+      }
+    ]
+  },
+  {
+    "id_ajuste": 48,
+    "producto": "MERCH_CARTUCHERA_NECESER",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 270.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "pvc"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 49,
+    "producto": "MERCH_CARTUCHERA_NECESER",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 83.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "tapasol"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 50,
+    "producto": "MERCH_CARTUCHERA_NECESER",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 85.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "nacional"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 51,
+    "producto": "MERCH_CARTUCHERA_NECESER",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 49.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "cosmetiquera"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 52,
+    "producto": "MERCH_CARTUCHERA_NECESER",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 59.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "herbi"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 53,
+    "producto": "MERCH_CARTUCHERA_NECESER",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 100.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "travex"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 54,
+    "producto": "MERCH_CUADERNO_LIBRETA",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 41.8,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "fibra de cafe"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 55,
+    "producto": "MERCH_CUADERNO_LIBRETA",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 49.5,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "30x25cm"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 56,
+    "producto": "MERCH_CUADERNO_LIBRETA",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 58.6,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "empastado"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 57,
+    "producto": "MERCH_CUADERNO_LIBRETA",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 48.9,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "fibra de pasto"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 58,
+    "producto": "MERCH_CUADERNO_LIBRETA",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 55.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "gerencial"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 59,
+    "producto": "MERCH_CUADERNO_LIBRETA",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 140.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "ruleta"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 60,
+    "producto": "MERCH_CUADERNO_LIBRETA",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 109.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "rpet"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 61,
+    "producto": "MERCH_CUADERNO_LIBRETA",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 107.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "imantada"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 62,
+    "producto": "MERCH_LLAVERO_PIN",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 150.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "llavero casco"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 63,
+    "producto": "MERCH_LLAVERO_PIN",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 120.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "wincha"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 64,
+    "producto": "MERCH_LLAVERO_PIN",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 200.0,
+    "condiciones": [
+      {
+        "variable": "cantidad",
+        "condicion": "igual",
+        "valor_referencia": 50
+      },
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "wincha"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 65,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 20.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "termico 2"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 66,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 30.0,
+    "condiciones": [
+      {
+        "variable": "cantidad",
+        "condicion": "mayor o igual",
+        "valor_referencia": 200
+      },
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "tomatodo termo"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 67,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 30.0,
+    "condiciones": [
+      {
+        "variable": "cantidad",
+        "condicion": "mayor o igual",
+        "valor_referencia": 200
+      },
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "vaso termico"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 68,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 398.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "cooler con funda"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 69,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 238.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "maletin portalnd"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 70,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 204.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "morral- importado"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 71,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 95.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "mochila anddes"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 72,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 68.6,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "multibolsillos"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 73,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 52.6,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "porta-laptop 3"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 74,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 46.6,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "53 cm x 30 cm"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 75,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 46.3,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "embolsado individual"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 76,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 45.6,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "solgas- fabricacion"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 77,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 74.3,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "marca comercial: ventus"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 78,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 56.7,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "3 en 1 -importado"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 79,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 91.8,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "mochila promocional"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 80,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 47.1,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "placa pequena"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 81,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 76.1,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "ribete interno"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 82,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 9.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "tomatodo metalico"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 83,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 44.6,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "modelo a desarrollar"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 84,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 36.9,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "basic arango"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 85,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 48.9,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "mochila cruzada"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 86,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 63.1,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "madera de 32 gb"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 87,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 62.9,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "canguro corporativo"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 88,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 58.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "botelas rpet"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 89,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 32.8,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "profundidad 23cm"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 90,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 233.3,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "mochila en 3d"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 91,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 107.2,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "mochila colapsible"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 92,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 103.8,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "cartera (23 x 33 cm)"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 93,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 110.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "bolsimochila deportiva 2"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 94,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 175.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "canguro arwen"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 95,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 398.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "notex"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 96,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 82.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "mochila ejecutiva viajera"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 97,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 84.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "mochila lona -importado"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 98,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 66.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "mochila solgas"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 99,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 180.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "mochila sport"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 100,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 89.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "maletin deportivo"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 101,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 122.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "bolsa mochila zipper"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 102,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 8.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "mochila multifuncion"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 103,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 49.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "mochila porta laptop promocional"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 104,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 49.5,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "multibolsillos porta laptop"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 105,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 52.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "canguro 3 compartimientos"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 106,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 68.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "canguro comercial"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 107,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 32.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "mochila rpet"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 108,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 31.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "mochila campera"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 109,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 28.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "mochirrueda"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 110,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 56.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "porta laptop 3 en 1"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 111,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 71.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "porta laptop #2"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 112,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 93.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "cooler san diego"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 113,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 45.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "portalaptop -fabricacion"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 114,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 46.8,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "caja estuche especial con lazo"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 115,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 42.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "formatos en talonarios"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 116,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 48.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "brocuchere"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 117,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 55.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "pin + tarjeta + armado pin"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 118,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 50.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "foto cubo premium"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 119,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 54.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "foto cubo small"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 120,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 42.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "soporte eco pisa"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 121,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 51.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "set ejecutivo 5"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 122,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 59.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "set ejecutivo 4"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 123,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 240.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "pelota antiestres"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 124,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 500.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "tarjetero para celular"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 125,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 320.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "stickers vinil"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 126,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 57.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "bolsa drill- tipo muestra"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 127,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 160.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "bolsas lyner"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 128,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 167.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "linterna de pvc"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 129,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 133.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "linterna dynamo"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 130,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 110.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "bolsa drill grande"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 131,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 533.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "pulsera sublimada"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 132,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 286.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "lanyards 2 cm"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 133,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 147.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "lanyards con retractil"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 134,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 26.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "caja de paneton personalizada"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 135,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 57.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "portalaptop ecologico"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 136,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 40.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "lonchera"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 137,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 90.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "bolsa drill"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 138,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 191.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "bolsa nylon"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 139,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 60.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "almohadilla de cuello"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 140,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 190.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "taza blancas con estuche"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 141,
+    "producto": "MERCH_LAPICERO_UTILES",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 157.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "lapicero bambu con estuche"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 142,
+    "producto": "MERCH_LAPICERO_UTILES",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 110.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "lapicero bambu sin estuche"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 143,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 77.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "porta post it ecologico"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 144,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 92.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "lonchera de neoprene"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 145,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 240.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "porta pastillas cuadrado"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 146,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 221.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "lonchera importada"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 147,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 122.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "alcancias cerdtio"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 148,
+    "producto": "MERCH_RECREACION_Y_VARIOS",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 20.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "pisco personalizado en caja"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 149,
+    "producto": "MERCH_RECREACION_Y_VARIOS",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 25.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "pisco personalizado en estuche"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 150,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 609.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "tapa webcam lacol"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 151,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 112.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "lentes de sol sigma"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 152,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 94.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "boligrafo skipper"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 153,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 94.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "boligrafo peters"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 154,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 100.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "tarjetero soporte kenna"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 155,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 102.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "termometro digital kelvin"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 156,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 222.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "boligrafo roliok"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 157,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 246.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "boligrafo perte"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 158,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 269.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "boligrafo rafton"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 159,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 44.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "audifonos bluetooth dodiax"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 160,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 41.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "audifonos bluetooth hermes"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 161,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 269.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "lentes de sol uv400"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 162,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 100.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "vinil ingreso chorrillos"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 163,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 53.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "viniles"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 164,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 47.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "lonchera termica"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 165,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 34.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "maletin"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 166,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 36.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "porta herramientas"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 167,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 56.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "funda para pelota"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 168,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 49.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "colgantes"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 169,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 68.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "usb eco + estuche"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 170,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 51.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "pelota de futbol adidas"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 171,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 160.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "bolsa tipo sobre 39 x 29"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 172,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 524.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "tarjetero de celular"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 173,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 35.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "adaptador hdmi a vga"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 174,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 70.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "panel informativo"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 175,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 56.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "canasta con caja organizadora"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 176,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 56.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "canasta con caja 1 arroz"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 177,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 53.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "canasta en cesto"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 178,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 127.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "mantel de mesa"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 179,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 106.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "ambientador para autos"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 180,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 168.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "roll screem"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 182,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 164.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "credenciales"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 183,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 30.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "espumante riccadonna"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 184,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 198.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "bolsa con cierre de seguro"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 185,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 203.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "bandana standar"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 186,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 13.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "props ascenso"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 187,
+    "producto": "MERCH_TROFEOS_PLACAS",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 33.1,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "props ascenso"
+      },
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "contraplacado"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 188,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 101.6,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "props ascenso"
+      },
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "folcote 14"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 189,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 7.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "props nuevos ingresos"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 190,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 4.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "props manito"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 191,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 62.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "corporeo mdf autosoportable"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 192,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 204.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "morral- importado"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 193,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 37.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "caja maletin"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 194,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 48.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "caja de carton"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 195,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 42.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "caja eco"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 196,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 51.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "caja trupan"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 197,
+    "producto": "MERCH_TECNOLOGIA_GADGETS",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 333.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "pop socket"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 198,
+    "producto": "MERCH_TECNOLOGIA_GADGETS",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 377.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "pop socket giratorio"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 199,
+    "producto": "MERCH_TECNOLOGIA_GADGETS",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 48.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "cable multipuerto fibra de paja"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 200,
+    "producto": "MERCH_TECNOLOGIA_GADGETS",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 43.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "cable multipuerto retractil"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 201,
+    "producto": "MERCH_TECNOLOGIA_GADGETS",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 48.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "cargador multiple"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 202,
+    "producto": "MERCH_TECNOLOGIA_GADGETS",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 41.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "cable hdmi m-m 1.2m"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 203,
+    "producto": "MERCH_TECNOLOGIA_GADGETS",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 66.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "cable eco rectractil"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 204,
+    "producto": "MERCH_TECNOLOGIA_GADGETS",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 49.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "cargador zeus"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 205,
+    "producto": "MERCH_TECNOLOGIA_GADGETS",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 42.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "cargador riens"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 206,
+    "producto": "MERCH_TECNOLOGIA_GADGETS",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 50.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "cargador neo"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 207,
+    "producto": "MERCH_TECNOLOGIA_GADGETS",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 41.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "usb totem"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 208,
+    "producto": "MERCH_TECNOLOGIA_GADGETS",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 65.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "usb eco bambu"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 209,
+    "producto": "MERCH_TECNOLOGIA_GADGETS",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 48.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "parlante bluetooh bamboo"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 210,
+    "producto": "MERCH_TECNOLOGIA_GADGETS",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 50.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "parlante bluetooth fibra de trigo"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 211,
+    "producto": "MERCH_TECNOLOGIA_GADGETS",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 61.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "mouse pad silicona-ergonomico 1"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 212,
+    "producto": "MERCH_TECNOLOGIA_GADGETS",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 67.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "mouse pad silicona-ergonomico 2"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 213,
+    "producto": "MERCH_TECNOLOGIA_GADGETS",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 114.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "mouse pad ecologico"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 214,
+    "producto": "MERCH_TECNOLOGIA_GADGETS",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 45.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "desk pads"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 215,
+    "producto": "MERCH_TECNOLOGIA_GADGETS",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 42.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "power bank oziel 5k"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 216,
+    "producto": "MERCH_TECNOLOGIA_GADGETS",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 38.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "power bank oziel 10k"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 217,
+    "producto": "MERCH_TECNOLOGIA_GADGETS",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 42.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "power banck 5k"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 218,
+    "producto": "MERCH_TECNOLOGIA_GADGETS",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 43.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "power bank tematico"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 219,
+    "producto": "MERCH_TECNOLOGIA_GADGETS",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 51.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "power bank metalico con estuche"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 220,
+    "producto": "MERCH_TECNOLOGIA_GADGETS",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 53.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "power bank smart 3"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 221,
+    "producto": "MERCH_TECNOLOGIA_GADGETS",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 52.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "power bank tudelak"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 222,
+    "producto": "MERCH_TECNOLOGIA_GADGETS",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 41.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "audifonos bluetooth hermes"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 223,
+    "producto": "MERCH_TECNOLOGIA_GADGETS",
+    "tipo_ajuste": "margen fijo",
+    "valor_impacto": 44.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "audifonos bluetooth dodiax"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 224,
+    "producto": "MERCH_TAZA_VASO",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 15.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "peso: 59 gr"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 225,
+    "producto": "MERCH_TAZA_VASO",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 12.0,
+    "condiciones": [
+      {
+        "variable": "cantidad",
+        "condicion": "igual",
+        "valor_referencia": 100
+      },
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "11 onzas"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 226,
+    "producto": "MERCH_LLAVERO_PIN",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 260.0,
+    "condiciones": [
+      {
+        "variable": "cantidad",
+        "condicion": "igual",
+        "valor_referencia": 50
+      },
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "metal"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 227,
+    "producto": "MERCH_LLAVERO_PIN",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 45.0,
+    "condiciones": [
+      {
+        "variable": "cantidad",
+        "condicion": "igual",
+        "valor_referencia": 100
+      },
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "pines metalicos"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 228,
+    "producto": "MERCH_LLAVERO_PIN",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 350.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "promocional"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 229,
+    "producto": "MERCH_RECREACION_Y_VARIOS",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 21.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "funko"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 230,
+    "producto": "MERCH_RECREACION_Y_VARIOS",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 28.0,
+    "condiciones": [
+      {
+        "variable": "cantidad",
+        "condicion": "igual",
+        "valor_referencia": 50
+      },
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "funko"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 231,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 31.0,
+    "condiciones": [
+      {
+        "variable": "cantidad",
+        "condicion": "igual",
+        "valor_referencia": 160
+      },
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "viaje"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 232,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 33.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "metal 2019"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 233,
+    "producto": "CAMISA_OXFORD",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 28.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "rib"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 234,
+    "producto": "CASACA_TASLAN",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 6.5,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "gamuzado"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 235,
+    "producto": "CASACA_TASLAN",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 22.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "platinado"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 236,
+    "producto": "CASACA_TASLAN",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 10.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "2 bolsillo"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 237,
+    "producto": "CHALECO",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 14.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "malla poliester"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 238,
+    "producto": "CHALECO",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 24.0,
+    "condiciones": [
+      {
+        "variable": "cantidad",
+        "condicion": "igual",
+        "valor_referencia": 250
+      },
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "taslan"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 239,
+    "producto": "GORRO_DRILL",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 13.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "safari"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 240,
+    "producto": "GORRO_DRILL",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 12.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "corporativo"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 241,
+    "producto": "MERCH_ALMOHADA_VIAJE",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 13.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "acolchada"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 242,
+    "producto": "MERCH_ANTIESTRES",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 105.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "goma"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 243,
+    "producto": "MERCH_ANTIESTRES",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 50.0,
+    "condiciones": [
+      {
+        "variable": "cantidad",
+        "condicion": "igual",
+        "valor_referencia": 500
+      },
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "poliuretano"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 244,
+    "producto": "MERCH_ANTIESTRES",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 80.0,
+    "condiciones": [
+      {
+        "variable": "cantidad",
+        "condicion": "igual",
+        "valor_referencia": 100
+      },
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "poliuretano"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 245,
+    "producto": "MERCH_BOLSA_PAPEL_OTROS",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 40.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "rpet"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 246,
+    "producto": "MERCH_BOLSA_TOCUYO",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 14.0,
+    "condiciones": [
+      {
+        "variable": "cantidad",
+        "condicion": "igual",
+        "valor_referencia": 50
+      }
+    ]
+  },
+  {
+    "id_ajuste": 247,
+    "producto": "MERCH_BOLSA_TOCUYO",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 60.0,
+    "condiciones": [
+      {
+        "variable": "cantidad",
+        "condicion": "igual",
+        "valor_referencia": 50
+      },
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "15 x 9"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 248,
+    "producto": "PANTALON_DRILL",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 30.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "cargo"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 249,
+    "producto": "POLERA",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 20.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "pretina en rip"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 250,
+    "producto": "POLO_20_1",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 32.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "polo camisero manga larga"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 251,
+    "producto": "POLO_30_1",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 12.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "pique"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 252,
+    "producto": "POLO_30_1",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 12.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "opc.2"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 253,
+    "producto": "POLO_30_1",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 9.0,
+    "condiciones": [
+      {
+        "variable": "cantidad",
+        "condicion": "igual",
+        "valor_referencia": 200
+      },
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "deportivo"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 254,
+    "producto": "MERCH_TROFEOS_PLACAS",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 20.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "trofeo de vidrio personalizado"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 255,
+    "producto": "MERCH_TROFEOS_PLACAS",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 32.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "placa con soporte"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 256,
+    "producto": "MERCH_RESALTADOR",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 60.0,
+    "condiciones": [
+      {
+        "variable": "cantidad",
+        "condicion": "igual",
+        "valor_referencia": 100
+      }
+    ]
+  },
+  {
+    "id_ajuste": 257,
+    "producto": "MERCH_TAZA_VASO",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 55.0,
+    "condiciones": [
+      {
+        "variable": "cantidad",
+        "condicion": "igual",
+        "valor_referencia": 100
+      },
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "vaso"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 258,
+    "producto": "MERCH_TAZA_VASO",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 65.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "plegable"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 259,
+    "producto": "MERCH_TAZA_VASO",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 30.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "taza blanca sublimada"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 260,
+    "producto": "MERCH_TAZA_VASO",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 10.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "stanley"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 261,
+    "producto": "MERCH_TAZA_VASO",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 70.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "vaso plegable daibak"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 262,
+    "producto": "MERCH_TAZA_VASO",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 40.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "taza plegable mibar"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 263,
+    "producto": "MERCH_CUADERNO_LIBRETA",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 30.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "biocuero"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 264,
+    "producto": "MERCH_TECNOLOGIA_GADGETS",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 25.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "pad mouse"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 265,
+    "producto": "MERCH_TOALLAS_TEXTIL_PROMO",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 20.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "cuerpo"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 266,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 31.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "canguro corporativo"
+      },
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "poliester"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 267,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 60.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "canguro corporativo"
+      },
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "40 x 30 cm"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 268,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 28.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "bolsimochila deportiva 2"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 269,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 95.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "bolsimochila deportiva"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 270,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 255.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "bolsimochila clasica"
+      },
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "notex"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 271,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 43.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "42 x 35 cm"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 272,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 42.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "53 cm x 30 cm x 25 cm"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 273,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 157.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "3d"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 274,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 330.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "45 x 35 cm"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 275,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 30.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "mochila promocional"
+      },
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "42 x30 cm"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 276,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 28.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "mochila porta laptop"
+      },
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "45x35 cm"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 277,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 4.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "mochila portalaptop"
+      },
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "adaptador usb"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 278,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 30.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "alto 60cm, ancho 30cm, profundidad 23cm"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 279,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 42.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "mochila cruzada"
+      },
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "poliester"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 280,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 64.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "ecologico rpet"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 281,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 75.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "14 x 6 cm"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 282,
+    "producto": "MERCH_CUADERNO_LIBRETA",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 80.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "notebook a6"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 283,
+    "producto": "MERCH_CUADERNO_LIBRETA",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 44.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "notebook a5"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 284,
+    "producto": "MERCH_CUADERNO_LIBRETA",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 13.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "18x13cm"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 285,
+    "producto": "MERCH_CUADERNO_LIBRETA",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 15.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "14.7 cm x 21 cm"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 286,
+    "producto": "MERCH_CUADERNO_LIBRETA",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 143.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "14.8cm x 21cm"
+      },
+      {
+        "variable": "cantidad",
+        "condicion": "igual",
+        "valor_referencia": 200
+      }
+    ]
+  },
+  {
+    "id_ajuste": 287,
+    "producto": "MERCH_CUADERNO_LIBRETA",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 65.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "ecologico rpet"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 288,
+    "producto": "MERCH_CUADERNO_LIBRETA",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 157.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "18 cm x 12.5"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 289,
+    "producto": "MERCH_CUADERNO_LIBRETA",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 109.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "libreta ecologica stock inmediato"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 290,
+    "producto": "MERCH_TOMATODO_TERMO_COMERCIAL",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 84.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "tomatodo plastico modelo1"
+      },
+      {
+        "variable": "cantidad",
+        "condicion": "igual",
+        "valor_referencia": 50
+      }
+    ]
+  },
+  {
+    "id_ajuste": 291,
+    "producto": "MERCH_TOMATODO_TERMO_COMERCIAL",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 38.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "base portacelular"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 292,
+    "producto": "MERCH_TOMATODO_TERMO_COMERCIAL",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 60.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "16.5cm de alto por 6 cm x 7cm"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 293,
+    "producto": "MERCH_TOMATODO_TERMO_COMERCIAL",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 121.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "ecologico con sorbete"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 294,
+    "producto": "MERCH_TOMATODO_TERMO_COMERCIAL",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 30.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "mug ecologico"
+      },
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "caja grupal, sin bolsa individual"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 295,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 55.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "tomatodo de aluminio mate"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 296,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 47.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "altura: 27.5 cm diametro: 6.5 cm"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 297,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 26.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "sorbete de acero"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 298,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 23.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "acero inoxidable 201"
+      },
+      {
+        "variable": "cantidad",
+        "condicion": "menor o igual",
+        "valor_referencia": 60
+      }
+    ]
+  },
+  {
+    "id_ajuste": 299,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 15.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "tomatodo acero inox"
+      },
+      {
+        "variable": "cantidad",
+        "condicion": "mayor o igual",
+        "valor_referencia": 150
+      }
+    ]
+  },
+  {
+    "id_ajuste": 300,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 22.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "tomatodo acero inox"
+      },
+      {
+        "variable": "cantidad",
+        "condicion": "menor o igual",
+        "valor_referencia": 100
+      }
+    ]
+  },
+  {
+    "id_ajuste": 301,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 19.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "tapa con asa"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 302,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 10.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "acero de alta calidad"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 303,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 19.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "medidas: 26.8cm x 7.5 cm"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 304,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 6.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "jarro de acero inoxidable"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 305,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 27.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "vidrio y bambu"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 306,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 25.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "tomatodo eco"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 307,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 15.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "medida 22.5 cm diametro 6.5 cm"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 308,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 54.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "tomatodo eco"
+      },
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "base de corcho"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 309,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 21.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "mug termico"
+      },
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "base de corcho"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 310,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 22.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "medidas: 28 x 9 cm"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 311,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 33.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "1xbet"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 312,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 47.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "24cm de alto x 6.1cm"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 313,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 7.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "bamboo"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 314,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 9.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "almohadilla de cuello"
+      },
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "37 x 32 cm"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 315,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 152.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "bandana standar"
+      },
+      {
+        "variable": "cantidad",
+        "condicion": "igual",
+        "valor_referencia": 3000
+      }
+    ]
+  },
+  {
+    "id_ajuste": 316,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 148.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "bandana standar"
+      },
+      {
+        "variable": "cantidad",
+        "condicion": "igual",
+        "valor_referencia": 1000
+      }
+    ]
+  },
+  {
+    "id_ajuste": 317,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 176.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "cinta lanyard"
+      },
+      {
+        "variable": "cantidad",
+        "condicion": "igual",
+        "valor_referencia": 400
+      }
+    ]
+  },
+  {
+    "id_ajuste": 318,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 35.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "caja de carton"
+      },
+      {
+        "variable": "cantidad",
+        "condicion": "igual",
+        "valor_referencia": 200
+      }
+    ]
+  },
+  {
+    "id_ajuste": 319,
+    "producto": "MERCH_RECREACION_Y_VARIOS",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 128.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "espejo de cartera"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 320,
+    "producto": "MERCH_RECREACION_Y_VARIOS",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 29.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "funko personalizado"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 321,
+    "producto": "MERCH_RECREACION_Y_VARIOS",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 8.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "funko pollito"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 322,
+    "producto": "MERCH_CUADERNO_LIBRETA",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 160.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "60 hojas en blanco eco"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 323,
+    "producto": "MERCH_CUADERNO_LIBRETA",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 110.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "21 x 14.8 cm"
+      },
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "full color"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 324,
+    "producto": "MERCH_CUADERNO_LIBRETA",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 161.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "14 x 10.5 cm"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 325,
+    "producto": "MERCH_CUADERNO_LIBRETA",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 164.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "block espiral a6"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 326,
+    "producto": "MERCH_CUADERNO_LIBRETA",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 15.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "couche full color"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 327,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 19.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "lonchera 2 compartimientos"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 328,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 33.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "bolso lonchera"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 329,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 37.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "29 cm x 28.5 cm x 13.50 cm"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 330,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 36.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "tapasol promocional 1"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 331,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 81.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "soporte eco pisa"
+      },
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "grabado a laser o full color"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 332,
+    "producto": "MERCH_TOALLAS_TEXTIL_PROMO",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 14.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "toalla tematica 30 x 30 cm"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 333,
+    "producto": "MERCH_TOALLAS_TEXTIL_PROMO",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 27.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "toalla para rostro"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 334,
+    "producto": "MERCH_TOALLAS_TEXTIL_PROMO",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 30.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "toalla de bano"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 335,
+    "producto": "MERCH_TOALLAS_TEXTIL_PROMO",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 30.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "toalla de mano"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 336,
+    "producto": "MERCH_RECREACION_Y_VARIOS",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 150.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "collar bandana bipols"
+      },
+      {
+        "variable": "cantidad",
+        "condicion": "igual",
+        "valor_referencia": 5000
+      }
+    ]
+  },
+  {
+    "id_ajuste": 337,
+    "producto": "MERCH_TOMATODO_TERMO_COMERCIAL",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 15.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "18.5 cm x 6.5 cm"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 338,
+    "producto": "MERCH_TOMATODO_TERMO_COMERCIAL",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 30.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "8cm x 28cm"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 339,
+    "producto": "MERCH_TOMATODO_TERMO_COMERCIAL",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 20.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "capacidad: 500 ml"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 340,
+    "producto": "MERCH_TOMATODO_TERMO_COMERCIAL",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 14.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "700 ml"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 341,
+    "producto": "MERCH_TOMATODO_TERMO_COMERCIAL",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 10.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "altura: 17.5 cm, ancho: 6 cm"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 342,
+    "producto": "MERCH_TOMATODO_TERMO_COMERCIAL",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 37.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "660 ml"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 343,
+    "producto": "MERCH_TOMATODO_TERMO_COMERCIAL",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 34.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "21.2 cm"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 344,
+    "producto": "MERCH_TOMATODO_TERMO_COMERCIAL",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 38.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "mug fibra de trigo con silicona"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 345,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 27.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "acero inoxidable con colgante"
+      },
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "colores mate: negro"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 346,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 31.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "acero inoxidable con colgante"
+      },
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "colores: rojo mate"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 347,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 38.8,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "tomatodo plastico"
+      },
+      {
+        "variable": "cantidad",
+        "condicion": "menor o igual",
+        "valor_referencia": 60
+      }
+    ]
+  },
+  {
+    "id_ajuste": 348,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 39.87,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "color tono mate"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 349,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 42.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "tomatodo aluminio"
+      },
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "altura: 23.5 cm"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 350,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 24.3,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "material: acero inox."
+      },
+      {
+        "variable": "cantidad",
+        "condicion": "igual",
+        "valor_referencia": 110
+      }
+    ]
+  },
+  {
+    "id_ajuste": 351,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 12.75,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "logo a laser o 1 color"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 352,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 15.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "colores: negro, azul, rojo, plateado y blanco."
+      }
+    ]
+  },
+  {
+    "id_ajuste": 353,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 17.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "color: oro rosa"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 354,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 34.25,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "alto: 11.5 cm."
+      }
+    ]
+  },
+  {
+    "id_ajuste": 355,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 20.24,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "altura: 24 cm"
+      },
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "500 ml"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 356,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 9.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "termico 2"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 357,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 13.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "termico 1"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 358,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 24.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "22 cm x 6.5 cm"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 359,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 16.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "720 ml"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 360,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 31.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "tomatodo de metal"
+      },
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "logo a 1 color a 1 lado"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 361,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 48.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "gas antiestres"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 362,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 22.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "cartapacio"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 363,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 33.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "bolsa drill"
+      },
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "medida: 38 cm alto x 33 cm"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 364,
+    "producto": "MERCHANDISING_GENERAL",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 15.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "bolsa ecologica"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 365,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 33.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "canguro material: tetron"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 366,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 29.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "bolsa mochila zipper"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 367,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 16.5,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "thermo mug material: acero"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 368,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 10.5,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "thermo mug opc.2"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 369,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 28.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "tomatodo de metal 2019"
+      },
+      {
+        "variable": "cantidad",
+        "condicion": "igual",
+        "valor_referencia": 60
+      }
+    ]
+  },
+  {
+    "id_ajuste": 370,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 9.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "blanco, nude y negro mate"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 371,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 18.5,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "24cm de alto x 6.1cm"
+      },
+      {
+        "variable": "cantidad",
+        "condicion": "igual",
+        "valor_referencia": 90
+      }
+    ]
+  },
+  {
+    "id_ajuste": 372,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 16.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "tapa de rosca. antigoteo"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 373,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 14.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "con accesorio de corcho y tapa plastica"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 374,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 6.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "tomatodo de acero"
+      },
+      {
+        "variable": "cantidad",
+        "condicion": "igual",
+        "valor_referencia": 110
+      }
+    ]
+  },
+  {
+    "id_ajuste": 375,
+    "producto": "MERCH_TOMATODO_TERMO",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 16.2,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "banda antideslizante"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 376,
+    "producto": "MERCH_BOLSA_TOCUYO",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 18.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "bolsa tocuyo con base"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 377,
+    "producto": "MERCH_BOLSA_TOCUYO",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 7.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "tocuyo intermedio 160 gr de 100% algodon"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 378,
+    "producto": "MERCH_BOLSA_TOCUYO",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 11.5,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "bolsa de tocuyo delgado (plana)"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 379,
+    "producto": "MERCH_BOLSA_TOCUYO",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 16.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "cartuchera tocuyo eco"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 380,
+    "producto": "MERCH_BOLSA_TOCUYO",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 10.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "bolsa tocuyo comercial"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 381,
+    "producto": "MERCH_RECREACION_Y_VARIOS",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 18.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "alimentacion 2 pilas aa"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 382,
+    "producto": "MERCH_RECREACION_Y_VARIOS",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 13.4,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "caramelos personalizados"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 383,
+    "producto": "MERCH_CUADERNO_LIBRETA",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 115.0,
+    "condiciones": [
+      {
+        "variable": "cantidad",
+        "condicion": "menor o igual",
+        "valor_referencia": 25
+      },
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "14.5 x 10.4 cm"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 384,
+    "producto": "MERCH_CUADERNO_LIBRETA",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 156.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "medidas: 14.7 ancho x 21"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 385,
+    "producto": "MERCH_CUADERNO_LIBRETA",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 36.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "libreta a5- grabado a laser"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 386,
+    "producto": "MERCH_CUADERNO_LIBRETA",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 150.0,
+    "condiciones": [
+      {
+        "variable": "cantidad",
+        "condicion": "menor o igual",
+        "valor_referencia": 50
+      },
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "14.8cm x 21cm"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 387,
+    "producto": "MERCH_CUADERNO_LIBRETA",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 100.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "libreta ecologica medidas: 21 x 14.8 cm"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 388,
+    "producto": "MERCH_CUADERNO_LIBRETA",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 170.0,
+    "condiciones": [
+      {
+        "variable": "cantidad",
+        "condicion": "menor o igual",
+        "valor_referencia": 15
+      },
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "notebook a5- medidas: 14 x 21cm"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 389,
+    "producto": "MERCH_CUADERNO_LIBRETA",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 106.0,
+    "condiciones": [
+      {
+        "variable": "cantidad",
+        "condicion": "menor",
+        "valor_referencia": 50
+      },
+      {
+        "variable": "cantidad",
+        "condicion": "mayor",
+        "valor_referencia": 25
+      },
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "notebook a5"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 390,
+    "producto": "MERCH_CUADERNO_LIBRETA",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 66.0,
+    "condiciones": [
+      {
+        "variable": "cantidad",
+        "condicion": "menor o igual",
+        "valor_referencia": 25
+      },
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "cuaderno p"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 391,
+    "producto": "MERCH_CUADERNO_LIBRETA",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 133.0,
+    "condiciones": [
+      {
+        "variable": "cantidad",
+        "condicion": "menor",
+        "valor_referencia": 25
+      },
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "libreta ecologica con ruleta"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 392,
+    "producto": "MERCH_LAPICERO_UTILES",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 334.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "lapiceros plasticos modelo: cuerpo translucido"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 393,
+    "producto": "MERCH_LAPICERO_UTILES",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 226.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "resaltador"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 394,
+    "producto": "MERCH_LAPICERO_UTILES",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 81.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "metalico con touch"
+      },
+      {
+        "variable": "cantidad",
+        "condicion": "menor",
+        "valor_referencia": 50
+      }
+    ]
+  },
+  {
+    "id_ajuste": 395,
+    "producto": "MERCH_LLAVERO_PIN",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 65.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "4 cm largo x 2 cm ancho"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 396,
+    "producto": "MERCH_LLAVERO_PIN",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 115.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "pines de bronce medida:3.5 x 3 cm"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 397,
+    "producto": "MERCH_LLAVERO_PIN",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 99.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "pin circular"
+      },
+      {
+        "variable": "cantidad",
+        "condicion": "menor",
+        "valor_referencia": 25
+      }
+    ]
+  },
+  {
+    "id_ajuste": 398,
+    "producto": "MERCH_LLAVERO_PIN",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 253.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "llavero wincha"
+      },
+      {
+        "variable": "cantidad",
+        "condicion": "menor o igual",
+        "valor_referencia": 15
+      }
+    ]
+  },
+  {
+    "id_ajuste": 399,
+    "producto": "MERCH_LLAVERO_PIN",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 35.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "3 cm de diametro"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 400,
+    "producto": "MERCH_LLAVERO_PIN",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 94.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "parche bordado"
+      },
+      {
+        "variable": "cantidad",
+        "condicion": "igual",
+        "valor_referencia": 50
+      }
+    ]
+  },
+  {
+    "id_ajuste": 401,
+    "producto": "MERCH_LLAVERO_PIN",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 49.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "parche bordado"
+      },
+      {
+        "variable": "cantidad",
+        "condicion": "menor",
+        "valor_referencia": 50
+      }
+    ]
+  },
+  {
+    "id_ajuste": 402,
+    "producto": "CAMISA_DENIM",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 12.0,
+    "condiciones": [
+      {
+        "variable": "cantidad",
+        "condicion": "menor",
+        "valor_referencia": 50
+      }
+    ]
+  },
+  {
+    "id_ajuste": 403,
+    "producto": "CAMISA_OXFORD",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 20.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "nova (poliester/spandex)"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 404,
+    "producto": "CASACA_TASLAN",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 5.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "modelo: casaca con capucha desmontable"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 405,
+    "producto": "CASACA_TASLAN",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 40.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "taslam platinado impermeable y forro malla"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 406,
+    "producto": "CASACA_TASLAN",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 23.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "exterior en taslan bomber impermeable, interior en malla para el cuerpo, para capucha desmotable y bolsillos en tafeta"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 407,
+    "producto": "CASACA_TASLAN",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 5.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "cascaca acolchada 3"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 408,
+    "producto": "CHALECO",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 7.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "taslan impermeable, fibra y tafeta"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 409,
+    "producto": "GORRO_DRILL",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 30.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "6 capas, con visera, con ojalillos y regulador velcrom"
+      },
+      {
+        "variable": "cantidad",
+        "condicion": "menor",
+        "valor_referencia": 25
+      }
+    ]
+  },
+  {
+    "id_ajuste": 410,
+    "producto": "GORRO_DRILL",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 31.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "incluye 1 logo estampado a 2 frontal y 1 logo a 2 colores en reverso"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 411,
+    "producto": "GORRO_DRILL",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 24.25,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "visera estandar con 2 lineas"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 412,
+    "producto": "GORRO_DRILL",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 21.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "modelo: 6 capas acabados: ojalillos y boton"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 413,
+    "producto": "GORRO_DRILL",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 23.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "gorro lona"
+      },
+      {
+        "variable": "cantidad",
+        "condicion": "igual",
+        "valor_referencia": 25
+      }
+    ]
+  },
+  {
+    "id_ajuste": 414,
+    "producto": "GORRO_DRILL",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 13.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "6 capas, visera intermedia y regulador con velcro"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 415,
+    "producto": "GORRO_DRILL",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 9.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "6 tapas, regulador hebilla metalica, vaporizado"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 416,
+    "producto": "MERCH_BOLSA_NOTEX",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 34.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "notex 80 gr medida: 40 x 35 cm"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 417,
+    "producto": "MERCH_BOLSA_TOCUYO",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 145.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "medidas: 30 x 35 cm x 10 cm"
+      },
+      {
+        "variable": "cantidad",
+        "condicion": "igual",
+        "valor_referencia": 200
+      }
+    ]
+  },
+  {
+    "id_ajuste": 418,
+    "producto": "MERCH_BOLSA_TOCUYO",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 6.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "medida: 35 cm largo 30 cm ancho"
+      },
+      {
+        "variable": "cantidad",
+        "condicion": "igual",
+        "valor_referencia": 1
+      }
+    ]
+  },
+  {
+    "id_ajuste": 419,
+    "producto": "MERCH_CARTUCHERA_NECESER",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 40.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "lona poliester (muy buena calidad)"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 420,
+    "producto": "MERCH_CARTUCHERA_NECESER",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 5.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "modelo con fuelle, costura y cierre del mismo color del cuerpo"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 421,
+    "producto": "MERCH_CUADERNO_LIBRETA",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 27.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "cuaderno a5 con sticker"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 422,
+    "producto": "MERCH_CUADERNO_LIBRETA",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 36.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "carton reciclado medida: 14 x 6 cm incluye 50 hojas rayadas"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 423,
+    "producto": "MERCH_CUADERNO_LIBRETA",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 103.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "cuaderno anillado a5 con lapicero"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 424,
+    "producto": "MERCH_CUADERNO_LIBRETA",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 129.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "rpet anillado a5"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 425,
+    "producto": "MERCH_CUADERNO_LIBRETA",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 15.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "notebook a5- medidas: 14 x 21cm"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 426,
+    "producto": "MERCH_CUADERNO_LIBRETA",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 11.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "anillado tamano: a5 material: tapa dura, forrado en couche 150 grs"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 427,
+    "producto": "MERCH_CUADERNO_LIBRETA",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 46.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "9 cm x 14 cm"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 428,
+    "producto": "MERCH_CUADERNO_LIBRETA",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 334.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "lapiceros ecologicos gruesos"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 429,
+    "producto": "MERCH_CUADERNO_LIBRETA",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 250.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "lapicero retractil, barril de aluminio, clip de metal."
+      }
+    ]
+  },
+  {
+    "id_ajuste": 430,
+    "producto": "MERCH_LLAVERO_PIN",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 286.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "llavero pelota antiestres"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 431,
+    "producto": "MERCH_LLAVERO_PIN",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 19.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "solaperos de bronce"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 432,
+    "producto": "MERCH_LLAVERO_PIN",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 27.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "llavero peluche"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 433,
+    "producto": "MERCH_LLAVERO_PIN",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 296.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "llavero destapador"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 434,
+    "producto": "MERCH_LLAVERO_PIN",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 82.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "llavero con herramientas"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 435,
+    "producto": "MERCH_LLAVERO_PIN",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 141.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "pines acrilico"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 436,
+    "producto": "MERCH_LLAVERO_PIN",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 70.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "llavero acrilico uv"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 437,
+    "producto": "MERCH_LLAVERO_PIN",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 167.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "llavero metal 5 funciones"
+      },
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "medidas: 9,5 cm x 2,5 cm"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 438,
+    "producto": "MERCH_LLAVERO_PIN",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 47.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "llavero metal 5 funciones"
+      },
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "modelo: 1 tijera, 1 destapador, 1 lija y 1 cuchilla"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 439,
+    "producto": "MERCH_LLAVERO_PIN",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 158.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "llavero publicitario de tela"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 440,
+    "producto": "MERCH_LLAVERO_PIN",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 330.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "llavero saco pacasmayo"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 441,
+    "producto": "MERCH_LLAVERO_PIN",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 209.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "metalico con cinta satinada argolla metalica"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 442,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "sumar puntos",
+    "valor_impacto": 38.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "asa de mano.2 compartimientos, 1 principal con cierre y 1 bolsillo exterior"
+      },
+      {
+        "variable": "cantidad",
+        "condicion": "menor o igual",
+        "valor_referencia": 15
+      }
+    ]
+  },
+  {
+    "id_ajuste": 443,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 41.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "mochila rpet"
+      },
+      {
+        "variable": "cantidad",
+        "condicion": "menor o igual",
+        "valor_referencia": 15
+      }
+    ]
+  },
+  {
+    "id_ajuste": 444,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 38.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "importado mochila con adaptador usb para conectar cable"
+      },
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "incluye logos estampados en dtf full color en la parte frontal"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 445,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 20.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "incluye desarrollo de 1 muestra"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 446,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 40.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "poliester 230t medidas: 40 x 30 cm"
+      }
+    ]
+  },
+  {
+    "id_ajuste": 447,
+    "producto": "MERCH_MOCHILAS_MALETINES",
+    "tipo_ajuste": "restar puntos",
+    "valor_impacto": 94.0,
+    "condiciones": [
+      {
+        "variable": "texto",
+        "condicion": "contiene",
+        "valor_referencia": "bolsimochila deportiva 2"
+      }
+    ]
+  }
+]

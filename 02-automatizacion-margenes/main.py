@@ -1,7 +1,8 @@
 """Punto de entrada principal del Módulo 02 - Automatización de Márgenes.
 
 Orquesta la lectura del histórico Excel (obtenido del Módulo 01), ejecuta 
-el pipeline de limpieza y exporta las matrices suavizadas a formato JSON.
+el pipeline de limpieza, exporta las matrices suavizadas a formato JSON
+e inyecta los márgenes base en el tarifario maestro del Módulo 03.
 """
 
 from pathlib import Path
@@ -12,6 +13,9 @@ from src.analizador import analizar_y_optimizar_margenes
 def main() -> None:
     base_dir = Path(__file__).resolve().parent
     data_dir = base_dir / "data"
+    
+    # Ruta hacia el tarifario maestro del Módulo 03
+    ruta_excel_tarifario = base_dir.parent / "03-motor-ajustes-dinamicos" / "config" / "tarifario_diseno.xlsx"
     
     # Búsqueda defensiva del archivo Excel histórico en data/ (debug_scan_raw)
     archivos_excel = list(data_dir.glob("*.xlsx"))
@@ -39,13 +43,18 @@ def main() -> None:
     tiempo_inicio = time.time()
 
     try:
-        analizar_y_optimizar_margenes(ruta_excel, ruta_json_salida)
+        analizar_y_optimizar_margenes(
+            ruta_excel_entrada=ruta_excel,
+            ruta_json_salida=ruta_json_salida,
+            ruta_excel_tarifario=ruta_excel_tarifario
+        )
         tiempo_total = time.time() - tiempo_inicio
 
         print("==================================================================")
         print("¡Pipeline de análisis masivo ejecutado con éxito!")
         print(f"Tiempo de procesamiento RAM: {tiempo_total:.2f} segundos.")
         print(f"Archivo JSON autogenerado en: {ruta_json_salida}")
+        print(f"Hoja 'Margenes_Base' inyectada en: {ruta_excel_tarifario.name}")
         print("Márgenes listos para inyección en el cotizador principal (Compipro).")
         print("==================================================================")
 

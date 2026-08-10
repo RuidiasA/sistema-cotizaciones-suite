@@ -28,15 +28,28 @@ Thumbs.db
 # ==========================================
 # Datasets de Datos e Ingesta Pesada
 # ==========================================
-# Excluir todos los excels de datos crudos
+# Ignorar todos los excels de datos por defecto
 *.xlsx
 *.xls
 
-# Ignorar logs de auditoría pesados o locales
+# Ignorar logs de auditoría pesados, checkpoints locales y reportes
 *.log
-log_errores.txt
+
+TEMPORAL/
 
 # ==========================================
 # Excepciones
 # ==========================================
+
+!01-escaneo-masivo-cotizaciones/data/cotizaciones-pasadas/debug_scan_raw.xlsx
+!01-escaneo-masivo-cotizaciones/data/cotizaciones-recientes/debug_scan_raw_recent.xlsx
+!01-escaneo-masivo-cotizaciones/data/mapeo_productos_pasados.xlsx
+!01-escaneo-masivo-cotizaciones/data/mapeo_productos_recientes.xlsx
+
+# Base de datos histórica utilizada como benchmark en el Módulo 02
 !02-automatizacion-margenes/data/debug_scan_raw.xlsx
+
+# Libro maestro de reglas, taxonomía y márgenes del Módulo 03
+!03-motor-ajustes-dinamicos/config/tarifario_diseno.xlsx
+!03-motor-ajustes-dinamicos/data/input/debug_scan_raw_recent.xlsx
+!03-motor-ajustes-dinamicos/data/output/auditoria_global.xlsx
