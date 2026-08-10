@@ -157,7 +157,7 @@ class ResultsView(ctk.CTkFrame):
             rows: Colección de ScanRow a insertar.
         """
         self._cancel_pending_row_render()
-        self._pending_rows = list(rows)
+        self._pending_rows = rows if isinstance(rows, list) else list(rows)
         self._pending_row_offset = 0
         if not self._pending_rows:
             return

@@ -122,12 +122,13 @@ class BenchmarkingService:
         df_raw = pd.DataFrame(records)
 
         # Filtro de relevancia dinámico (Top 3 variantes)
-        conteos = df_raw["arquetipo"].value_counts()
-        arquetipos_validos = set()
-
-        for _, grupo in df_raw.groupby("raiz_producto"):
-            top_variantes = sorted(grupo["arquetipo"].unique(), key=lambda x: conteos.get(x, 0), reverse=True)
-            arquetipos_validos.update(top_variantes[:3])
+        ranking = (
+            df_raw.groupby(["raiz_producto", "arquetipo"], as_index=False)
+            .size()
+            .rename(columns={"size": "conteo"})
+            .sort_values(["raiz_producto", "conteo", "arquetipo"], ascending=[True, False, True])
+        )
+        arquetipos_validos = set(ranking.groupby("raiz_producto", sort=False).head(3)["arquetipo"])
 
         df = df_raw[df_raw["arquetipo"].isin(arquetipos_validos)].copy()
 

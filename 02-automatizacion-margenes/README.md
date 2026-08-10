@@ -19,7 +19,7 @@ Módulo backend de la **SistemaCotizaciones Suite** encargado de procesar volúm
 [ Filtro IQR + Mediana + Monotonía ] ➔ (Depuración de outliers y corrección de picos/valles)
           │
           ▼ (Fase 4: Exportación Multicapa)
-[ matriz_margenes.json ] ➔ (Estructura optimizada para consulta O(1) en el Cotizador Exprés)
+[ matriz_margenes.json ] ➔ (Estructura optimizada para consulta O(1) en el Cotizador Exprès)
 [ tarifario_diseno.xlsx ] ➔ (Inyección automática en Hoja 1 'Margenes_Base' del Módulo 03)
 ```
 
@@ -27,7 +27,7 @@ Módulo backend de la **SistemaCotizaciones Suite** encargado de procesar volúm
 
 ## Características Clave
 
-1. **Taxonomía Comercial de 30 Subcategorías:** Clasificación precisa por tipo de prenda, material y colador especial por costo de proveedor (ej. discriminación de Tomatodos económicamente comerciales `< S/ 8.00` vs. insulados premium).
+1. **Taxonomía Comercial de 30 Subcategorías:** Clasificación precisa por tipo de prenda, material y colador especial por costo de proveedor (ej. discriminación en `limpiador.py` de Tomatodos económicamente comerciales `< S/ 8.00` PEN vs. insulados/premium).
 2. **Filtro Estadístico IQR (Interquartile Range):** Depuración de registros históricos atípicos mediante el cálculo de cuantiles $Q_1$ (25%) y $Q_3$ (75%) por tramo de cantidad.
 3. **Suavizado Monótono Decreciente:** Corrección de curvas financieras de dos vías (izquierda a derecha y derecha a izquierda) para evitar inconsistencias de margen al escalar volúmenes de pedido.
 4. **Inyección Directa en Módulo 03:** Sincronización automática de la Hoja 1 (`Margenes_Base`) en `03-motor-ajustes-dinamicos/config/tarifario_diseno.xlsx`, eliminando la edición manual de tablas de Excel.
@@ -47,12 +47,12 @@ Módulo backend de la **SistemaCotizaciones Suite** encargado de procesar volúm
 ```text
 02-automatizacion-margenes/
 ├── data/
-│   ├── debug_scan_raw.xlsx        # Dataset histórico de entrada (Copia de 01-escaneo-masivo-cotizaciones/data/cotizaciones-pasadas/debug_scan_raw.xlsx)
+│   ├── debug_scan_raw.xlsx        # Dataset histórico de entrada (Sincronizado desde 01-escaneo-masivo-cotizaciones)
 │   └── matriz_margenes.json       # Artefacto JSON de márgenes suavizados autogenerado
 ├── src/
-│   ├── analizador_margenes.py     # Lógica matemática de IQR, medianas, suavizado e inyección a Excel
+│   ├── analizador.py              # Lógica matemática de IQR, medianas, suavizado e inyección a Excel
 │   └── limpiador.py               # Diccionario de 30 subcategorías y clasificación estricta por costo/tokens
-├── main.py                        # Orquestador del pipeline global
+├── main.py                        # Orquestador global: Autodetecta el dataset en data/ y ejecuta el pipeline
 └── README.md                      # Documentación técnica del módulo
 ```
 
@@ -60,7 +60,9 @@ Módulo backend de la **SistemaCotizaciones Suite** encargado de procesar volúm
 
 ## Ejecución del Pipeline
 
-Asegúrate de tener el entorno virtual del monorepo activo (`.venv` en la raíz) y ejecuta el orquestador:
+El orquestador `main.py` autodetecta dinámicamente el primer archivo `.xlsx` disponible en la carpeta `data/` y ejecuta en cascada la limpieza, el análisis estadístico, la exportación del JSON y la inyección en el Módulo 03.
+
+Asegúrate de tener el entorno virtual del monorepo activo (`.venv` en la raíz) y ejecuta:
 
 ```bash
 python 02-automatizacion-margenes/main.py

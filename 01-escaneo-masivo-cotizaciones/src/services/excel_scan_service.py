@@ -119,7 +119,7 @@ class ExcelScanService:
         def _scan_one(ruta: str) -> Tuple[FileScanReport, List[Dict[str, object]], float]:
             local_raw: List[Dict[str, object]] = []
             t0 = time.time()
-            report = self.scan_file(ruta, compiled_search_pack, local_raw)
+            report = self.scan_file(ruta, compiled_search_pack, stop_event, local_raw)
             return report, local_raw, time.time() - t0
 
         max_workers = min(6, os.cpu_count() or 1)
@@ -196,12 +196,18 @@ class ExcelScanService:
                     pass
 
         finally:
-            executor.shutdown(wait=False)
+            executor.shutdown(wait=False, cancel_futures=True)
             self._last_raw_records = raw_records
 
         return reports
 
-    def scan_file(self, file_path: str, search_pack: dict, raw_records: Optional[List[Dict[str, object]]] = None) -> FileScanReport:
+    def scan_file(
+        self,
+        file_path: str,
+        search_pack: dict,
+        stop_event: threading.Event,
+        raw_records: Optional[List[Dict[str, object]]] = None,
+    ) -> FileScanReport:
         """Procesa un archivo individual leyendo todas sus pestañas válidas.
 
         Args:
@@ -221,6 +227,8 @@ class ExcelScanService:
             sheets_processed: List[str] = []
 
             for sheet_name in xls.sheet_names:
+                if stop_event.is_set():
+                    break
                 if any(ex in sheet_name.lower().strip() for ex in self._hojas_excluidas):
                     continue
 
@@ -232,6 +240,9 @@ class ExcelScanService:
                     )
                 except Exception:
                     continue
+
+                if stop_event.is_set():
+                    break
 
                 header_row = self._detect_header_row(df_check)
                 if header_row is None:
@@ -286,9 +297,17 @@ class ExcelScanService:
                             "detalle": c_detalle,
                             "proveedor_col": c_proveedor,
                         }
-                        self._process_rows(df_temp.loc[mask].copy(), col_map, report, file_path, sheet_name, raw_records)
+                        self._process_rows(
+                            df_temp.loc[mask].copy(),
+                            col_map,
+                            report,
+                            file_path,
+                            sheet_name,
+                            stop_event,
+                            raw_records,
+                        )
 
-            if not report.matched_rows and not report.failed_rows:
+            if not stop_event.is_set() and not report.matched_rows and not report.failed_rows:
                 report.error_message = "No se detectó una tabla válida."
                 return report
 
@@ -342,8 +361,8 @@ class ExcelScanService:
         return df.iloc[header + 1:].reset_index(drop=True)
 
     def _detect_header_row(self, df_check: pd.DataFrame) -> Optional[int]:
-        for idx, fila in df_check.iterrows():
-            linea = " ".join([str(x).lower() for x in fila.values])
+        for idx, fila in enumerate(df_check.itertuples(index=False, name=None)):
+            linea = " ".join([str(x).lower() for x in fila])
             if ("cant" in linea or "cantidad" in linea) and ("costo" in linea or "s/." in linea or "uni" in linea):
                 return int(idx)
         return None
@@ -445,6 +464,7 @@ class ExcelScanService:
         report: FileScanReport,
         file_path: str,
         sheet_name: str,
+        stop_event: threading.Event,
         raw_records: Optional[List[Dict[str, object]]] = None,
     ) -> None:
         vistos = set()
@@ -483,6 +503,9 @@ class ExcelScanService:
             return len(s) < 20 and " " not in s
 
         for idx, fila in df.iterrows():
+            if stop_event.is_set():
+                break
+
             try:
                 cantidad = limpiar_y_entero(fila[col_map["cant"]])
 

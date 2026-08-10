@@ -25,6 +25,7 @@ class VariationService:
         self._variaciones = variaciones_por_categoria
         self._cached_global_pack: Optional[Dict[str, List[str]]] = None
         self._cached_all_variations: Optional[List[str]] = None
+        self._cached_all_variations_norm: Optional[List[str]] = None
         self._cached_category_packs: Dict[str, Dict[str, Any]] = {}
 
     def get_categories(self) -> List[str]:
@@ -205,8 +206,7 @@ class VariationService:
         if not prod_norm:
             return False
 
-        for variation in self._all_variations():
-            var_norm = normalizar_texto(variation)
+        for var_norm in self._all_variations_norm():
             if prod_norm in var_norm or var_norm in prod_norm:
                 return True
         return False
@@ -222,3 +222,10 @@ class VariationService:
                     flat_list.extend(cluster.get("tags", []))
         self._cached_all_variations = flat_list
         return flat_list
+
+    def _all_variations_norm(self) -> List[str]:
+        if self._cached_all_variations_norm is not None:
+            return self._cached_all_variations_norm
+
+        self._cached_all_variations_norm = [normalizar_texto(variation) for variation in self._all_variations()]
+        return self._cached_all_variations_norm

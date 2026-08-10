@@ -11,21 +11,21 @@ Procesa el archivo tarifario maestro multicapa (`tarifario_diseno.xlsx`), transf
 ```text
 03-motor-ajustes-dinamicos/
 ├── config/
-│   ├── tarifario_diseno.xlsx              # Libro Excel maestro con las 5 hojas de reglas
-│   ├── matrices_margen.json               # Artefacto autogenerado: Curvas de márgenes base
-│   └── ajustes_margen.json                # Artefacto autogenerado: Reglas condicionales de ajuste
+│   ├── tarifario_diseno.xlsx      # Libro Excel maestro con las 5 hojas de reglas
+│   ├── matrices_margen.json       # Artefacto autogenerado: Curvas de márgenes base
+│   └── ajustes_margen.json        # Artefacto autogenerado: Reglas condicionales de ajuste
 ├── data/
 │   ├── input/
-│   │   └── debug_scan_raw_recent.xlsx     # Data Lake histórico para pruebas de auditoría
+│   │   └── debug_scan_raw.xlsx    # Data Lake histórico para pruebas de auditoría
 │   └── output/
-│       └── auditoria_global.xlsx          # Reporte de precios calculados vs. precios históricos
+│       └── auditoria_global.xlsx  # Reporte de precios calculados vs. precios históricos
 ├── scripts/
-│   ├── clean_db.py                        # ETL utilitario para saneamiento de proveedores nulos
-│   └── diagnostico_entrega.py             # Diagnóstico de desvíos en pedidos corporativos (>= 50u)
+│   ├── clean_db.py                # ETL utilitario para saneamiento de proveedores nulos
+│   └── diagnostico_entrega.py     # Diagnóstico de desvíos en pedidos corporativos (>= 50u)
 ├── src/
-│   ├── audit.py                           # Motor de auditoría global desacoplado (Reusa Módulo 02)
-│   └── compiler.py                        # Compilador multicapa de tarifario (Excel -> JSON)
-├── main.py                                # Orquestador principal del pipeline
+│   ├── audit.py                   # Motor de auditoría global desacoplado (Reusa Módulo 02)
+│   └── compiler.py                # Compilador multicapa de tarifario (Excel -> JSON)
+├── main.py                        # Orquestador principal del pipeline
 └── README.md
 ```
 
@@ -35,17 +35,19 @@ Procesa el archivo tarifario maestro multicapa (`tarifario_diseno.xlsx`), transf
 
 ### 1. Compilador Multicapa (`src/compiler.py`)
 
-La clase `ExcelCompiler` lee de forma secuencial las 5 hojas de `tarifario_diseno.xlsx`:
+La clase `ExcelCompiler` requiere estrictamente las siguientes 5 hojas dentro de `tarifario_diseno.xlsx`:
 
-* **Hoja 5 (`Diccionario_Filtros_Globales`):** Carga los tokens de inclusión/exclusión.
-* **Hoja 3 (`Diccionario_Categorias`):** Mapea arquetipos comerciales y variantes de material.
-* **Hoja 1 (`Margenes_Base`):** Estructura los márgenes por tramos de volumen ($10, 25, 50, 100, \dots$).
-* **Hoja 4 (`Diccionario_Productos`):** Inyecta sub-productos específicos vinculados a su categoría padre.
-* **Hoja 2 (`Ajustes`):** Compila las reglas multi-condicionales de impacto financiero (margen fijo, sumar/restar puntos).
+| Hoja requerida | Descripción y Función |
+| --- | --- |
+| **`Margenes_Base`** | Estructura los márgenes base por tramos de volumen (10, 25, 50, 100, ...). |
+| **`Ajustes`** | Compila las reglas condicionales de impacto financiero (margen fijo, sumar/restar puntos). |
+| **`Diccionario_Categorias`** | Mapea arquetipos comerciales y variantes de material. |
+| **`Diccionario_Productos`** | Inyecta sub-productos específicos vinculados a su categoría padre. |
+| **`Diccionario_Filtros_Globales`** | Carga los tokens de inclusión/exclusión globales. |
 
 ### 2. Motor de Auditoría Global (`src/audit.py`)
 
-* Importa centralizadamente la función `clasificar_producto_estricto` del **Módulo 02** para garantizar una taxonomía uniforme sin duplicidad de código.
+* Importa centralizadamente la función `clasificar_producto_estricto` desde el **Módulo 02** mediante vinculación dinámica de rutas (`sys.path.append`).
 * Evalúa el dataset histórico aplicando el algoritmo de interpolación por **Piso Comercial / Escalón Duro**.
 * Ejecuta las reglas condicionales dinámicas y genera el reporte consolidado `auditoria_global.xlsx` evaluando la tolerancia comercial ($\pm 2.00$ PEN).
 
@@ -60,6 +62,15 @@ Analiza los casos críticos fuera de tolerancia enfocándose en entregas corpora
 ### 4. Saneamiento del Data Lake (`scripts/clean_db.py`)
 
 Proceso ETL que imputa registros huérfanos o proveedores `"ANONIMO"` en `debug_scan_raw.xlsx` mediante la firma de texto de descripciones previamente identificadas.
+
+---
+
+## Dependencias e Integración Modular
+
+Este módulo mantiene una **dependencia directa con el Módulo 02** (`02-automatizacion-margenes`):
+
+1. **Inyección de entrada:** El Módulo 02 actualiza automáticamente la hoja `Margenes_Base` dentro de `tarifario_diseno.xlsx`.
+2. **Reuso de código:** `src/audit.py` consume la taxonomía de `02-automatizacion-margenes/src/limpiador.py` para garantizar la misma clasificación en toda la suite sin duplicar código.
 
 ---
 
