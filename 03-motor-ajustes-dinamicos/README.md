@@ -1,4 +1,4 @@
-# Módulo 03: Motor de Ajustes Dinámicos y Auditoría Comercial
+# 03 - Motor de Ajustes Dinámicos y Auditoría Comercial
 
 Este módulo constituye el núcleo de compilación de reglas de negocio y validación de precios dentro de la suite **SistemaCotizaciones**. 
 
