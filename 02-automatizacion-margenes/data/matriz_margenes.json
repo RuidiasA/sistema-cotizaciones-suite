@@ -1,0 +1,3493 @@
+{
+  "ABRIGO": {
+    "nombre_comercial": "Abrigo",
+    "macro_categoria": "Prendas de Vestir y Textil",
+    "subcategoria": "casacas, chamarras y abrigos",
+    "filtros_prenda": [
+      "abrigo",
+      "abrigos",
+      "parka",
+      "parkas",
+      "sobretodo",
+      "sobretodos",
+      "gabardina",
+      "gabardinas",
+      "prendas de invierno"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "50": 66.6,
+      "1000": 46.6
+    }
+  },
+  "AFICHE": {
+    "nombre_comercial": "Afiche",
+    "macro_categoria": "Imprenta y Papelería Corporativa",
+    "subcategoria": "impresos y piezas promocionales",
+    "filtros_prenda": [
+      "afiche",
+      "afiches",
+      "afiche pvc"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 78.6,
+      "25": 76.5,
+      "500": 70.4,
+      "1000": 69.0,
+      "2000": 67.6,
+      "5000": 65.8
+    }
+  },
+  "AGENDA": {
+    "nombre_comercial": "Agenda",
+    "macro_categoria": "Artículos de Oficina y Escritorio",
+    "subcategoria": "agendas y planificadores",
+    "filtros_prenda": [
+      "agenda",
+      "agendas"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 291.2,
+      "25": 203.8,
+      "50": 142.7,
+      "100": 99.9,
+      "250": 69.9,
+      "500": 57.8,
+      "1000": 40.5,
+      "3000": 28.3,
+      "5000": 19.8
+    }
+  },
+  "ALCANCIA": {
+    "nombre_comercial": "Alcancia",
+    "macro_categoria": "Merchandising y Promocionales",
+    "subcategoria": "trofeos y medallas",
+    "filtros_prenda": [
+      "alcancia"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "1000": 29.4,
+      "2000": 24.0,
+      "3000": 22.0
+    }
+  },
+  "ALMANAQUE": {
+    "nombre_comercial": "Almanaque",
+    "macro_categoria": "Imprenta y Papelería Corporativa",
+    "subcategoria": "impresos y piezas promocionales",
+    "filtros_prenda": [
+      "almanaque"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "500": 47.7,
+      "1000": 43.5,
+      "10000": 40.6
+    }
+  },
+  "ALMOHADA": {
+    "nombre_comercial": "Almohada",
+    "macro_categoria": "Artículos de Hogar y Cocina",
+    "subcategoria": "textiles de hogar y limpieza",
+    "filtros_prenda": [
+      "almohada",
+      "almohadas",
+      "almohada de viaje",
+      "almoada inflable"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 191.9,
+      "50": 134.3,
+      "100": 94.0,
+      "500": 79.0,
+      "1000": 77.4
+    }
+  },
+  "AMBIENTADOR": {
+    "nombre_comercial": "Ambientador",
+    "macro_categoria": "Artículos de Hogar y Cocina",
+    "subcategoria": "textiles de hogar y limpieza",
+    "filtros_prenda": [
+      "ambientador"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "500": 102.7,
+      "1000": 78.4,
+      "2000": 64.0,
+      "5000": 62.3,
+      "10000": 52.7
+    }
+  },
+  "ANILLADO": {
+    "nombre_comercial": "Anillado",
+    "macro_categoria": "Artículos de Oficina y Escritorio",
+    "subcategoria": "cuadernos y libretas",
+    "filtros_prenda": [
+      "anillado",
+      "anillados"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "50": 42.7,
+      "100": 41.8,
+      "250": 40.7,
+      "500": 30.3,
+      "1000": 21.2,
+      "2000": 16.0,
+      "10000": 15.3
+    }
+  },
+  "ANTIESTRES": {
+    "nombre_comercial": "Antiestres",
+    "macro_categoria": "Merchandising y Promocionales",
+    "subcategoria": "trofeos y medallas",
+    "filtros_prenda": [
+      "antiestres",
+      "antistress",
+      "bolas antiestress",
+      "dr antiestres",
+      "muneco antiestres",
+      "masajeador estrella"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "25": 296.7,
+      "50": 278.2,
+      "100": 214.1,
+      "250": 149.9,
+      "500": 104.9,
+      "1000": 73.4,
+      "2000": 60.6,
+      "3000": 43.1,
+      "5000": 39.2,
+      "10000": 38.4
+    }
+  },
+  "AROMATIZADOR": {
+    "nombre_comercial": "Aromatizador",
+    "macro_categoria": "Artículos de Hogar y Cocina",
+    "subcategoria": "textiles de hogar y limpieza",
+    "filtros_prenda": [
+      "aromatizador"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "500": 100.0,
+      "1000": 70.0
+    }
+  },
+  "AUDIFONO": {
+    "nombre_comercial": "Audifono",
+    "macro_categoria": "Tecnología y Gadgets",
+    "subcategoria": "tecnologia y gadgets",
+    "filtros_prenda": [
+      "audifono",
+      "audifonos"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "50": 112.3,
+      "100": 78.6,
+      "500": 55.0,
+      "1000": 38.5
+    }
+  },
+  "BANDEJA": {
+    "nombre_comercial": "Bandeja",
+    "macro_categoria": "Artículos de Hogar y Cocina",
+    "subcategoria": "utensilios y cocina",
+    "filtros_prenda": [
+      "bandeja"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "100": 88.2,
+      "500": 65.3,
+      "1000": 53.2
+    }
+  },
+  "BANNER": {
+    "nombre_comercial": "Banner",
+    "macro_categoria": "Imprenta y Papelería Corporativa",
+    "subcategoria": "impresos y piezas promocionales",
+    "filtros_prenda": [
+      "banner",
+      "banderola",
+      "bandera"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 72.5,
+      "25": 50.8,
+      "50": 46.4,
+      "100": 45.5,
+      "250": 44.3
+    }
+  },
+  "BILLETERA": {
+    "nombre_comercial": "Billetera",
+    "macro_categoria": "Bolsos y Equipaje",
+    "subcategoria": "estuches, cartucheras y neceseres",
+    "filtros_prenda": [
+      "billetera"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "100": 53.4,
+      "500": 50.9,
+      "1000": 35.6
+    }
+  },
+  "BIVIDI": {
+    "nombre_comercial": "Bividi",
+    "macro_categoria": "Prendas de Vestir y Textil",
+    "subcategoria": "polos y camisetas",
+    "filtros_prenda": [
+      "bividi"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "25": 134.3
+    }
+  },
+  "BLOCK": {
+    "nombre_comercial": "Block",
+    "macro_categoria": "Artículos de Oficina y Escritorio",
+    "subcategoria": "cuadernos y libretas",
+    "filtros_prenda": [
+      "block",
+      "blocks",
+      "mini block"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 86.4,
+      "25": 60.5,
+      "50": 42.3,
+      "100": 41.5,
+      "250": 40.4,
+      "500": 39.6,
+      "1000": 36.2,
+      "2000": 35.5,
+      "3000": 24.8,
+      "5000": 24.4,
+      "10000": 23.9
+    }
+  },
+  "BLOC_DE_NOTAS": {
+    "nombre_comercial": "Bloc de notas",
+    "macro_categoria": "Artículos de Oficina y Escritorio",
+    "subcategoria": "cuadernos y libretas",
+    "filtros_prenda": [
+      "bloc de notas"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "100": 23.9,
+      "1000": 22.3
+    }
+  },
+  "BLUSA": {
+    "nombre_comercial": "Blusa",
+    "macro_categoria": "Prendas de Vestir y Textil",
+    "subcategoria": "camisas y blusas",
+    "filtros_prenda": [
+      "blusa",
+      "blusas",
+      "camisas / blusas happyland"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 55.1,
+      "25": 38.6,
+      "50": 32.4,
+      "100": 27.6
+    }
+  },
+  "BOLIGRAFO": {
+    "nombre_comercial": "Boligrafo",
+    "macro_categoria": "Artículos de Oficina y Escritorio",
+    "subcategoria": "lapiceros y escritura",
+    "filtros_prenda": [
+      "boligrafo",
+      "boligrafos",
+      "boligraforesaltador"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "25": 230.4,
+      "50": 191.4,
+      "100": 154.2,
+      "500": 147.0,
+      "1000": 102.9
+    }
+  },
+  "BOLSA": {
+    "nombre_comercial": "Bolsa",
+    "macro_categoria": "Empaques y Packaging",
+    "subcategoria": "bolsas y packaging",
+    "filtros_prenda": [
+      "bolsa",
+      "bolsas",
+      "bolsa papel"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 50.0,
+      "25": 48.7,
+      "50": 47.7,
+      "100": 46.7,
+      "250": 45.5,
+      "500": 44.6,
+      "1000": 43.7,
+      "2000": 41.2,
+      "3000": 40.7,
+      "5000": 40.1,
+      "10000": 39.3,
+      "20000": 38.5,
+      "30000": 38.0,
+      "50000": 26.6,
+      "100000": 18.6
+    }
+  },
+  "BOLSO": {
+    "nombre_comercial": "Bolso",
+    "macro_categoria": "Bolsos y Equipaje",
+    "subcategoria": "bolsos, canguros y maletines",
+    "filtros_prenda": [
+      "bolso",
+      "bolsos",
+      "bandolera",
+      "bandoleras"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "25": 71.7,
+      "50": 70.3,
+      "100": 68.6,
+      "250": 56.8,
+      "500": 56.0,
+      "1000": 44.1,
+      "2000": 38.8,
+      "3000": 38.3,
+      "5000": 37.7,
+      "10000": 36.9
+    }
+  },
+  "BOMBONERA": {
+    "nombre_comercial": "Bombonera",
+    "macro_categoria": "Empaques y Packaging",
+    "subcategoria": "cajas y empaques",
+    "filtros_prenda": [
+      "bombonera",
+      "bomboneras"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "25": 66.7
+    }
+  },
+  "BOTELLA": {
+    "nombre_comercial": "Botella",
+    "macro_categoria": "Artículos de Hogar y Cocina",
+    "subcategoria": "tomatodos y botellas",
+    "filtros_prenda": [
+      "botella",
+      "botellas",
+      "caramañola",
+      "caramañolas"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "25": 42.3,
+      "50": 41.5,
+      "100": 40.7,
+      "250": 39.6,
+      "500": 38.8,
+      "1000": 38.0,
+      "2000": 30.0
+    }
+  },
+  "BOTON": {
+    "nombre_comercial": "Boton",
+    "macro_categoria": "Merchandising y Promocionales",
+    "subcategoria": "pines y prendedores",
+    "filtros_prenda": [
+      "boton",
+      "botones",
+      "botones publicitarios"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 51.0,
+      "25": 49.7,
+      "50": 48.7,
+      "100": 47.7,
+      "250": 33.4,
+      "500": 32.7,
+      "1000": 32.0,
+      "2000": 31.4,
+      "3000": 31.0,
+      "10000": 29.9,
+      "20000": 29.3
+    }
+  },
+  "BROCHURE": {
+    "nombre_comercial": "Brochure",
+    "macro_categoria": "Imprenta y Papelería Corporativa",
+    "subcategoria": "impresos y piezas promocionales",
+    "filtros_prenda": [
+      "brochure",
+      "diptico",
+      "triptico",
+      "tripticos"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "250": 64.8,
+      "500": 63.5,
+      "1000": 62.2,
+      "2000": 61.0,
+      "3000": 60.3
+    }
+  },
+  "BUGUCELA": {
+    "nombre_comercial": "Bugucela",
+    "macro_categoria": "Merchandising y Promocionales",
+    "subcategoria": "trofeos y medallas",
+    "filtros_prenda": [
+      "bugucela",
+      "corneta",
+      "matracones",
+      "pandereta"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "250": 277.6
+    }
+  },
+  "BUZO": {
+    "nombre_comercial": "Buzo",
+    "macro_categoria": "Prendas de Vestir y Textil",
+    "subcategoria": "poleras, buzos y sudaderas",
+    "filtros_prenda": [
+      "buzo",
+      "buzos"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "25": 23.3
+    }
+  },
+  "CAFETERA": {
+    "nombre_comercial": "Cafetera",
+    "macro_categoria": "Artículos de Hogar y Cocina",
+    "subcategoria": "utensilios y cocina",
+    "filtros_prenda": [
+      "cafetera",
+      "cafeteras",
+      "prensa francesa"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "2000": 42.2
+    }
+  },
+  "CAJA": {
+    "nombre_comercial": "Caja",
+    "macro_categoria": "Empaques y Packaging",
+    "subcategoria": "cajas y empaques",
+    "filtros_prenda": [
+      "caja",
+      "cajas"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 109.5,
+      "25": 76.6,
+      "50": 58.4,
+      "100": 57.2,
+      "250": 55.7,
+      "500": 39.0,
+      "1000": 33.7,
+      "2000": 23.6,
+      "3000": 23.3,
+      "5000": 23.0
+    }
+  },
+  "CALCULADORA": {
+    "nombre_comercial": "Calculadora",
+    "macro_categoria": "Artículos de Oficina y Escritorio",
+    "subcategoria": "escritorio y organizacion",
+    "filtros_prenda": [
+      "calculadora"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 82.5,
+      "25": 80.3,
+      "50": 74.0,
+      "100": 70.1,
+      "250": 68.2,
+      "500": 48.2,
+      "1000": 33.7,
+      "5000": 23.6
+    }
+  },
+  "CALENDARIO": {
+    "nombre_comercial": "Calendario",
+    "macro_categoria": "Artículos de Oficina y Escritorio",
+    "subcategoria": "escritorio y organizacion",
+    "filtros_prenda": [
+      "calendario",
+      "caledndario"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 704.7,
+      "25": 493.3,
+      "50": 345.3,
+      "100": 241.7,
+      "250": 169.2,
+      "500": 118.4,
+      "1000": 82.9,
+      "2000": 58.0,
+      "3000": 40.6,
+      "30000": 37.9
+    }
+  },
+  "CAMISA": {
+    "nombre_comercial": "Camisa",
+    "macro_categoria": "Prendas de Vestir y Textil",
+    "subcategoria": "camisas y blusas",
+    "filtros_prenda": [
+      "camisa",
+      "camisas",
+      "camisa manga larga"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 55.1,
+      "25": 43.2,
+      "50": 38.4,
+      "100": 33.9,
+      "250": 23.7,
+      "500": 23.2,
+      "1000": 22.7
+    }
+  },
+  "CAMISETA": {
+    "nombre_comercial": "Camiseta",
+    "macro_categoria": "Prendas de Vestir y Textil",
+    "subcategoria": "polos y camisetas",
+    "filtros_prenda": [
+      "camiseta",
+      "camise",
+      "polo algodon cuello camisero",
+      "polo algodon cuello redondo",
+      "polo algodon cuello v",
+      "polo algodon cuello pique",
+      "polos camisero",
+      "polo deportivo",
+      "polos cuello camisero",
+      "polos cuello redondo",
+      "polos cuello v",
+      "polos cuello pique",
+      "polo algodón",
+      "polo algodón cuello camisero",
+      "polo algodón cuello redondo",
+      "polo algodón cuello v",
+      "polo algodón cuello pique"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 10.0,
+      "25": 10.0,
+      "50": 10.0,
+      "100": 10.0,
+      "250": 10.0,
+      "500": 10.0,
+      "1000": 10.0,
+      "3000": 10.0,
+      "5000": 10.0
+    }
+  },
+  "CANASTA": {
+    "nombre_comercial": "Canasta",
+    "macro_categoria": "Empaques y Packaging",
+    "subcategoria": "cajas y empaques",
+    "filtros_prenda": [
+      "canasta",
+      "canastas",
+      "canasta navideña"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "500": 10.0
+    }
+  },
+  "CANGURO": {
+    "nombre_comercial": "Canguro",
+    "macro_categoria": "Bolsos y Equipaje",
+    "subcategoria": "bolsos, canguros y maletines",
+    "filtros_prenda": [
+      "canguro",
+      "canguros",
+      "riñonera",
+      "riñoneras",
+      "koala",
+      "koalas",
+      "kit canguro"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 101.6,
+      "25": 97.7,
+      "50": 68.4,
+      "100": 47.9,
+      "250": 46.6,
+      "500": 32.6,
+      "1000": 31.9,
+      "2000": 22.3,
+      "3000": 15.6,
+      "5000": 10.9
+    }
+  },
+  "CARGADOR": {
+    "nombre_comercial": "Cargador",
+    "macro_categoria": "Tecnología y Gadgets",
+    "subcategoria": "tecnologia y gadgets",
+    "filtros_prenda": [
+      "cargador",
+      "cargadores",
+      "cargador para auto"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "100": 40.8,
+      "250": 39.0,
+      "500": 27.3
+    }
+  },
+  "CARPETA": {
+    "nombre_comercial": "Carpeta",
+    "macro_categoria": "Imprenta y Papelería Corporativa",
+    "subcategoria": "folders y carpetas",
+    "filtros_prenda": [
+      "carpeta"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "250": 25.3,
+      "500": 17.7,
+      "1000": 17.3
+    }
+  },
+  "CARTUCHERA": {
+    "nombre_comercial": "Cartuchera",
+    "macro_categoria": "Bolsos y Equipaje",
+    "subcategoria": "estuches, cartucheras y neceseres",
+    "filtros_prenda": [
+      "cartuchera",
+      "cartucheras",
+      "portautiles"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "25": 74.6,
+      "50": 52.2,
+      "100": 36.5,
+      "250": 35.5,
+      "500": 24.8,
+      "1000": 24.3,
+      "2000": 23.8,
+      "5000": 23.2
+    }
+  },
+  "CASACA": {
+    "nombre_comercial": "Casaca",
+    "macro_categoria": "Prendas de Vestir y Textil",
+    "subcategoria": "casacas, chamarras y abrigos",
+    "filtros_prenda": [
+      "casaca",
+      "casacas",
+      "chamarra",
+      "chamarras",
+      "jacket",
+      "jackets",
+      "chaqueta",
+      "chaquetas",
+      "cortavientos",
+      "casaca cortavientos",
+      "rompevientos"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 99.0,
+      "25": 69.3,
+      "50": 56.8,
+      "100": 39.8,
+      "250": 33.7,
+      "500": 33.0
+    }
+  },
+  "CEPILLO": {
+    "nombre_comercial": "Cepillo",
+    "macro_categoria": "Artículos de Hogar y Cocina",
+    "subcategoria": "textiles de hogar y limpieza",
+    "filtros_prenda": [
+      "cepillo"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 786.1,
+      "25": 550.3,
+      "50": 385.2,
+      "100": 269.6,
+      "250": 188.7,
+      "500": 132.1,
+      "1000": 92.5,
+      "2000": 64.8,
+      "3000": 45.4
+    }
+  },
+  "CHALECO": {
+    "nombre_comercial": "Chaleco",
+    "macro_categoria": "Prendas de Vestir y Textil",
+    "subcategoria": "chalecos",
+    "filtros_prenda": [
+      "chaleco",
+      "chalecos",
+      "gilet",
+      "gilets",
+      "chalecos tacticos",
+      "chaleco corporativo",
+      "chaleco corporativo acolchado",
+      "chalecos polar",
+      "chalecos promocional"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 84.7,
+      "25": 59.3,
+      "50": 41.5,
+      "250": 39.6,
+      "500": 38.8,
+      "1000": 27.2,
+      "2000": 26.7
+    }
+  },
+  "CHALINA": {
+    "nombre_comercial": "Chalina",
+    "macro_categoria": "Prendas de Vestir y Textil",
+    "subcategoria": "chalinas y accesorios de frio",
+    "filtros_prenda": [
+      "chalina",
+      "chalinas",
+      "bufanda",
+      "bufandas"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "500": 43.3,
+      "1000": 30.3
+    }
+  },
+  "CHIMPUNERA": {
+    "nombre_comercial": "Chimpunera",
+    "macro_categoria": "Bolsos y Equipaje",
+    "subcategoria": "bolsos, canguros y maletines",
+    "filtros_prenda": [
+      "chimpunera",
+      "chimpuneras",
+      "portacalzado",
+      "portacalzados"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 50.7,
+      "100": 47.3
+    }
+  },
+  "CHOP": {
+    "nombre_comercial": "Chop",
+    "macro_categoria": "Artículos de Hogar y Cocina",
+    "subcategoria": "vasos, tazas y mugs",
+    "filtros_prenda": [
+      "chop",
+      "chopp"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "50": 88.3,
+      "100": 63.3,
+      "1000": 44.3
+    }
+  },
+  "CINTA_LAZO": {
+    "nombre_comercial": "Cinta lazo",
+    "macro_categoria": "Empaques y Packaging",
+    "subcategoria": "cajas y empaques",
+    "filtros_prenda": [
+      "cinta lazo"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "3000": 50.0
+    }
+  },
+  "CINTA_METRICA": {
+    "nombre_comercial": "Cinta metrica",
+    "macro_categoria": "Imprenta y Papelería Corporativa",
+    "subcategoria": "impresos y piezas promocionales",
+    "filtros_prenda": [
+      "cinta metrica"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "100": 103.0,
+      "500": 72.7
+    }
+  },
+  "CLIP": {
+    "nombre_comercial": "Clip",
+    "macro_categoria": "Artículos de Oficina y Escritorio",
+    "subcategoria": "escritorio y organizacion",
+    "filtros_prenda": [
+      "clip"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 293.9,
+      "25": 286.1,
+      "50": 280.4,
+      "100": 196.3,
+      "250": 154.2,
+      "500": 107.9,
+      "1000": 89.6,
+      "2000": 87.8,
+      "3000": 61.9,
+      "5000": 55.4,
+      "10000": 45.5
+    }
+  },
+  "COLGADORES": {
+    "nombre_comercial": "Colgadores",
+    "macro_categoria": "Merchandising y Promocionales",
+    "subcategoria": "trofeos y medallas",
+    "filtros_prenda": [
+      "colgadores",
+      "colgantes"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "100": 101.3,
+      "1000": 70.9
+    }
+  },
+  "COPA": {
+    "nombre_comercial": "Copa",
+    "macro_categoria": "Artículos de Hogar y Cocina",
+    "subcategoria": "vasos, tazas y mugs",
+    "filtros_prenda": [
+      "copa",
+      "copas",
+      "copa champagne",
+      "copa vino"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 50.0,
+      "25": 48.7,
+      "50": 42.9,
+      "100": 42.0,
+      "250": 35.4,
+      "5000": 32.6
+    }
+  },
+  "CORPOREO": {
+    "nombre_comercial": "Corporeo",
+    "macro_categoria": "Imprenta y Papelería Corporativa",
+    "subcategoria": "impresos y piezas promocionales",
+    "filtros_prenda": [
+      "corporeo",
+      "letrero"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 80.3
+    }
+  },
+  "CORTA_PUROS": {
+    "nombre_comercial": "Corta puros",
+    "macro_categoria": "Merchandising y Promocionales",
+    "subcategoria": "trofeos y medallas",
+    "filtros_prenda": [
+      "corta puros"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "100": 211.3
+    }
+  },
+  "COSTURERO": {
+    "nombre_comercial": "Costurero",
+    "macro_categoria": "Artículos de Hogar y Cocina",
+    "subcategoria": "textiles de hogar y limpieza",
+    "filtros_prenda": [
+      "costurero"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "100": 120.9,
+      "500": 84.6,
+      "1000": 62.9
+    }
+  },
+  "CUADERNILLO": {
+    "nombre_comercial": "Cuadernillo",
+    "macro_categoria": "Artículos de Oficina y Escritorio",
+    "subcategoria": "cuadernos y libretas",
+    "filtros_prenda": [
+      "cuadernillo",
+      "cuadernillos"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "250": 42.5
+    }
+  },
+  "CUADERNO": {
+    "nombre_comercial": "Cuaderno",
+    "macro_categoria": "Artículos de Oficina y Escritorio",
+    "subcategoria": "cuadernos y libretas",
+    "filtros_prenda": [
+      "cuaderno",
+      "cuadernos",
+      "cudernos",
+      "cuadernos empresariales",
+      "mini cuaderno"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 361.4,
+      "25": 253.0,
+      "50": 216.3,
+      "100": 151.4,
+      "250": 106.0,
+      "500": 74.2,
+      "1000": 51.9,
+      "2000": 36.3,
+      "5000": 35.3
+    }
+  },
+  "CUBIERTO": {
+    "nombre_comercial": "Cubierto",
+    "macro_categoria": "Artículos de Hogar y Cocina",
+    "subcategoria": "utensilios y cocina",
+    "filtros_prenda": [
+      "cubierto",
+      "cubiertos"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "100": 49.8,
+      "250": 35.3,
+      "500": 34.6,
+      "1000": 33.9,
+      "5000": 32.3
+    }
+  },
+  "CUCHARA": {
+    "nombre_comercial": "Cuchara",
+    "macro_categoria": "Artículos de Hogar y Cocina",
+    "subcategoria": "utensilios y cocina",
+    "filtros_prenda": [
+      "cuchara",
+      "cucharas"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 75.9,
+      "50": 72.9,
+      "100": 72.9,
+      "250": 54.3,
+      "500": 53.2,
+      "2000": 51.1
+    }
+  },
+  "DESTAPADOR": {
+    "nombre_comercial": "Destapador",
+    "macro_categoria": "Merchandising y Promocionales",
+    "subcategoria": "trofeos y medallas",
+    "filtros_prenda": [
+      "destapador",
+      "destapadores"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "100": 261.4,
+      "250": 183.0,
+      "500": 128.1
+    }
+  },
+  "DISFRAZ": {
+    "nombre_comercial": "Disfraz",
+    "macro_categoria": "Prendas de Vestir y Textil",
+    "subcategoria": "mamelucos y overoles",
+    "filtros_prenda": [
+      "disfraz",
+      "disfraz duende",
+      "disfraz papa noel",
+      "disfraz papa Noel"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 51.7
+    }
+  },
+  "DISPENSADOR": {
+    "nombre_comercial": "Dispensador",
+    "macro_categoria": "Artículos de Hogar y Cocina",
+    "subcategoria": "utensilios y cocina",
+    "filtros_prenda": [
+      "dispensador"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 33.6,
+      "100": 31.4,
+      "250": 30.6,
+      "500": 30.0,
+      "1000": 29.4,
+      "5000": 28.0
+    }
+  },
+  "DRINKWARE": {
+    "nombre_comercial": "Drinkware",
+    "macro_categoria": "Artículos de Hogar y Cocina",
+    "subcategoria": "vasos, tazas y mugs",
+    "filtros_prenda": [
+      "drinkware"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "100": 56.7,
+      "1000": 39.7
+    }
+  },
+  "EMPAQUE": {
+    "nombre_comercial": "Empaque",
+    "macro_categoria": "Empaques y Packaging",
+    "subcategoria": "cajas y empaques",
+    "filtros_prenda": [
+      "empaque",
+      "empaques",
+      "packaging"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "25": 82.4,
+      "50": 57.7,
+      "100": 53.6,
+      "250": 42.4,
+      "500": 35.6,
+      "1000": 34.9,
+      "2000": 34.2,
+      "3000": 23.9,
+      "5000": 23.5,
+      "10000": 23.0
+    }
+  },
+  "ENCENDEDOR": {
+    "nombre_comercial": "Encendedor",
+    "macro_categoria": "Tecnología y Gadgets",
+    "subcategoria": "tecnologia y gadgets",
+    "filtros_prenda": [
+      "encendedor"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "1000": 91.2,
+      "2000": 66.7,
+      "3000": 58.3
+    }
+  },
+  "ENGRAPADOR": {
+    "nombre_comercial": "Engrapador",
+    "macro_categoria": "Artículos de Oficina y Escritorio",
+    "subcategoria": "escritorio y organizacion",
+    "filtros_prenda": [
+      "engrapador",
+      "engrampador"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "100": 67.1,
+      "3000": 47.0
+    }
+  },
+  "ESCRITORIO": {
+    "nombre_comercial": "Escritorio",
+    "macro_categoria": "Artículos de Oficina y Escritorio",
+    "subcategoria": "escritorio y organizacion",
+    "filtros_prenda": [
+      "escritorio"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 42.4,
+      "25": 41.3,
+      "50": 38.0,
+      "100": 37.2,
+      "250": 36.2,
+      "500": 25.3,
+      "1000": 24.8
+    }
+  },
+  "ESCULTURA_IMANTADA": {
+    "nombre_comercial": "Escultura imantada",
+    "macro_categoria": "Artículos de Oficina y Escritorio",
+    "subcategoria": "escritorio y organizacion",
+    "filtros_prenda": [
+      "escultura imantada",
+      "escultura magnética"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "50": 212.8,
+      "100": 149.0,
+      "500": 104.3,
+      "1000": 73.0
+    }
+  },
+  "ESPEJO": {
+    "nombre_comercial": "Espejo",
+    "macro_categoria": "Artículos de Hogar y Cocina",
+    "subcategoria": "textiles de hogar y limpieza",
+    "filtros_prenda": [
+      "espejo"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "100": 61.1,
+      "500": 58.3,
+      "1000": 57.1,
+      "2000": 56.0,
+      "5000": 42.9,
+      "10000": 30.0
+    }
+  },
+  "ESTUCHE": {
+    "nombre_comercial": "Estuche",
+    "macro_categoria": "Bolsos y Equipaje",
+    "subcategoria": "estuches, cartucheras y neceseres",
+    "filtros_prenda": [
+      "estuche",
+      "estuches",
+      "esctuche",
+      "estuche vino",
+      "kit estuche"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 76.4,
+      "25": 67.9,
+      "50": 47.5,
+      "100": 37.9,
+      "250": 35.5,
+      "500": 33.0,
+      "1000": 32.3,
+      "2000": 30.9,
+      "3000": 23.0,
+      "5000": 22.7
+    }
+  },
+  "FLYER": {
+    "nombre_comercial": "Flyer",
+    "macro_categoria": "Imprenta y Papelería Corporativa",
+    "subcategoria": "impresos y piezas promocionales",
+    "filtros_prenda": [
+      "flyer",
+      "flyers",
+      "volante",
+      "volantes"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "100": 29.1,
+      "1000": 27.2,
+      "2000": 26.7
+    }
+  },
+  "FOLDER": {
+    "nombre_comercial": "Folder",
+    "macro_categoria": "Imprenta y Papelería Corporativa",
+    "subcategoria": "folders y carpetas",
+    "filtros_prenda": [
+      "folder",
+      "folderes",
+      "folder corp."
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "500": 11.0,
+      "1000": 10.8,
+      "10000": 10.1
+    }
+  },
+  "FOTOCHECK": {
+    "nombre_comercial": "Fotocheck",
+    "macro_categoria": "Artículos de Oficina y Escritorio",
+    "subcategoria": "credenciales y displays",
+    "filtros_prenda": [
+      "fotocheck",
+      "fotochecks"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "50": 177.8,
+      "100": 156.4,
+      "250": 153.5,
+      "500": 132.6,
+      "1000": 96.8,
+      "5000": 92.3
+    }
+  },
+  "FRANELA": {
+    "nombre_comercial": "Franela",
+    "macro_categoria": "Artículos de Hogar y Cocina",
+    "subcategoria": "textiles de hogar y limpieza",
+    "filtros_prenda": [
+      "franela"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "25": 54.7,
+      "50": 50.9,
+      "100": 38.5,
+      "250": 26.9,
+      "500": 24.5,
+      "1000": 20.1,
+      "5000": 19.2
+    }
+  },
+  "FUNDA": {
+    "nombre_comercial": "Funda",
+    "macro_categoria": "Empaques y Packaging",
+    "subcategoria": "bolsas y packaging",
+    "filtros_prenda": [
+      "funda",
+      "fundas",
+      "funda cartón",
+      "funda pana"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 96.4,
+      "50": 86.1,
+      "100": 80.2,
+      "250": 56.1,
+      "500": 55.0,
+      "1000": 53.9,
+      "2000": 52.8,
+      "3000": 37.0
+    }
+  },
+  "GAFETE": {
+    "nombre_comercial": "Gafete",
+    "macro_categoria": "Artículos de Oficina y Escritorio",
+    "subcategoria": "credenciales y displays",
+    "filtros_prenda": [
+      "gafete",
+      "gafetes",
+      "gafete bronce"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 58.2,
+      "25": 56.7,
+      "50": 55.6,
+      "100": 52.7
+    }
+  },
+  "GALARDON": {
+    "nombre_comercial": "Galardon",
+    "macro_categoria": "Merchandising y Promocionales",
+    "subcategoria": "trofeos y medallas",
+    "filtros_prenda": [
+      "galardon",
+      "galardones",
+      "premio",
+      "premios",
+      "condecoracion",
+      "condecoraciones",
+      "muñecos navideños",
+      "muñecos",
+      "bombones",
+      "caramelos",
+      "chocolates",
+      "galletas de la fortuna",
+      "kekes publicitarios",
+      "kekes",
+      "huevos de pascua",
+      "pack muffins",
+      "pack potpourri",
+      "paneton",
+      "panetones",
+      "kit ecológico",
+      "kit viajero",
+      "pack ecológico",
+      "set viajero"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "100": 213.7,
+      "500": 149.6,
+      "1000": 104.7,
+      "2000": 73.3,
+      "5000": 51.3
+    }
+  },
+  "GANCHO": {
+    "nombre_comercial": "Gancho",
+    "macro_categoria": "Merchandising y Promocionales",
+    "subcategoria": "trofeos y medallas",
+    "filtros_prenda": [
+      "gancho"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "100": 42.0,
+      "500": 29.4,
+      "1000": 28.8
+    }
+  },
+  "GLOBO": {
+    "nombre_comercial": "Globo",
+    "macro_categoria": "Merchandising y Promocionales",
+    "subcategoria": "trofeos y medallas",
+    "filtros_prenda": [
+      "globo",
+      "globos",
+      "globo publicitarios",
+      "globos con helio",
+      "paliglobo"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "25": 46.7,
+      "50": 46.7,
+      "100": 45.8,
+      "250": 44.6,
+      "500": 37.7,
+      "1000": 36.9,
+      "2000": 36.2,
+      "3000": 35.8,
+      "5000": 35.3,
+      "10000": 34.6,
+      "20000": 33.9
+    }
+  },
+  "GORRO": {
+    "nombre_comercial": "Gorro",
+    "macro_categoria": "Prendas de Vestir y Textil",
+    "subcategoria": "gorros, vinchas y viseras",
+    "filtros_prenda": [
+      "gorro",
+      "gorros",
+      "gorra",
+      "gorras",
+      "beanie",
+      "beanies",
+      "gorro carbonero",
+      "gorrodrill",
+      "gorro trucker",
+      "gorros bull",
+      "gorros safari",
+      "gorros tapanuca",
+      "chullo",
+      "chullos"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 11.2,
+      "25": 10.9,
+      "50": 10.7,
+      "100": 10.5,
+      "250": 10.2,
+      "500": 10.0,
+      "1000": 10.0,
+      "2000": 10.0,
+      "3000": 10.0,
+      "5000": 10.0,
+      "10000": 10.0
+    }
+  },
+  "HERRAMIENTERO": {
+    "nombre_comercial": "Herramientero",
+    "macro_categoria": "Merchandising y Promocionales",
+    "subcategoria": "trofeos y medallas",
+    "filtros_prenda": [
+      "herramientero",
+      "casco",
+      "multiherramientero",
+      "mini herramientero",
+      "mini kit multiherramiententa",
+      "set de herramientas",
+      "set herramientero",
+      "navaja",
+      "navajas"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 273.4,
+      "50": 191.4,
+      "100": 151.4,
+      "250": 106.0,
+      "500": 74.2,
+      "1000": 51.9
+    }
+  },
+  "HOJA_MEMBRETADA": {
+    "nombre_comercial": "Hoja membretada",
+    "macro_categoria": "Imprenta y Papelería Corporativa",
+    "subcategoria": "hojas y papeleria corporativa",
+    "filtros_prenda": [
+      "hoja membretada",
+      "hojas",
+      "hoja corporativas",
+      "hoja informativa",
+      "carta"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 88.2,
+      "50": 65.2,
+      "100": 63.9,
+      "250": 58.4,
+      "500": 40.9,
+      "1000": 40.1,
+      "2000": 39.3,
+      "3000": 38.8,
+      "10000": 37.5
+    }
+  },
+  "IDENTIFICADOR": {
+    "nombre_comercial": "Identificador",
+    "macro_categoria": "Artículos de Oficina y Escritorio",
+    "subcategoria": "credenciales y displays",
+    "filtros_prenda": [
+      "identificador",
+      "identificadores"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "50": 154.5,
+      "100": 151.4,
+      "500": 106.0,
+      "1000": 74.2
+    }
+  },
+  "IMANTADO": {
+    "nombre_comercial": "Imantado",
+    "macro_categoria": "Merchandising y Promocionales",
+    "subcategoria": "placas y reconocimientos",
+    "filtros_prenda": [
+      "imantado",
+      "imantados",
+      "imantal promocional",
+      "mariposa con iman"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "500": 142.3,
+      "1000": 141.7,
+      "2000": 113.3,
+      "5000": 79.3,
+      "10000": 77.7,
+      "30000": 75.2
+    }
+  },
+  "INDIVIDUAL": {
+    "nombre_comercial": "Individual",
+    "macro_categoria": "Imprenta y Papelería Corporativa",
+    "subcategoria": "impresos y piezas promocionales",
+    "filtros_prenda": [
+      "individual",
+      "individuales"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "50": 43.3,
+      "100": 42.4,
+      "250": 41.3,
+      "500": 37.7,
+      "1000": 36.9,
+      "2000": 36.2,
+      "3000": 35.8,
+      "5000": 35.3
+    }
+  },
+  "INSIGNIA": {
+    "nombre_comercial": "Insignia",
+    "macro_categoria": "Merchandising y Promocionales",
+    "subcategoria": "pines y prendedores",
+    "filtros_prenda": [
+      "insignia",
+      "insignias"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 62.8,
+      "25": 55.7,
+      "50": 42.0,
+      "100": 36.5,
+      "250": 32.7,
+      "500": 32.0,
+      "1000": 26.7,
+      "3000": 18.7,
+      "5000": 18.4,
+      "10000": 18.0
+    }
+  },
+  "JARRO": {
+    "nombre_comercial": "Jarro",
+    "macro_categoria": "Artículos de Hogar y Cocina",
+    "subcategoria": "vasos, tazas y mugs",
+    "filtros_prenda": [
+      "jarro",
+      "jarros",
+      "jarro mug",
+      "jarro mug moka",
+      "jarro mug fibra de trigo",
+      "moke",
+      "mokes"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 73.5,
+      "25": 71.6,
+      "50": 70.2,
+      "100": 68.7,
+      "250": 62.7,
+      "500": 43.9,
+      "1000": 35.2,
+      "2000": 34.5,
+      "5000": 33.6
+    }
+  },
+  "JUEGO": {
+    "nombre_comercial": "Juego",
+    "macro_categoria": "Merchandising y Promocionales",
+    "subcategoria": "trofeos y medallas",
+    "filtros_prenda": [
+      "juego",
+      "juegos",
+      "michi",
+      "desestresante",
+      "jenga",
+      "jenga madera",
+      "jenga mdf",
+      "ajedrez",
+      "cubo",
+      "frisbee",
+      "pelota",
+      "rompecabeza",
+      "rompecabezas"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 31.2,
+      "25": 30.4,
+      "50": 29.8,
+      "100": 29.2,
+      "250": 28.4,
+      "500": 27.8,
+      "1000": 27.2,
+      "2000": 26.7,
+      "3000": 26.4,
+      "5000": 26.0
+    }
+  },
+  "KIT_EJECUTIVO": {
+    "nombre_comercial": "Kit ejecutivo",
+    "macro_categoria": "Artículos de Oficina y Escritorio",
+    "subcategoria": "escritorio y organizacion",
+    "filtros_prenda": [
+      "kit ejecutivo"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "50": 43.2,
+      "100": 31.6
+    }
+  },
+  "KIT_ESCOLAR": {
+    "nombre_comercial": "Kit escolar",
+    "macro_categoria": "Artículos de Oficina y Escritorio",
+    "subcategoria": "escritorio y organizacion",
+    "filtros_prenda": [
+      "kit escolar"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "30000": 666.7
+    }
+  },
+  "LAPICERO": {
+    "nombre_comercial": "Lapicero",
+    "macro_categoria": "Artículos de Oficina y Escritorio",
+    "subcategoria": "lapiceros y escritura",
+    "filtros_prenda": [
+      "lapicero",
+      "lapiceros",
+      "lap-",
+      "lap.",
+      "lap. plast.",
+      "lapicero aguja",
+      "lapicero madera",
+      "lapicero bamboo",
+      "lapicero atomizador",
+      "lapicero linterna",
+      "lapicero puntero laser",
+      "lapicero con punta de goma",
+      "lapicero resaltador",
+      "lapicero jeringa",
+      "lap usb"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 72.4,
+      "25": 70.5,
+      "50": 69.1,
+      "100": 67.7,
+      "250": 65.9,
+      "500": 64.6,
+      "1000": 63.3,
+      "2000": 62.0,
+      "3000": 61.3,
+      "5000": 60.4,
+      "10000": 59.2,
+      "20000": 51.1,
+      "30000": 50.5,
+      "50000": 49.8,
+      "100000": 48.8
+    }
+  },
+  "LAPIZ": {
+    "nombre_comercial": "Lapiz",
+    "macro_categoria": "Artículos de Oficina y Escritorio",
+    "subcategoria": "lapiceros y escritura",
+    "filtros_prenda": [
+      "lapiz",
+      "lapices",
+      "lapiz eco",
+      "lapiz natural",
+      "lapiz blanco"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "250": 223.5,
+      "500": 219.0,
+      "1000": 214.6,
+      "2000": 209.5,
+      "3000": 204.4,
+      "5000": 168.4,
+      "10000": 117.9,
+      "20000": 115.5
+    }
+  },
+  "LASER": {
+    "nombre_comercial": "Laser",
+    "macro_categoria": "Tecnología y Gadgets",
+    "subcategoria": "tecnologia y gadgets",
+    "filtros_prenda": [
+      "laser"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "25": 35.5,
+      "50": 30.3,
+      "100": 29.7,
+      "250": 28.9,
+      "500": 28.3
+    }
+  },
+  "LIBRETA": {
+    "nombre_comercial": "Libreta",
+    "macro_categoria": "Artículos de Oficina y Escritorio",
+    "subcategoria": "cuadernos y libretas",
+    "filtros_prenda": [
+      "libreta",
+      "libretas",
+      "eco libreta",
+      "mini libreta",
+      "libreta eco",
+      "libreta ecoligica",
+      "libreta post it",
+      "libreta tapa imantada"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 270.0,
+      "25": 249.8,
+      "50": 174.9,
+      "100": 122.4,
+      "250": 85.7,
+      "500": 60.0,
+      "1000": 51.8,
+      "2000": 51.2,
+      "3000": 38.3
+    }
+  },
+  "LIMPIA": {
+    "nombre_comercial": "Limpia",
+    "macro_categoria": "Merchandising y Promocionales",
+    "subcategoria": "trofeos y medallas",
+    "filtros_prenda": [
+      "limpia"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "2000": 350.8,
+      "3000": 260.7,
+      "10000": 182.5
+    }
+  },
+  "LINTERNA": {
+    "nombre_comercial": "Linterna",
+    "macro_categoria": "Tecnología y Gadgets",
+    "subcategoria": "tecnologia y gadgets",
+    "filtros_prenda": [
+      "linterna",
+      "limterna",
+      "mini linterna"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "50": 112.9,
+      "100": 108.3,
+      "250": 76.9,
+      "500": 65.0,
+      "1000": 54.1,
+      "2000": 53.0
+    }
+  },
+  "LLAVERO": {
+    "nombre_comercial": "Llavero",
+    "macro_categoria": "Merchandising y Promocionales",
+    "subcategoria": "llaveros",
+    "filtros_prenda": [
+      "llavero",
+      "llaveros",
+      "keychain",
+      "keychains",
+      "mini llavero",
+      "llavero destapador",
+      "llavero linterna",
+      "llavero casco",
+      "llavero antiestrés",
+      "llavero pvc",
+      "llavero espejo",
+      "llavero visual",
+      "llavero inyectable",
+      "llavero microinyectable",
+      "llavero lapicero",
+      "llavero microporoso",
+      "llavero multiusos",
+      "llavero pill box",
+      "llavero laser",
+      "llavero puntero laser",
+      "llavero silver",
+      "llavero wincha"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "25": 387.3,
+      "50": 278.3,
+      "100": 194.8,
+      "250": 136.4,
+      "500": 95.5,
+      "1000": 69.3,
+      "2000": 66.8,
+      "3000": 55.6,
+      "5000": 54.8,
+      "10000": 53.7,
+      "20000": 52.6
+    }
+  },
+  "LONCHERA": {
+    "nombre_comercial": "Lonchera",
+    "macro_categoria": "Bolsos y Equipaje",
+    "subcategoria": "bolsos, canguros y maletines",
+    "filtros_prenda": [
+      "lonchera",
+      "loncheras"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "25": 60.0,
+      "50": 53.0,
+      "100": 40.6,
+      "250": 31.6,
+      "500": 22.3,
+      "1000": 21.9
+    }
+  },
+  "LUSTRADOR": {
+    "nombre_comercial": "Lustrador",
+    "macro_categoria": "Artículos de Hogar y Cocina",
+    "subcategoria": "textiles de hogar y limpieza",
+    "filtros_prenda": [
+      "lustrador"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "100": 300.0,
+      "250": 253.6,
+      "500": 177.5,
+      "1000": 144.7
+    }
+  },
+  "MALETA": {
+    "nombre_comercial": "Maleta",
+    "macro_categoria": "Bolsos y Equipaje",
+    "subcategoria": "bolsos, canguros y maletines",
+    "filtros_prenda": [
+      "maleta",
+      "maletas"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "50": 42.1,
+      "100": 41.3,
+      "250": 28.9,
+      "1000": 26.5
+    }
+  },
+  "MALETIN": {
+    "nombre_comercial": "Maletin",
+    "macro_categoria": "Bolsos y Equipaje",
+    "subcategoria": "bolsos, canguros y maletines",
+    "filtros_prenda": [
+      "maletin",
+      "maletines"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 67.7,
+      "25": 65.9,
+      "50": 50.0,
+      "100": 35.0,
+      "250": 24.5,
+      "500": 24.0,
+      "1000": 23.5
+    }
+  },
+  "MAMELUCO": {
+    "nombre_comercial": "Mameluco",
+    "macro_categoria": "Prendas de Vestir y Textil",
+    "subcategoria": "mamelucos y overoles",
+    "filtros_prenda": [
+      "mameluco",
+      "mamelucos",
+      "overol",
+      "overoles",
+      "overall",
+      "enterizo",
+      "enterizos",
+      "uniforme"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 32.3,
+      "25": 31.4,
+      "50": 26.1,
+      "100": 25.6
+    }
+  },
+  "MANDIL": {
+    "nombre_comercial": "Mandil",
+    "macro_categoria": "Prendas de Vestir y Textil",
+    "subcategoria": "mandiles y delantales",
+    "filtros_prenda": [
+      "mandil",
+      "mandiles",
+      "delantal",
+      "delantales",
+      "tablier",
+      "tabliers"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 125.7,
+      "25": 88.0,
+      "50": 61.6,
+      "100": 60.4,
+      "250": 42.3,
+      "500": 38.0,
+      "1000": 37.2,
+      "2000": 36.5,
+      "3000": 25.5
+    }
+  },
+  "MARBETE": {
+    "nombre_comercial": "Marbete",
+    "macro_categoria": "Artículos de Oficina y Escritorio",
+    "subcategoria": "credenciales y displays",
+    "filtros_prenda": [
+      "marbete"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "25": 71.7,
+      "50": 50.2
+    }
+  },
+  "MARCADOR": {
+    "nombre_comercial": "Marcador",
+    "macro_categoria": "Artículos de Oficina y Escritorio",
+    "subcategoria": "lapiceros y escritura",
+    "filtros_prenda": [
+      "marcador",
+      "marcadores",
+      "marcadores de texto"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "100": 66.3,
+      "1000": 46.4,
+      "2000": 32.5,
+      "3000": 29.8
+    }
+  },
+  "MARCO_FOTO": {
+    "nombre_comercial": "Marco foto",
+    "macro_categoria": "Artículos de Oficina y Escritorio",
+    "subcategoria": "credenciales y displays",
+    "filtros_prenda": [
+      "marco foto",
+      "marcos foto",
+      "marco de foto",
+      "marco de fotometal",
+      "marco de fotoplastico",
+      "marco de fotos",
+      "marco para foto importad.",
+      "marco"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 159.3,
+      "25": 155.1,
+      "50": 119.6,
+      "100": 83.8,
+      "250": 81.6,
+      "500": 80.0,
+      "1000": 62.1,
+      "2000": 60.9
+    }
+  },
+  "MEDIDOR_DE_AIRE_PARA_NEUMATICOS": {
+    "nombre_comercial": "Medidor de aire para neumaticos",
+    "macro_categoria": "Merchandising y Promocionales",
+    "subcategoria": "trofeos y medallas",
+    "filtros_prenda": [
+      "medidor de aire para neumaticos",
+      "medidor de aire para neumáticos plasticos"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "500": 57.2,
+      "1000": 43.8
+    }
+  },
+  "MEMORIA_USB": {
+    "nombre_comercial": "Memoria usb",
+    "macro_categoria": "Tecnología y Gadgets",
+    "subcategoria": "tecnologia y gadgets",
+    "filtros_prenda": [
+      "memoria usb",
+      "usb",
+      "memorias usb"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 107.4,
+      "25": 75.2,
+      "50": 52.6,
+      "100": 36.8,
+      "250": 26.0,
+      "500": 25.5,
+      "1000": 17.8,
+      "3000": 17.2,
+      "5000": 16.9
+    }
+  },
+  "MINI_MUG": {
+    "nombre_comercial": "Mini mug",
+    "macro_categoria": "Merchandising y Promocionales",
+    "subcategoria": "trofeos y medallas",
+    "filtros_prenda": [
+      "mini mug",
+      "mini stickies",
+      "pocket stickies",
+      "notas adhesivas"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "1000": 39.0
+    }
+  },
+  "MOCHILA": {
+    "nombre_comercial": "Mochila",
+    "macro_categoria": "Bolsos y Equipaje",
+    "subcategoria": "mochilas y morrales",
+    "filtros_prenda": [
+      "mochila",
+      "mochilas",
+      "backpack",
+      "backpacks",
+      "mochila navideña",
+      "mochila funcional",
+      "mochila portalaptop"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 98.2,
+      "25": 68.7,
+      "50": 67.3,
+      "100": 49.6,
+      "250": 34.7,
+      "500": 34.0,
+      "1000": 33.3,
+      "2000": 32.6
+    }
+  },
+  "MONEDERO": {
+    "nombre_comercial": "Monedero",
+    "macro_categoria": "Bolsos y Equipaje",
+    "subcategoria": "estuches, cartucheras y neceseres",
+    "filtros_prenda": [
+      "monedero",
+      "monederos",
+      "monederos promocionales"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "100": 48.6,
+      "250": 47.3,
+      "500": 46.4,
+      "1000": 45.5,
+      "2000": 44.6,
+      "20000": 31.2
+    }
+  },
+  "MOPA": {
+    "nombre_comercial": "Mopa",
+    "macro_categoria": "Artículos de Hogar y Cocina",
+    "subcategoria": "textiles de hogar y limpieza",
+    "filtros_prenda": [
+      "mopa"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "100": 125.8,
+      "250": 88.1,
+      "500": 61.7,
+      "1000": 59.8
+    }
+  },
+  "MORRAL": {
+    "nombre_comercial": "Morral",
+    "macro_categoria": "Bolsos y Equipaje",
+    "subcategoria": "mochilas y morrales",
+    "filtros_prenda": [
+      "morral",
+      "morrales",
+      "morral de espalda"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 61.9,
+      "25": 43.3,
+      "50": 35.9,
+      "100": 32.9,
+      "500": 31.4,
+      "1000": 30.2,
+      "3000": 21.1,
+      "5000": 14.8,
+      "30000": 10.4
+    }
+  },
+  "MOUSE": {
+    "nombre_comercial": "Mouse",
+    "macro_categoria": "Tecnología y Gadgets",
+    "subcategoria": "tecnologia y gadgets",
+    "filtros_prenda": [
+      "mouse"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "25": 106.0,
+      "50": 83.6,
+      "100": 58.5,
+      "250": 57.0,
+      "500": 55.9
+    }
+  },
+  "MOUSE_PAD": {
+    "nombre_comercial": "Mouse pad",
+    "macro_categoria": "Artículos de Oficina y Escritorio",
+    "subcategoria": "escritorio y organizacion",
+    "filtros_prenda": [
+      "mouse pad",
+      "mousepad",
+      "mini mouse pad",
+      "alfombrilla",
+      "alfombrillas",
+      "tapete de escritorio"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "25": 76.2,
+      "50": 74.7,
+      "100": 52.3,
+      "250": 39.7,
+      "500": 35.0,
+      "1000": 33.1,
+      "2000": 32.4
+    }
+  },
+  "MUG": {
+    "nombre_comercial": "Mug",
+    "macro_categoria": "Artículos de Hogar y Cocina",
+    "subcategoria": "vasos, tazas y mugs",
+    "filtros_prenda": [
+      "mug",
+      "mugs",
+      "mug moka",
+      "mug fibra de trigo",
+      "travel mug",
+      "electronic mug",
+      "cofee mug",
+      "mug briel",
+      "mug acero",
+      "mug doble pared",
+      "mug rainbow",
+      "mug transparente",
+      "super mug"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 202.7,
+      "25": 181.3,
+      "50": 126.9,
+      "100": 88.8,
+      "250": 67.3,
+      "500": 47.1,
+      "1000": 33.0,
+      "2000": 23.1,
+      "3000": 16.3,
+      "5000": 16.1,
+      "10000": 15.8
+    }
+  },
+  "NECESER": {
+    "nombre_comercial": "Neceser",
+    "macro_categoria": "Bolsos y Equipaje",
+    "subcategoria": "estuches, cartucheras y neceseres",
+    "filtros_prenda": [
+      "neceser",
+      "neceseres",
+      "bolso de aseo",
+      "porta cosméticos"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 212.5,
+      "25": 167.0,
+      "50": 116.9,
+      "100": 81.8,
+      "250": 57.3,
+      "500": 56.2,
+      "1000": 39.3,
+      "3000": 38.4,
+      "5000": 26.9
+    }
+  },
+  "NOTEBOOK": {
+    "nombre_comercial": "Notebook",
+    "macro_categoria": "Artículos de Oficina y Escritorio",
+    "subcategoria": "cuadernos y libretas",
+    "filtros_prenda": [
+      "notebook",
+      "journal",
+      "journals"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 521.0,
+      "25": 364.7,
+      "50": 255.3,
+      "100": 178.7,
+      "250": 125.1,
+      "500": 87.6,
+      "1000": 61.3,
+      "2000": 42.9
+    }
+  },
+  "ORGANIZADOR": {
+    "nombre_comercial": "Organizador",
+    "macro_categoria": "Artículos de Oficina y Escritorio",
+    "subcategoria": "escritorio y organizacion",
+    "filtros_prenda": [
+      "organizador",
+      "organizadores"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "100": 48.3,
+      "250": 47.0
+    }
+  },
+  "PALETAS": {
+    "nombre_comercial": "Paletas",
+    "macro_categoria": "Merchandising y Promocionales",
+    "subcategoria": "trofeos y medallas",
+    "filtros_prenda": [
+      "paletas"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "500": 21.5,
+      "1000": 21.1
+    }
+  },
+  "PANTALON": {
+    "nombre_comercial": "Pantalon",
+    "macro_categoria": "Prendas de Vestir y Textil",
+    "subcategoria": "pantalones, shorts y bermudas",
+    "filtros_prenda": [
+      "pantalon",
+      "pantalones",
+      "pantalon jean",
+      "pantaloneta"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 59.5,
+      "25": 43.7,
+      "50": 30.6,
+      "100": 25.9,
+      "250": 25.2,
+      "500": 24.7
+    }
+  },
+  "PAPEL_DE_REGALO": {
+    "nombre_comercial": "Papel de regalo",
+    "macro_categoria": "Empaques y Packaging",
+    "subcategoria": "bolsas y packaging",
+    "filtros_prenda": [
+      "papel de regalo"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "3000": 15.9
+    }
+  },
+  "PARAGUAS": {
+    "nombre_comercial": "Paraguas",
+    "macro_categoria": "Merchandising y Promocionales",
+    "subcategoria": "trofeos y medallas",
+    "filtros_prenda": [
+      "paraguas",
+      "sombrilla",
+      "sombrillas",
+      "cooler",
+      "radio cooler",
+      "flotador",
+      "mesa de playa",
+      "mesita de playa",
+      "silla de playa"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "25": 55.6,
+      "50": 54.5,
+      "100": 38.2,
+      "250": 26.7,
+      "500": 18.7,
+      "1000": 14.5
+    }
+  },
+  "PARLANTE": {
+    "nombre_comercial": "Parlante",
+    "macro_categoria": "Tecnología y Gadgets",
+    "subcategoria": "tecnologia y gadgets",
+    "filtros_prenda": [
+      "parlante",
+      "parlantes",
+      "parlante bluetooth",
+      "speake bluetooth"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "25": 59.3
+    }
+  },
+  "PARRILLA": {
+    "nombre_comercial": "Parrilla",
+    "macro_categoria": "Artículos de Hogar y Cocina",
+    "subcategoria": "utensilios y cocina",
+    "filtros_prenda": [
+      "parrilla"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "100": 40.7,
+      "500": 28.5
+    }
+  },
+  "PASTILLERO": {
+    "nombre_comercial": "Pastillero",
+    "macro_categoria": "Merchandising y Promocionales",
+    "subcategoria": "trofeos y medallas",
+    "filtros_prenda": [
+      "pastillero"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "100": 46.5,
+      "250": 45.3,
+      "500": 44.4,
+      "1000": 43.5
+    }
+  },
+  "PAÑO": {
+    "nombre_comercial": "Paño",
+    "macro_categoria": "Artículos de Hogar y Cocina",
+    "subcategoria": "textiles de hogar y limpieza",
+    "filtros_prenda": [
+      "paño",
+      "paños"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "50": 46.0,
+      "100": 45.1,
+      "250": 31.6,
+      "500": 31.0,
+      "1000": 30.4,
+      "2000": 29.8,
+      "10000": 28.4
+    }
+  },
+  "PAÑUELO": {
+    "nombre_comercial": "Pañuelo",
+    "macro_categoria": "Prendas de Vestir y Textil",
+    "subcategoria": "chalinas y accesorios de frio",
+    "filtros_prenda": [
+      "pañuelo",
+      "pañueleta"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "25": 74.4
+    }
+  },
+  "PIN": {
+    "nombre_comercial": "Pin",
+    "macro_categoria": "Merchandising y Promocionales",
+    "subcategoria": "pines y prendedores",
+    "filtros_prenda": [
+      "pin",
+      "pines"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 19.6,
+      "25": 19.1,
+      "50": 18.7,
+      "100": 18.3,
+      "250": 17.8,
+      "500": 17.4,
+      "1000": 14.7,
+      "2000": 11.8,
+      "3000": 10.2,
+      "5000": 10.0,
+      "10000": 10.0,
+      "50000": 10.0
+    }
+  },
+  "PISAPAPEL": {
+    "nombre_comercial": "Pisapapel",
+    "macro_categoria": "Merchandising y Promocionales",
+    "subcategoria": "trofeos y medallas",
+    "filtros_prenda": [
+      "pisapapel"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "25": 341.2
+    }
+  },
+  "PLACA": {
+    "nombre_comercial": "Placa",
+    "macro_categoria": "Merchandising y Promocionales",
+    "subcategoria": "placas y reconocimientos",
+    "filtros_prenda": [
+      "placa",
+      "placas",
+      "placa grabada",
+      "plaquita"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 45.8,
+      "1000": 34.7
+    }
+  },
+  "PLUMON": {
+    "nombre_comercial": "Plumon",
+    "macro_categoria": "Artículos de Oficina y Escritorio",
+    "subcategoria": "lapiceros y escritura",
+    "filtros_prenda": [
+      "plumon",
+      "plumones"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 107.9,
+      "3000": 75.5
+    }
+  },
+  "POLERA": {
+    "nombre_comercial": "Polera",
+    "macro_categoria": "Prendas de Vestir y Textil",
+    "subcategoria": "poleras, buzos y sudaderas",
+    "filtros_prenda": [
+      "polera",
+      "poleras",
+      "polera polar",
+      "sudadera",
+      "sudaderas",
+      "hoodie",
+      "hoodies"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "50": 75.2,
+      "1000": 52.6
+    }
+  },
+  "PONCHO": {
+    "nombre_comercial": "Poncho",
+    "macro_categoria": "Prendas de Vestir y Textil",
+    "subcategoria": "casacas, chamarras y abrigos",
+    "filtros_prenda": [
+      "poncho",
+      "poncho impermeable"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "1000": 16.2
+    }
+  },
+  "PORTARETRATO": {
+    "nombre_comercial": "Portaretrato",
+    "macro_categoria": "Artículos de Oficina y Escritorio",
+    "subcategoria": "credenciales y displays",
+    "filtros_prenda": [
+      "portaretrato",
+      "porta retrato",
+      "portarretrato",
+      "porta retratos"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "50": 104.6,
+      "100": 95.6,
+      "250": 66.9,
+      "500": 46.8,
+      "1000": 32.8
+    }
+  },
+  "PORTA_AFICHE": {
+    "nombre_comercial": "Porta afiche",
+    "macro_categoria": "Artículos de Oficina y Escritorio",
+    "subcategoria": "credenciales y displays",
+    "filtros_prenda": [
+      "porta afiche"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 59.5
+    }
+  },
+  "PORTA_CARNET": {
+    "nombre_comercial": "Porta carnet",
+    "macro_categoria": "Artículos de Oficina y Escritorio",
+    "subcategoria": "credenciales y displays",
+    "filtros_prenda": [
+      "porta carnet",
+      "porta carnets"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "100": 178.5
+    }
+  },
+  "PORTA_CELULAR": {
+    "nombre_comercial": "Porta celular",
+    "macro_categoria": "Artículos de Oficina y Escritorio",
+    "subcategoria": "escritorio y organizacion",
+    "filtros_prenda": [
+      "porta celular",
+      "soporte celular",
+      "portacelular",
+      "silla porta celular"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "25": 68.2,
+      "50": 66.8,
+      "100": 65.5,
+      "250": 63.8,
+      "500": 62.5,
+      "1000": 61.2,
+      "2000": 60.0,
+      "5000": 42.0
+    }
+  },
+  "PORTA_DOCUMENTOS": {
+    "nombre_comercial": "Porta documentos",
+    "macro_categoria": "Artículos de Oficina y Escritorio",
+    "subcategoria": "escritorio y organizacion",
+    "filtros_prenda": [
+      "porta documentos",
+      "portadocumentos"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 83.1,
+      "50": 80.6,
+      "100": 79.0,
+      "250": 76.9,
+      "500": 54.0
+    }
+  },
+  "PORTA_FLYER": {
+    "nombre_comercial": "Porta flyer",
+    "macro_categoria": "Artículos de Oficina y Escritorio",
+    "subcategoria": "credenciales y displays",
+    "filtros_prenda": [
+      "porta flyer",
+      "porta flyers"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "250": 16.9
+    }
+  },
+  "PORTA_FOTO": {
+    "nombre_comercial": "Porta foto",
+    "macro_categoria": "Artículos de Oficina y Escritorio",
+    "subcategoria": "credenciales y displays",
+    "filtros_prenda": [
+      "porta foto",
+      "porta fotos",
+      "portafoto",
+      "porta foto madera"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "25": 186.3,
+      "50": 130.4,
+      "100": 91.3,
+      "250": 63.9,
+      "500": 44.7,
+      "1000": 31.3
+    }
+  },
+  "PORTA_LAPIZ": {
+    "nombre_comercial": "Porta lapiz",
+    "macro_categoria": "Artículos de Oficina y Escritorio",
+    "subcategoria": "escritorio y organizacion",
+    "filtros_prenda": [
+      "porta lapiz",
+      "portalapicero",
+      "porta lapicero",
+      "portaboligrafo"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "25": 363.3,
+      "50": 254.3,
+      "100": 178.0,
+      "250": 124.6,
+      "500": 87.2,
+      "1000": 61.0,
+      "2000": 42.7
+    }
+  },
+  "PORTA_NOMBRE": {
+    "nombre_comercial": "Porta nombre",
+    "macro_categoria": "Artículos de Oficina y Escritorio",
+    "subcategoria": "credenciales y displays",
+    "filtros_prenda": [
+      "porta nombre",
+      "porta nombres"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 87.5
+    }
+  },
+  "PORTA_NOTA": {
+    "nombre_comercial": "Porta nota",
+    "macro_categoria": "Artículos de Oficina y Escritorio",
+    "subcategoria": "escritorio y organizacion",
+    "filtros_prenda": [
+      "porta nota",
+      "porta notas",
+      "portanota",
+      "portanotas",
+      "memo pad",
+      "memo clip",
+      "memoclip",
+      "porta memo"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 358.0,
+      "25": 344.4,
+      "50": 241.1,
+      "100": 168.8,
+      "250": 118.2,
+      "500": 82.7,
+      "1000": 57.9,
+      "10000": 40.5
+    }
+  },
+  "PORTA_POST_IT": {
+    "nombre_comercial": "Porta post it",
+    "macro_categoria": "Artículos de Oficina y Escritorio",
+    "subcategoria": "escritorio y organizacion",
+    "filtros_prenda": [
+      "porta post it",
+      "post it poster"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "500": 23.1,
+      "1000": 16.7,
+      "2000": 16.4,
+      "3000": 16.2
+    }
+  },
+  "PORTA_TARJETA": {
+    "nombre_comercial": "Porta tarjeta",
+    "macro_categoria": "Artículos de Oficina y Escritorio",
+    "subcategoria": "escritorio y organizacion",
+    "filtros_prenda": [
+      "porta tarjeta",
+      "porta tarjetas",
+      "portatarjeta",
+      "portatarjetas",
+      "set portatarjeta",
+      "set porta tarjetas",
+      "set portatarjetas"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 563.7,
+      "25": 394.6,
+      "50": 276.2,
+      "100": 193.3,
+      "250": 135.3,
+      "500": 94.7,
+      "1000": 92.8
+    }
+  },
+  "PORTA_USB": {
+    "nombre_comercial": "Porta usb",
+    "macro_categoria": "Artículos de Oficina y Escritorio",
+    "subcategoria": "escritorio y organizacion",
+    "filtros_prenda": [
+      "porta usb"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "25": 154.8,
+      "50": 108.4,
+      "100": 75.9,
+      "250": 53.1,
+      "500": 37.2,
+      "1000": 26.0
+    }
+  },
+  "POWER_BANK": {
+    "nombre_comercial": "Power bank",
+    "macro_categoria": "Tecnología y Gadgets",
+    "subcategoria": "tecnologia y gadgets",
+    "filtros_prenda": [
+      "power bank"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "100": 81.3
+    }
+  },
+  "PRENDEDOR": {
+    "nombre_comercial": "Prendedor",
+    "macro_categoria": "Merchandising y Promocionales",
+    "subcategoria": "pines y prendedores",
+    "filtros_prenda": [
+      "prendedor",
+      "prendedores",
+      "broche",
+      "broches"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "100": 80.0,
+      "250": 56.9,
+      "500": 39.8,
+      "1000": 38.1
+    }
+  },
+  "PULSERA": {
+    "nombre_comercial": "Pulsera",
+    "macro_categoria": "Merchandising y Promocionales",
+    "subcategoria": "pines y prendedores",
+    "filtros_prenda": [
+      "pulsera",
+      "pulseras",
+      "pulsera caucho",
+      "pulsera silicona",
+      "pulsera usb"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "50": 30.1,
+      "100": 29.5,
+      "250": 24.8,
+      "500": 24.7,
+      "1000": 21.8,
+      "2000": 21.4,
+      "5000": 21.2,
+      "10000": 20.8,
+      "50000": 19.8
+    }
+  },
+  "REGLA": {
+    "nombre_comercial": "Regla",
+    "macro_categoria": "Artículos de Oficina y Escritorio",
+    "subcategoria": "escritorio y organizacion",
+    "filtros_prenda": [
+      "regla",
+      "reglas",
+      "regla escolar",
+      "regla poliestireno",
+      "regla calculadora",
+      "regla lupa",
+      "reglas promocionales"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 86.6,
+      "100": 80.8,
+      "500": 56.6,
+      "1000": 55.3,
+      "2000": 54.2,
+      "3000": 53.6,
+      "5000": 52.8,
+      "10000": 37.0,
+      "30000": 35.8,
+      "50000": 35.3,
+      "100000": 34.6
+    }
+  },
+  "RELOJ": {
+    "nombre_comercial": "Reloj",
+    "macro_categoria": "Tecnología y Gadgets",
+    "subcategoria": "relojes",
+    "filtros_prenda": [
+      "reloj",
+      "relojes",
+      "reloj de pared",
+      "reloj digital",
+      "reloj promocional",
+      "reloj escritorio",
+      "reloj multiuso",
+      "reloj porta",
+      "reloj rompecabezas",
+      "reloj swarovski",
+      "reloj vip"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "25": 120.7,
+      "50": 108.4,
+      "100": 93.0,
+      "250": 73.7,
+      "500": 72.2,
+      "1000": 70.8
+    }
+  },
+  "RELOJ_DIGITAL_CON_TARJETERO": {
+    "nombre_comercial": "Reloj digital con tarjetero",
+    "macro_categoria": "Artículos de Oficina y Escritorio",
+    "subcategoria": "escritorio y organizacion",
+    "filtros_prenda": [
+      "reloj digital con tarjetero",
+      "mini reloj digital con tarjetero"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "250": 82.9,
+      "500": 58.0,
+      "1000": 40.6
+    }
+  },
+  "REPISA": {
+    "nombre_comercial": "Repisa",
+    "macro_categoria": "Artículos de Oficina y Escritorio",
+    "subcategoria": "escritorio y organizacion",
+    "filtros_prenda": [
+      "repisa",
+      "repisas"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 420.3
+    }
+  },
+  "RESALTADOR": {
+    "nombre_comercial": "Resaltador",
+    "macro_categoria": "Artículos de Oficina y Escritorio",
+    "subcategoria": "lapiceros y escritura",
+    "filtros_prenda": [
+      "resaltador",
+      "resaltadores",
+      "set resaltador"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "25": 149.8,
+      "50": 146.8,
+      "100": 143.9,
+      "250": 100.7,
+      "500": 70.5,
+      "1000": 49.3,
+      "2000": 48.3,
+      "3000": 44.8,
+      "5000": 44.1,
+      "10000": 41.9
+    }
+  },
+  "REVISTA": {
+    "nombre_comercial": "Revista",
+    "macro_categoria": "Imprenta y Papelería Corporativa",
+    "subcategoria": "catalogos y revistas",
+    "filtros_prenda": [
+      "revista",
+      "revistas"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "1000": 25.8,
+      "2000": 25.3,
+      "5000": 20.1
+    }
+  },
+  "ROLLERBALL": {
+    "nombre_comercial": "Rollerball",
+    "macro_categoria": "Artículos de Oficina y Escritorio",
+    "subcategoria": "lapiceros y escritura",
+    "filtros_prenda": [
+      "rollerball"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "50": 64.9,
+      "100": 50.6,
+      "500": 48.3,
+      "1000": 47.3
+    }
+  },
+  "SACACORCHO": {
+    "nombre_comercial": "Sacacorcho",
+    "macro_categoria": "Artículos de Hogar y Cocina",
+    "subcategoria": "utensilios y cocina",
+    "filtros_prenda": [
+      "sacacorcho"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 75.9,
+      "25": 73.9,
+      "50": 56.5,
+      "100": 55.4,
+      "250": 38.8,
+      "500": 38.0
+    }
+  },
+  "SENCILLERA": {
+    "nombre_comercial": "Sencillera",
+    "macro_categoria": "Bolsos y Equipaje",
+    "subcategoria": "estuches, cartucheras y neceseres",
+    "filtros_prenda": [
+      "sencillera"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "250": 24.4,
+      "500": 23.9
+    }
+  },
+  "SEPARADOR": {
+    "nombre_comercial": "Separador",
+    "macro_categoria": "Artículos de Oficina y Escritorio",
+    "subcategoria": "escritorio y organizacion",
+    "filtros_prenda": [
+      "separador"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "25": 69.8,
+      "50": 48.9,
+      "100": 34.2,
+      "500": 32.6,
+      "1000": 31.9,
+      "5000": 30.4,
+      "10000": 29.8
+    }
+  },
+  "SERVILLETA": {
+    "nombre_comercial": "Servilleta",
+    "macro_categoria": "Artículos de Hogar y Cocina",
+    "subcategoria": "utensilios y cocina",
+    "filtros_prenda": [
+      "servilleta",
+      "servilletas"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "25": 55.6,
+      "50": 42.3,
+      "100": 32.6
+    }
+  },
+  "SET_DE_BAÑO": {
+    "nombre_comercial": "Set de baño",
+    "macro_categoria": "Artículos de Hogar y Cocina",
+    "subcategoria": "textiles de hogar y limpieza",
+    "filtros_prenda": [
+      "set de baño"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "25": 195.8,
+      "50": 137.1,
+      "100": 96.0,
+      "250": 67.2,
+      "1000": 47.0,
+      "2000": 32.9
+    }
+  },
+  "SET_DE_BROCHAS": {
+    "nombre_comercial": "Set de brochas",
+    "macro_categoria": "Artículos de Hogar y Cocina",
+    "subcategoria": "textiles de hogar y limpieza",
+    "filtros_prenda": [
+      "set de brochas"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "100": 256.6
+    }
+  },
+  "SET_DE_MANICURE": {
+    "nombre_comercial": "Set de manicure",
+    "macro_categoria": "Artículos de Hogar y Cocina",
+    "subcategoria": "textiles de hogar y limpieza",
+    "filtros_prenda": [
+      "set de manicure"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "50": 129.0,
+      "100": 90.3
+    }
+  },
+  "SET_DE_VINO": {
+    "nombre_comercial": "Set de vino",
+    "macro_categoria": "Artículos de Hogar y Cocina",
+    "subcategoria": "utensilios y cocina",
+    "filtros_prenda": [
+      "set de vino",
+      "set de vinos"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 90.0,
+      "25": 66.8,
+      "50": 54.2,
+      "100": 37.9,
+      "250": 36.9,
+      "500": 25.8
+    }
+  },
+  "SHORT": {
+    "nombre_comercial": "Short",
+    "macro_categoria": "Prendas de Vestir y Textil",
+    "subcategoria": "pantalones, shorts y bermudas",
+    "filtros_prenda": [
+      "short",
+      "shorts"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 50.0
+    }
+  },
+  "SOBRE": {
+    "nombre_comercial": "Sobre",
+    "macro_categoria": "Imprenta y Papelería Corporativa",
+    "subcategoria": "hojas y papeleria corporativa",
+    "filtros_prenda": [
+      "sobre",
+      "sobres",
+      "sobres con fondo blanco",
+      "sobre carta blanca",
+      "sobre oficio"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 127.6,
+      "25": 124.2,
+      "50": 121.7,
+      "100": 85.2,
+      "250": 59.6,
+      "500": 41.7,
+      "1000": 40.9,
+      "2000": 40.1,
+      "3000": 39.6,
+      "5000": 39.0,
+      "10000": 38.2
+    }
+  },
+  "STICKER": {
+    "nombre_comercial": "Sticker",
+    "macro_categoria": "Merchandising y Promocionales",
+    "subcategoria": "stickers y adhesivos",
+    "filtros_prenda": [
+      "sticker",
+      "stickers",
+      "sticker vinil",
+      "sticker publicitarios"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "50": 333.6,
+      "100": 233.5,
+      "250": 163.4,
+      "500": 114.4,
+      "1000": 80.1,
+      "3000": 77.6,
+      "10000": 54.3
+    }
+  },
+  "SUJETADOR": {
+    "nombre_comercial": "Sujetador",
+    "macro_categoria": "Artículos de Oficina y Escritorio",
+    "subcategoria": "escritorio y organizacion",
+    "filtros_prenda": [
+      "sujetador"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 59.7,
+      "25": 58.1,
+      "50": 56.9,
+      "100": 55.6,
+      "250": 52.3,
+      "500": 36.6,
+      "1000": 35.9,
+      "3000": 33.1,
+      "5000": 32.6,
+      "10000": 31.9
+    }
+  },
+  "TABLERO": {
+    "nombre_comercial": "Tablero",
+    "macro_categoria": "Artículos de Oficina y Escritorio",
+    "subcategoria": "escritorio y organizacion",
+    "filtros_prenda": [
+      "tablero"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 39.7,
+      "500": 36.5
+    }
+  },
+  "TACO_DE_NOTAS": {
+    "nombre_comercial": "Taco de notas",
+    "macro_categoria": "Artículos de Oficina y Escritorio",
+    "subcategoria": "cuadernos y libretas",
+    "filtros_prenda": [
+      "taco de notas",
+      "taco",
+      "taco encolado",
+      "tacos",
+      "tacos pegados"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 129.8,
+      "25": 90.9,
+      "50": 89.1,
+      "100": 62.4,
+      "250": 52.4,
+      "500": 39.8,
+      "1000": 38.9,
+      "2000": 35.0,
+      "3000": 34.6,
+      "5000": 34.1,
+      "10000": 33.4
+    }
+  },
+  "TAPASOL": {
+    "nombre_comercial": "Tapasol",
+    "macro_categoria": "Merchandising y Promocionales",
+    "subcategoria": "trofeos y medallas",
+    "filtros_prenda": [
+      "tapasol",
+      "tapasol colapsible",
+      "tapasol para autos"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "250": 63.3,
+      "500": 59.7,
+      "1000": 46.6,
+      "2000": 35.0,
+      "3000": 34.6,
+      "10000": 24.2,
+      "20000": 16.9
+    }
+  },
+  "TAPIZON": {
+    "nombre_comercial": "Tapizon",
+    "macro_categoria": "Merchandising y Promocionales",
+    "subcategoria": "trofeos y medallas",
+    "filtros_prenda": [
+      "tapizon"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 18.2
+    }
+  },
+  "TARJETA": {
+    "nombre_comercial": "Tarjeta",
+    "macro_categoria": "Imprenta y Papelería Corporativa",
+    "subcategoria": "hojas y papeleria corporativa",
+    "filtros_prenda": [
+      "tarjeta",
+      "tarjetas",
+      "tarjeta usb",
+      "tarjeta invitacion",
+      "tarjeta navidad",
+      "tarjetas navideñas",
+      "tarjetas personales",
+      "tarjetas presentacion",
+      "tarjeton"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "25": 49.6,
+      "50": 48.6,
+      "100": 47.6,
+      "250": 46.3,
+      "500": 32.4,
+      "1000": 31.8,
+      "2000": 31.2
+    }
+  },
+  "TARJETA_PERSONAL": {
+    "nombre_comercial": "Tarjeta personal",
+    "macro_categoria": "Artículos de Oficina y Escritorio",
+    "subcategoria": "credenciales y displays",
+    "filtros_prenda": [
+      "tarjeta personal",
+      "tarjetas personales"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 10.0,
+      "25": 10.0,
+      "50": 10.0,
+      "100": 10.0,
+      "250": 10.0,
+      "500": 10.0,
+      "1000": 10.0,
+      "2000": 10.0
+    }
+  },
+  "TARJETERO": {
+    "nombre_comercial": "Tarjetero",
+    "macro_categoria": "Artículos de Oficina y Escritorio",
+    "subcategoria": "escritorio y organizacion",
+    "filtros_prenda": [
+      "tarjetero",
+      "tarjeteros",
+      "tarjetero importados"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 259.2,
+      "25": 252.3,
+      "50": 186.9,
+      "100": 130.8,
+      "250": 91.6,
+      "500": 64.1,
+      "1000": 44.9,
+      "2000": 44.0,
+      "3000": 43.5,
+      "5000": 33.5
+    }
+  },
+  "TAZA": {
+    "nombre_comercial": "Taza",
+    "macro_categoria": "Artículos de Hogar y Cocina",
+    "subcategoria": "vasos, tazas y mugs",
+    "filtros_prenda": [
+      "taza",
+      "tazas",
+      "taza blanca",
+      "taza cónica",
+      "taza bombeada",
+      "tazas bombeadas"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 50.0,
+      "25": 48.7,
+      "50": 47.7,
+      "100": 46.7,
+      "250": 35.0,
+      "500": 33.4,
+      "1000": 32.7,
+      "2000": 30.9,
+      "3000": 30.5,
+      "5000": 27.4
+    }
+  },
+  "TERMO": {
+    "nombre_comercial": "Termo",
+    "macro_categoria": "Artículos de Hogar y Cocina",
+    "subcategoria": "tomatodos y botellas",
+    "filtros_prenda": [
+      "termo",
+      "termos",
+      "termito",
+      "termo bullet",
+      "thermo",
+      "thermos"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 100.0,
+      "25": 81.8,
+      "50": 80.2,
+      "100": 71.5,
+      "250": 68.9,
+      "500": 48.2,
+      "1000": 47.2,
+      "2000": 46.3,
+      "3000": 32.4,
+      "5000": 31.9,
+      "10000": 31.3
+    }
+  },
+  "TICKET": {
+    "nombre_comercial": "Ticket",
+    "macro_categoria": "Imprenta y Papelería Corporativa",
+    "subcategoria": "hojas y papeleria corporativa",
+    "filtros_prenda": [
+      "ticket",
+      "tickets bond"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "100": 122.2
+    }
+  },
+  "TOALLA": {
+    "nombre_comercial": "Toalla",
+    "macro_categoria": "Artículos de Hogar y Cocina",
+    "subcategoria": "textiles de hogar y limpieza",
+    "filtros_prenda": [
+      "toalla",
+      "toallas",
+      "toallon",
+      "toallones",
+      "toalla de mano",
+      "toalla de baño"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 241.2,
+      "25": 168.8,
+      "50": 118.2,
+      "100": 82.7,
+      "250": 57.9,
+      "500": 40.5
+    }
+  },
+  "TOMATODO": {
+    "nombre_comercial": "Tomatodo",
+    "macro_categoria": "Artículos de Hogar y Cocina",
+    "subcategoria": "tomatodos y botellas",
+    "filtros_prenda": [
+      "tomatodo",
+      "tomatodos",
+      "tomatodo ergo",
+      "toma todo",
+      "toma todo ergo"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 116.8,
+      "25": 113.7,
+      "50": 103.8,
+      "100": 72.7,
+      "250": 61.5,
+      "500": 56.4,
+      "1000": 50.4,
+      "2000": 49.4,
+      "3000": 47.6,
+      "5000": 46.9,
+      "10000": 35.9,
+      "30000": 34.8
+    }
+  },
+  "TOTE": {
+    "nombre_comercial": "Tote",
+    "macro_categoria": "Empaques y Packaging",
+    "subcategoria": "bolsas y packaging",
+    "filtros_prenda": [
+      "tote",
+      "totes"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "25": 34.0,
+      "500": 31.3,
+      "1000": 30.7
+    }
+  },
+  "TROFEO": {
+    "nombre_comercial": "Trofeo",
+    "macro_categoria": "Merchandising y Promocionales",
+    "subcategoria": "trofeos y medallas",
+    "filtros_prenda": [
+      "trofeo",
+      "trofeos",
+      "trofeos de vidrio"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 60.1
+    }
+  },
+  "VASO": {
+    "nombre_comercial": "Vaso",
+    "macro_categoria": "Artículos de Hogar y Cocina",
+    "subcategoria": "vasos, tazas y mugs",
+    "filtros_prenda": [
+      "vaso",
+      "vasos",
+      "vaso termico",
+      "vasos termicos",
+      "vaso cervecero",
+      "vaso kero",
+      "vaso tecnopor",
+      "vaso aleman"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "10": 106.8,
+      "25": 74.8,
+      "50": 66.6,
+      "100": 64.0,
+      "250": 44.8,
+      "500": 43.9,
+      "1000": 43.0,
+      "2000": 42.1,
+      "5000": 36.9,
+      "10000": 32.6
+    }
+  },
+  "VINCHA": {
+    "nombre_comercial": "Vincha",
+    "macro_categoria": "Prendas de Vestir y Textil",
+    "subcategoria": "gorros, vinchas y viseras",
+    "filtros_prenda": [
+      "vincha",
+      "vinchas"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "50": 103.6,
+      "3000": 72.5
+    }
+  },
+  "VISERA": {
+    "nombre_comercial": "Visera",
+    "macro_categoria": "Prendas de Vestir y Textil",
+    "subcategoria": "gorros, vinchas y viseras",
+    "filtros_prenda": [
+      "visera",
+      "vicera",
+      "viseras",
+      "viceras",
+      "viseras deportivas",
+      "visera promocional"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "100": 87.5,
+      "500": 61.2,
+      "1000": 60.0,
+      "2000": 42.0,
+      "3000": 31.2,
+      "5000": 21.8
+    }
+  },
+  "WINCHA": {
+    "nombre_comercial": "Wincha",
+    "macro_categoria": "Merchandising y Promocionales",
+    "subcategoria": "trofeos y medallas",
+    "filtros_prenda": [
+      "wincha",
+      "wincha cuadrada",
+      "wincha multiusos",
+      "wincha redonda"
+    ],
+    "filtros_material": [],
+    "margenes": {
+      "500": 333.3,
+      "1000": 233.3
+    }
+  }
+}

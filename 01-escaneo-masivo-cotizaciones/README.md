@@ -26,45 +26,28 @@ Este motor ha sido optimizado y validado en entornos reales de producción con c
 
 ```text
 01-escaneo-masivo-cotizaciones/
+├── data/                     # Datasets de entrada (.xlsx, .xls), logs y reportes exportados
+│   ├── debug_scan_raw.xlsx   # Reporte consolidado y limpio con el extracto de todas las filas parseadas tras la ejecución del motor.
+│   ├── scan_checkpoint.json  # Caché de estado y checkpoint del escáner para reanudar sesiones o evitar el re-procesamiento de archivos no modificados.
+│   └── log_errores.txt       # Registro de auditoría de hojas corruptas, celdas omitidas o fallos de lectura durante el escaneo concurrente.
 ├── docs/                     # Especificaciones y reportes de implementación
-├── scripts/                  # Scripts auxiliares (headless y búsqueda de prueba)
+├── scripts/                  # Scripts auxiliares (headless y tests de búsqueda)
 ├── src/
 │   ├── controllers/          # Orquestador del ciclo de vida y UI (AppController)
-│   ├── models/               # Entidades de dominio (ScanRow, PriceStats, etc.)
+│   ├── models/               # Entidades de dominio (ScanRow, PriceStats, constants)
 │   ├── services/             # Motor de escaneo, benchmarking, variaciones y cotización
 │   └── views/                # Vistas modulares, controles y render por lotes
 ├── ARCHITECTURE.md           # Documentación técnica profunda del diseño e ingeniería
 ├── main.py                   # Punto de entrada principal de la aplicación
-└── requirements.txt          # Dependencias de Python del módulo
+└── README.md                 # Documentación técnica del módulo
 ```
----
-
-## Instalación y Configuración
-
-Clona el repositorio principal:
-```bash
-git clone https://github.com/RuidiasA/sistema-cotizaciones-suite.git
-cd sistema-cotizaciones-suite/01-escaneo-masivo-cotizaciones
-```
-
-Crea y activa un entorno virtual:
-```bash
-python -m venv .venv
-# En Windows (PowerShell):
-.venv\Scripts\Activate
-```
-
-Instala las dependencias:
-```bash
-pip install -r requirements.txt
-```
-
 ---
 
 ## Ejecución
 
-Para arrancar la interfaz gráfica del motor de escaneo:
+Asegúrate de tener el entorno virtual del monorepo activo (.venv en la raíz), entra a este módulo y ejecuta la interfaz gráfica:
 ```bash
+cd 01-escaneo-masivo-cotizaciones
 python main.py
 ```
 ---
