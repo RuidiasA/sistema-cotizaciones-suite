@@ -130,7 +130,7 @@ sistema-cotizaciones-suite/
 ### 1. Clonar el repositorio y configurar el entorno:
 
 ```bash
-git clone [https://github.com/RuidiasA/sistema-cotizaciones-suite.git](https://github.com/RuidiasA/sistema-cotizaciones-suite.git)
+git clone https://github.com/RuidiasA/sistema-cotizaciones-suite.git
 cd sistema-cotizaciones-suite
 
 python -m venv .venv
