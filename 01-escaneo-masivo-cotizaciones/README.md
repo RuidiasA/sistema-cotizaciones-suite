@@ -15,6 +15,15 @@ Este motor ha sido optimizado y validado en entornos reales de producción con c
 
 ---
 
+## Características Principales de la Interfaz
+
+* **Selector de Directorio de Datos:** Apunta dinámicamente a la carpeta contenedora de los excels históricos.
+* **Filtros por Categoría y Tokenización:** Búsqueda rápida por palabras clave o segmentación por familias de productos.
+* **Calculadora Rápida Integrada:** Consulta automatizada de márgenes y precios sugeridos basados en el benchmarking consolidado.
+* **Exportación y Depuración Asíncrona:** Generación de reportes limpios (`debug_scan_raw.xlsx`), registro de errores de lectura (`log_errores.txt`) y checkpoints de sesión (`scan_checkpoint.json`).
+
+---
+
 ## Tecnologías y Dependencias
 
 * **Python 3.12+**
@@ -28,27 +37,27 @@ Este motor ha sido optimizado y validado en entornos reales de producción con c
 
 ```text
 01-escaneo-masivo-cotizaciones/
-├── data/                                   # Datasets de entrada (.xlsx, .xls), logs y reportes exportados.
-│   ├── cotizaciones-pasadas/               # Directorio fuente de archivos Excel históricos.
-│   │   ├── debug_scan_raw.xlsx             # Reporte consolidado y limpio con el extracto de todas las filas parseadas tras la ejecución del motor.
-│   │   ├── log_errores.txt                 # Registro de auditoría de hojas corruptas, celdas omitidas o fallos de lectura durante el escaneo concurrente.
-│   │   └── scan_checkpoint.json            # Caché de estado y checkpoint del escáner para reanudar sesiones o evitar el re-procesamiento de archivos no modificados.
-│   ├── cotizaciones-recientes/             # Directorio fuente de archivos Excel recientes.
-│   ├── mapeo_productos_pasados.xlsx        # Catálogo consolidado de productos únicos extraídos del histórico de cotizaciones pasadas.
-│   └── mapeo_productos_recientes.xlsx      # Catálogo de 1,220 productos únicos sin duplicados detectados en el ciclo reciente.
-├── docs/                                   # Especificaciones y reportes de implementación.
-├── scripts/                                # Scripts de utilidad e ingesta ETL.
-│   ├── busqueda_productos.py               # Test de búsqueda por tokens sobre el Data Lake.
-│   ├── extract_articles.py                 # Crawler dinámico para extracción de artículos únicos.
-│   └── headless_scan_check.py              # Verificación rápida de estado por línea de comandos.
+├── data/                               # Datasets de entrada (.xlsx, .xls), logs y reportes exportados.
+│   ├── cotizaciones-pasadas/           # Directorio fuente de archivos Excel históricos.
+│   │   ├── debug_scan_raw.xlsx         # Reporte consolidado y limpio con el extracto de todas las filas parseadas tras la ejecución del motor.
+│   │   ├── log_errores.txt             # Registro de auditoría de hojas corruptas, celdas omitidas o fallos de lectura durante el escaneo concurrente.
+│   │   └── scan_checkpoint.json        # Caché de estado y checkpoint del escáner para reanudar sesiones o evitar el re-procesamiento de archivos no modificados.
+│   ├── cotizaciones-recientes/         # Directorio fuente de archivos Excel recientes.
+│   ├── mapeo_productos_pasados.xlsx    # Catálogo consolidado de productos únicos extraídos del histórico de cotizaciones pasadas.
+│   └── mapeo_productos_recientes.xlsx  # Catálogo de 1,220 productos únicos sin duplicados detectados en el ciclo reciente.
+├── docs/                               # Especificaciones y reportes de implementación.
+├── scripts/                            # Scripts de utilidad e ingesta ETL.
+│   ├── busqueda_productos.py           # Test de búsqueda por tokens sobre el Data Lake.
+│   ├── extract_articles.py             # Crawler dinámico para extracción de artículos únicos.
+│   └── headless_scan_check.py          # Verificación rápida de estado por línea de comandos.
 ├── src/
-│   ├── controllers/                        # Orquestador del ciclo de vida y UI (AppController: handle_scan, handle_cancel, _on_scan_done).
-│   ├── models/                             # Entidades de dominio (ScanRow, PriceStats, constants).
-│   ├── services/                           # Motor de escaneo (excel_scan_service), benchmarking (benchmarking_service) y variaciones (variation_service).
-│   └── views/                              # Vistas modulares, controles y render por lotes (results_view).
-├── ARCHITECTURE.md                         # Documentación técnica del diseño de arquitectura.
-├── main.py                                 # Punto de entrada de la interfaz gráfica.
-└── README.md                               # Documentación técnica del módulo.
+│   ├── controllers/                    # Orquestador del ciclo de vida y UI (AppController: handle_scan, handle_cancel, _on_scan_done).
+│   ├── models/                         # Entidades de dominio (ScanRow, PriceStats, constants).
+│   ├── services/                       # Motor de escaneo (excel_scan_service), benchmarking (benchmarking_service) y variaciones (variation_service).
+│   └── views/                          # Vistas modulares, controles y render por lotes (results_view).
+├── ARCHITECTURE.md                     # Documentación técnica del diseño de arquitectura.
+├── main.py                             # Punto de entrada de la interfaz gráfica.
+└── README.md                           # Documentación técnica del módulo.
 ```
 
 ---
@@ -58,7 +67,6 @@ Este motor ha sido optimizado y validado en entornos reales de producción con c
 ### 1. Interfaz Gráfica (UI Desktop)
 
 Asegúrate de tener el entorno virtual del monorepo activo (`.venv` en la raíz) y ejecuta:
-
 ```bash
 python 01-escaneo-masivo-cotizaciones/main.py
 ```
@@ -66,16 +74,15 @@ python 01-escaneo-masivo-cotizaciones/main.py
 ### 2. Extractor Dinámico de Artículos Únicos (CLI)
 
 Para re-escanear las cotizaciones y actualizar el catálogo de productos unificados:
-
 ```bash
 python 01-escaneo-masivo-cotizaciones/scripts/extract_articles.py
 ```
 
 ---
 
-## Características Principales de la Interfaz
+## Métricas de Desempeño
 
-* **Selector de Directorio de Datos:** Apunta dinámicamente a la carpeta contenedora de los excels históricos.
-* **Filtros por Categoría y Tokenización:** Búsqueda rápida por palabras clave o segmentación por familias de productos.
-* **Calculadora Rápida Integrada:** Consulta automatizada de márgenes y precios sugeridos basados en el benchmarking consolidado.
-* **Exportación y Depuración Asíncrona:** Generación de reportes limpios (`debug_scan_raw.xlsx`), registro de errores de lectura (`log_errores.txt`) y checkpoints de sesión (`scan_checkpoint.json`).
+* **Archivos Procesados:** Más de 908+ archivos Excel concurrentes.
+* **Hojas Válidas Indexadas:** Más de 2,000+ pestañas sin bloqueo de UI.
+* **Filas Crudas Consolidadas:** 14,000+ registros históricos.
+* **Productos Únicos Mapeados:** 1,220 artículos comerciales.

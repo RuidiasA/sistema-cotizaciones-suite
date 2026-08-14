@@ -6,7 +6,48 @@ Procesa el archivo tarifario maestro multicapa (`tarifario_diseno.xlsx`), transf
 
 ---
 
-## Arquitectura del Módulo
+## Componentes y Arquitectura de Reglas
+
+### 1. Compilador Multicapa (`src/compiler.py`)
+La clase `ExcelCompiler` requiere estrictamente las siguientes 5 hojas dentro de `tarifario_diseno.xlsx`:
+
+| Hoja requerida | Descripción y Función |
+| --- | --- |
+| **`Margenes_Base`** | Estructura los márgenes base por tramos de volumen (10, 25, 50, 100, ...). |
+| **`Ajustes`** | Compila las reglas condicionales de impacto financiero (margen fijo, sumar/restar puntos). |
+| **`Diccionario_Categorias`** | Mapea arquetipos comerciales y variantes de material. |
+| **`Diccionario_Productos`** | Inyecta sub-productos específicos vinculados a su categoría padre. |
+| **`Diccionario_Filtros_Globales`** | Carga los tokens de inclusión/exclusión globales. |
+
+### 2. Motor de Auditoría Global (`src/audit.py`)
+* Importa centralizadamente la función `clasificar_producto_estricto` desde el **Módulo 02** mediante vinculación dinámica de rutas (`sys.path.append`).
+* Evalúa el dataset histórico aplicando el algoritmo de interpolación por **Piso Comercial / Escalón Duro**.
+* Ejecuta las reglas condicionales dinámicas y genera el reporte consolidado `auditoria_global.xlsx` evaluando la tolerancia comercial ($\pm 2.00$ PEN).
+
+### 3. Diagnóstico Quirúrgico (`scripts/diagnostico_entrega.py`)
+Analiza los casos críticos fuera de tolerancia enfocándose en entregas corporativas ($\ge 50$ unidades):
+* Muestra la concentración del error por Top 5 arquetipos.
+* Calcula el desvío monetario promedio en PEN por categoría.
+* Mide la incidencia de parámetros técnicos de personalización (color, logo, impresión UV, DTF, bordado).
+
+### 4. Saneamiento del Data Lake (`scripts/clean_db.py`)
+Proceso ETL que imputa registros huérfanos o proveedores `"ANONIMO"` en `debug_scan_raw.xlsx` mediante la firma de texto de descripciones previamente identificadas.
+
+---
+
+## Tecnologías y Dependencias
+
+* **Python 3.12+**
+* **Pandas & NumPy:** Evaluación vectorial de reglas y cálculo de tolerancia.
+* **Openpyxl:** Lectura de hojas multicapa de diseño y exportación de reportes de auditoría.
+
+### Integración Modular con Módulo 02
+1. **Inyección de entrada:** El Módulo 02 actualiza automáticamente la hoja `Margenes_Base` dentro de `tarifario_diseno.xlsx`.
+2. **Reuso de código:** `src/audit.py` consume la taxonomía de `02-automatizacion-margenes/src/limpiador.py` para garantizar la misma clasificación en toda la suite sin duplicar código.
+
+---
+
+## Estructura del Módulo
 
 ```text
 03-motor-ajustes-dinamicos/
@@ -26,51 +67,8 @@ Procesa el archivo tarifario maestro multicapa (`tarifario_diseno.xlsx`), transf
 │   ├── audit.py                   # Motor de auditoría global desacoplado (Reusa Módulo 02)
 │   └── compiler.py                # Compilador multicapa de tarifario (Excel -> JSON)
 ├── main.py                        # Orquestador principal del pipeline
-└── README.md
+└── README.md                      # Documentación técnica del módulo
 ```
-
----
-
-## Componentes Principales
-
-### 1. Compilador Multicapa (`src/compiler.py`)
-
-La clase `ExcelCompiler` requiere estrictamente las siguientes 5 hojas dentro de `tarifario_diseno.xlsx`:
-
-| Hoja requerida | Descripción y Función |
-| --- | --- |
-| **`Margenes_Base`** | Estructura los márgenes base por tramos de volumen (10, 25, 50, 100, ...). |
-| **`Ajustes`** | Compila las reglas condicionales de impacto financiero (margen fijo, sumar/restar puntos). |
-| **`Diccionario_Categorias`** | Mapea arquetipos comerciales y variantes de material. |
-| **`Diccionario_Productos`** | Inyecta sub-productos específicos vinculados a su categoría padre. |
-| **`Diccionario_Filtros_Globales`** | Carga los tokens de inclusión/exclusión globales. |
-
-### 2. Motor de Auditoría Global (`src/audit.py`)
-
-* Importa centralizadamente la función `clasificar_producto_estricto` desde el **Módulo 02** mediante vinculación dinámica de rutas (`sys.path.append`).
-* Evalúa el dataset histórico aplicando el algoritmo de interpolación por **Piso Comercial / Escalón Duro**.
-* Ejecuta las reglas condicionales dinámicas y genera el reporte consolidado `auditoria_global.xlsx` evaluando la tolerancia comercial ($\pm 2.00$ PEN).
-
-### 3. Diagnóstico Quirúrgico (`scripts/diagnostico_entrega.py`)
-
-Analiza los casos críticos fuera de tolerancia enfocándose en entregas corporativas ($\ge 50$ unidades):
-
-* Muestra la concentración del error por Top 5 arquetipos.
-* Calcula el desvío monetario promedio en PEN por categoría.
-* Mide la incidencia de parámetros técnicos de personalización (color, logo, impresión UV, DTF, bordado).
-
-### 4. Saneamiento del Data Lake (`scripts/clean_db.py`)
-
-Proceso ETL que imputa registros huérfanos o proveedores `"ANONIMO"` en `debug_scan_raw.xlsx` mediante la firma de texto de descripciones previamente identificadas.
-
----
-
-## Dependencias e Integración Modular
-
-Este módulo mantiene una **dependencia directa con el Módulo 02** (`02-automatizacion-margenes`):
-
-1. **Inyección de entrada:** El Módulo 02 actualiza automáticamente la hoja `Margenes_Base` dentro de `tarifario_diseno.xlsx`.
-2. **Reuso de código:** `src/audit.py` consume la taxonomía de `02-automatizacion-margenes/src/limpiador.py` para garantizar la misma clasificación en toda la suite sin duplicar código.
 
 ---
 
@@ -78,8 +76,7 @@ Este módulo mantiene una **dependencia directa con el Módulo 02** (`02-automat
 
 ### 1. Compilación y Auditoría Principal
 
-Para compilar las reglas de diseño y ejecutar la auditoría global, corre desde la raíz del proyecto o dentro del módulo:
-
+Para compilar las reglas de diseño y ejecutar la auditoría global:
 ```bash
 python 03-motor-ajustes-dinamicos/main.py
 ```
@@ -114,16 +111,14 @@ CONTROL DE ENTREGAS CRÍTICAS (Pedidos >= 50 Unidades):
 
 ### 2. Ejecución del Diagnóstico Corporativo
 
-Para obtener la descomposición de errores y desvíos financieros:
-
+Para descomponer los desvíos financieros por categoría y técnica:
 ```bash
 python 03-motor-ajustes-dinamicos/scripts/diagnostico_entrega.py
 ```
 
 ### 3. Saneamiento Preventivo de Datos (Opcional)
 
-Para reparar proveedores nulos en la base de datos de pruebas:
-
+Para reparar proveedores nulos en la base de datos:
 ```bash
 python 03-motor-ajustes-dinamicos/scripts/clean_db.py
 ```
