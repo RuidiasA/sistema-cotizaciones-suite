@@ -6,27 +6,31 @@ e inyecta los márgenes base en el tarifario maestro del Módulo 03.
 """
 
 from pathlib import Path
+import sys
 import time
+from typing import Optional
+
 from src.analizador import analizar_y_optimizar_margenes
 
 
 def main() -> None:
-    base_dir = Path(__file__).resolve().parent
-    data_dir = base_dir / "data"
-    
-    # Ruta hacia el tarifario maestro del Módulo 03
-    ruta_excel_tarifario = base_dir.parent / "03-motor-ajustes-dinamicos" / "config" / "tarifario_diseno.xlsx"
-    
-    # Búsqueda defensiva del archivo Excel histórico en data/ (debug_scan_raw)
-    archivos_excel = list(data_dir.glob("*.xlsx"))
-    ruta_excel = None
+    """Orquesta la ejecución del pipeline de análisis y suavizado de márgenes."""
+    base_dir: Path = Path(__file__).resolve().parent
+    data_dir: Path = base_dir / "data"
 
-    for archivo in archivos_excel:
-        if "matrices" not in archivo.name and not archivo.name.startswith("~$"):
-            ruta_excel = archivo
-            break
+    ruta_excel_tarifario: Path = (
+        base_dir.parent / "03-motor-ajustes-dinamicos" / "config" / "tarifario_diseno.xlsx"
+    )
 
-    ruta_json_salida = data_dir / "matriz_margenes.json"
+    ruta_excel: Optional[Path] = next(
+        (
+            f for f in data_dir.glob("*.xlsx")
+            if "matrices" not in f.name and not f.name.startswith("~$")
+        ),
+        None,
+    )
+
+    ruta_json_salida: Path = data_dir / "matriz_margenes.json"
 
     print("==============================================")
     print(" MOTOR DE OPTIMIZACIÓN DE MÁRGENES (GLOBAL)   ")
@@ -37,18 +41,18 @@ def main() -> None:
         print("\nSolución:")
         print("   Asegúrate de colocar tu archivo Excel de cotizaciones dentro de la carpeta 'data/'")
         print("==================================================================")
-        return
+        sys.exit(1)
 
     print(f"Archivo de entrada detectado: {ruta_excel.name}")
-    tiempo_inicio = time.time()
+    tiempo_inicio: float = time.perf_counter()
 
     try:
         analizar_y_optimizar_margenes(
             ruta_excel_entrada=ruta_excel,
             ruta_json_salida=ruta_json_salida,
-            ruta_excel_tarifario=ruta_excel_tarifario
+            ruta_excel_tarifario=ruta_excel_tarifario,
         )
-        tiempo_total = time.time() - tiempo_inicio
+        tiempo_total: float = time.perf_counter() - tiempo_inicio
 
         print("==================================================================")
         print("¡Pipeline de análisis masivo ejecutado con éxito!")
@@ -58,13 +62,14 @@ def main() -> None:
         print("Márgenes listos para inyección en el cotizador principal (Compipro).")
         print("==================================================================")
 
-    except Exception as e:
+    except Exception as exc:
         print("\nSe produjo un fallo crítico durante la ejecución del proceso:")
-        print(f"   -> Error: {e}")
+        print(f"   -> Error: {exc}")
         print("\nRecomendación de debugging:")
         print("   Verifica que las columnas 'Descripcion / Articulo', 'Cantidad Detectada',")
         print("   'Costo Prov' y 'Precio Cli' existan en el Excel.")
         print("==================================================================")
+        sys.exit(1)
 
 
 if __name__ == "__main__":

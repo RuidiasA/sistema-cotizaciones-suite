@@ -1,13 +1,27 @@
 import os
 import re
 from pathlib import Path
+from typing import Any, Dict, List, Optional, Union
+
 from openpyxl import Workbook
-from openpyxl.styles import PatternFill, Font, Alignment, Border, Side
+from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
 from openpyxl.utils import get_column_letter
 
 
 class ExcelExporter:
-    def __init__(self, output_dir=None):
+    """Servicio de exportación y maquetación comercial en formato Microsoft Excel (.xlsx).
+
+    Transforma las estructuras de datos procesadas en propuestas comerciales formales,
+    aplicando estilos corporativos, formatos numéricos monetarios y segmentación
+    en dos zonas: columnas comerciales para el cliente y columnas de control para auditoría.
+    """
+
+    def __init__(self, output_dir: Optional[Union[str, Path]] = None) -> None:
+        """Inicializa el exportador y asegura la existencia del directorio de salida.
+
+        Args:
+            output_dir: Ruta destino de los archivos exportados. Si es None, utiliza data/output.
+        """
         if output_dir is None:
             base_module_dir = Path(__file__).resolve().parent.parent.parent
             self.output_dir = base_module_dir / "data" / "output"
@@ -16,26 +30,46 @@ class ExcelExporter:
 
         os.makedirs(self.output_dir, exist_ok=True)
 
-    def _generar_nombre_archivo(self, lista_pedidos):
-        partes_nombre = []
-        for p in lista_pedidos:
-            nombre = p.get("producto_nombre", "Producto")
+    def _generar_nombre_archivo(self, lista_pedidos: List[Dict[str, Any]]) -> str:
+        """Construye un nombre de archivo normalizado y gestiona colisiones mediante sufijos de versión.
+
+        Args:
+            lista_pedidos: Resumen de pedidos que componen la cotización.
+
+        Returns:
+            Ruta absoluta o relativa del archivo Excel en formato string.
+        """
+        partes_nombre: List[str] = []
+        for pedido in lista_pedidos:
+            nombre = pedido.get("producto_nombre", "Producto")
             nombre_limpio = re.sub(r'[\\/*?:"<>|]', "", nombre).replace(" ", "_")
-            partes_nombre.append(f"{p['cantidad']}_{nombre_limpio}")
+            partes_nombre.append(f"{pedido['cantidad']}_{nombre_limpio}")
 
         base_name = ", ".join(partes_nombre)
         if len(base_name) > 120:
-            base_name = base_name[:115] + "_etc"
+            base_name = f"{base_name[:115]}_etc"
 
         filename = self.output_dir / f"{base_name}.xlsx"
         counter = 1
         while filename.exists():
             filename = self.output_dir / f"{base_name}_v{counter}.xlsx"
             counter += 1
+
         return str(filename)
 
-    def exportar_cotizacion_completa(self, bloques_productos):
-        resumen_pedidos = [{"producto_nombre": b["producto_nombre"], "cantidad": b["cantidad"]} for b in bloques_productos]
+    def exportar_cotizacion_completa(self, bloques_productos: List[Dict[str, Any]]) -> str:
+        """Genera el libro de Excel con bloques independientes y diseño estructurado por producto.
+
+        Args:
+            bloques_productos: Lista de bloques de productos con sus respectivas opciones calculadas.
+
+        Returns:
+            Ruta del archivo Excel generado.
+        """
+        resumen_pedidos = [
+            {"producto_nombre": bloque["producto_nombre"], "cantidad": bloque["cantidad"]}
+            for bloque in bloques_productos
+        ]
         filename = self._generar_nombre_archivo(resumen_pedidos)
 
         wb = Workbook()
@@ -43,7 +77,6 @@ class ExcelExporter:
         ws.title = "Cotización"
         ws.views.sheetView[0].showGridLines = True
 
-        # Estilos visuales institucionales
         yellow_fill = PatternFill(start_color="FFC000", end_color="FFC000", fill_type="solid")
         gray_fill = PatternFill(start_color="EAEAEA", end_color="EAEAEA", fill_type="solid")
         blue_fill = PatternFill(start_color="1F4E78", end_color="1F4E78", fill_type="solid")
@@ -62,7 +95,6 @@ class ExcelExporter:
         thin_border = Border(left=thin_side, right=thin_side, top=thin_side, bottom=thin_side)
         currency_fmt = '"S/." #,##0.00'
 
-        # Las 9 columnas amarillas del cliente + las 3 columnas grises de auditoría
         all_headers = [
             "N°", "Proveedor", "Producto", "Foto", "Cant.",
             "Costo uni. NO IGV (S/.)", "Tiempo Entrega", "Detalle", "Costo TOTAL NO IGV (S/.)",
@@ -79,8 +111,12 @@ class ExcelExporter:
             if not opciones_proveedores:
                 continue
 
-            # 1. Cabecera del bloque (Azul)
-            ws.merge_cells(start_row=current_row, start_column=1, end_row=current_row, end_column=len(all_headers))
+            ws.merge_cells(
+                start_row=current_row,
+                start_column=1,
+                end_row=current_row,
+                end_column=len(all_headers)
+            )
             cell_titulo = ws.cell(row=current_row, column=1, value=f"{prod_nombre.upper()} ({cantidad} UNIDADES)")
             cell_titulo.font = title_font
             cell_titulo.fill = blue_fill
@@ -89,7 +125,6 @@ class ExcelExporter:
 
             current_row += 1
 
-            # 2. Filas de Encabezados (Amarillo para cliente, Gris para control)
             ws.row_dimensions[current_row].height = 25
             for col_idx, h_text in enumerate(all_headers, start=1):
                 cell = ws.cell(row=current_row, column=col_idx, value=h_text)
@@ -100,7 +135,6 @@ class ExcelExporter:
 
             current_row += 1
 
-            # 3. Filas de opciones de proveedores reales
             for opcion in opciones_proveedores:
                 ws.row_dimensions[current_row].height = 110
 
@@ -114,10 +148,9 @@ class ExcelExporter:
                     opcion["Tiempo Entrega"],
                     opcion["Detalle"],
                     opcion["Costo TOTAL NO IGV (S/.)"],
-                    # Las 3 columnas grises de control multilínea
                     opcion["Cantidad_Multilinea"],
                     opcion["Costo_Prov_Multilinea"],
-                    opcion["Precio_Cli_Original_2026"]
+                    opcion["Precio_Cli_Original_2026"],
                 ]
 
                 for col_idx, val in enumerate(row_values, start=1):
@@ -143,9 +176,8 @@ class ExcelExporter:
 
                 current_row += 1
 
-            current_row += 2  # Separador entre bloques
+            current_row += 2
 
-        # Ajuste dinámico de anchos de columna
         for col_idx in range(1, len(all_headers) + 1):
             col_letter = get_column_letter(col_idx)
             if col_idx == 8:

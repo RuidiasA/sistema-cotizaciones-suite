@@ -1,14 +1,15 @@
 """Módulo Compilador Multicapa del Tarifario Maestro.
 
-Transforma las 5 hojas de cálculo del archivo Excel de reglas (tarifario_diseno.xlsx)
+Transforma las hojas de cálculo del archivo Excel de reglas (tarifario_diseno.xlsx)
 en artefactos JSON estructurados (matrices_margen.json y ajustes_margen.json)
-para su consumo en tiempo real por el motor de cotización expres.
+para su consumo en tiempo real por el motor de cotización exprés.
 """
 
 import json
 from pathlib import Path
 import unicodedata
 from typing import Any, Dict, List
+
 import pandas as pd
 
 
@@ -16,6 +17,12 @@ class ExcelCompiler:
     """Compilador multicapa para procesar la taxonomía y reglas de negocio en Excel."""
 
     def __init__(self, excel_path: Path, config_dir: Path) -> None:
+        """Inicializa las rutas del libro maestro y los artefactos de salida.
+
+        Args:
+            excel_path: Ruta del archivo Excel con las hojas de diseño y reglas.
+            config_dir: Directorio de destino para los archivos JSON generados.
+        """
         self.excel_path: Path = excel_path
         self.config_dir: Path = config_dir
         self.matrices_json_path: Path = config_dir / "matrices_margen.json"
@@ -23,14 +30,28 @@ class ExcelCompiler:
 
     @staticmethod
     def _normalizar_texto(texto: Any) -> str:
-        """Sanea y remueve diacríticos de una cadena de texto."""
+        """Sanea y remueve diacríticos de una cadena de texto.
+
+        Args:
+            texto: Valor escalar a normalizar.
+
+        Returns:
+            Texto en minúsculas sin acentos ni marcas diacríticas.
+        """
         if pd.isna(texto):
             return ""
         texto_norm = unicodedata.normalize("NFD", str(texto).strip().lower())
         return "".join(c for c in texto_norm if unicodedata.category(c) != "Mn")
 
     def _procesar_filtros(self, excel_file: pd.ExcelFile) -> Dict[str, Dict[str, List[str]]]:
-        """Procesa la Hoja 5: Diccionario de Filtros Globales."""
+        """Procesa el diccionario de filtros globales de inclusión y exclusión.
+
+        Args:
+            excel_file: Objeto ExcelFile del libro maestro abierto.
+
+        Returns:
+            Mapeo de identificadores de filtro a listas de tokens inclusivos y exclusivos.
+        """
         diccionario_filtros: Dict[str, Dict[str, List[str]]] = {}
         sheet_name = "Diccionario_Filtros_Globales"
 
@@ -43,7 +64,7 @@ class ExcelCompiler:
 
         try:
             df = pd.read_excel(excel_file, sheet_name=sheet_name)
-            for _, row in df.iterrows():
+            for row in df.to_dict(orient="records"):
                 if pd.isna(row.get("ID_Filtro")):
                     continue
                 f_id = str(row["ID_Filtro"]).strip().upper()
@@ -55,13 +76,20 @@ class ExcelCompiler:
                     "exc": [t.strip().lower() for t in str_exc.split(",") if t.strip()],
                 }
             print(f"[SUCCESS] Filtros globales cargados ({sheet_name}): {len(diccionario_filtros)} IDs.")
-        except Exception as e:
-            print(f"[WARN] Error procesando hoja de Filtros: {e}")
+        except Exception as exc:
+            print(f"[WARN] Error procesando hoja de Filtros: {exc}")
 
         return diccionario_filtros
 
     def _procesar_categorias(self, excel_file: pd.ExcelFile) -> Dict[str, Dict[str, Any]]:
-        """Procesa la Hoja 3: Diccionario de Categorías."""
+        """Procesa el diccionario de categorías, nombres comerciales y variantes.
+
+        Args:
+            excel_file: Objeto ExcelFile del libro maestro abierto.
+
+        Returns:
+            Mapeo de claves técnicas de categoría a sus propiedades y tokens.
+        """
         diccionario_categorias: Dict[str, Dict[str, Any]] = {}
         sheet_name = "Diccionario_Categorias"
 
@@ -71,7 +99,7 @@ class ExcelCompiler:
 
         try:
             df = pd.read_excel(excel_file, sheet_name=sheet_name)
-            for _, row in df.iterrows():
+            for row in df.to_dict(orient="records"):
                 if pd.isna(row.get("Categoria")):
                     continue
                 cat_key = str(row["Categoria"]).strip().upper().replace(" ", "_")
@@ -88,15 +116,23 @@ class ExcelCompiler:
                     "filtros_material": [m.strip().lower() for m in str_material.split(",") if m.strip()],
                 }
             print(f"[SUCCESS] Categorías procesadas: {len(diccionario_categorias)} definiciones.")
-        except Exception as e:
-            print(f"[ERROR] Falló procesamiento de '{sheet_name}': {e}")
+        except Exception as exc:
+            print(f"[ERROR] Falló procesamiento de '{sheet_name}': {exc}")
 
         return diccionario_categorias
 
     def _procesar_margenes_base(
         self, excel_file: pd.ExcelFile, diccionario_categorias: Dict[str, Dict[str, Any]]
     ) -> Dict[str, Dict[str, Any]]:
-        """Procesa la Hoja 1: Márgenes Base y estructura las matrices finales."""
+        """Procesa la matriz de márgenes base por tramo de cantidad y estructura el árbol maestro.
+
+        Args:
+            excel_file: Objeto ExcelFile del libro maestro abierto.
+            diccionario_categorias: Mapeo de categorías previamente procesado.
+
+        Returns:
+            Estructura anidada con taxonomía, filtros y curvas de margen por producto.
+        """
         matrices_finales: Dict[str, Dict[str, Any]] = {}
         sheet_name = "Margenes_Base"
 
@@ -131,7 +167,7 @@ class ExcelCompiler:
                     "productos_especificos": [],
                 }
 
-            for _, row in grupo.iterrows():
+            for row in grupo.to_dict(orient="records"):
                 if pd.notna(row.get("Cantidad")) and pd.notna(row.get("Margen")):
                     cant_key = str(int(row["Cantidad"]))
                     matrices_finales[cat_key]["margenes"][cant_key] = float(row["Margen"])
@@ -144,7 +180,13 @@ class ExcelCompiler:
         matrices_finales: Dict[str, Dict[str, Any]],
         diccionario_filtros: Dict[str, Dict[str, List[str]]],
     ) -> None:
-        """Procesa la Hoja 4: Diccionario de Productos Específicos."""
+        """Inyecta las definiciones de subproductos específicos en sus categorías padre.
+
+        Args:
+            excel_file: Objeto ExcelFile del libro maestro abierto.
+            matrices_finales: Diccionario maestro de categorías en mutación.
+            diccionario_filtros: Mapeo de filtros globales para resolución de tokens.
+        """
         sheet_name = "Diccionario_Productos"
         if sheet_name not in excel_file.sheet_names:
             return
@@ -153,7 +195,7 @@ class ExcelCompiler:
             df = pd.read_excel(excel_file, sheet_name=sheet_name)
             contador = 0
 
-            for _, row in df.iterrows():
+            for row in df.to_dict(orient="records"):
                 if pd.isna(row.get("Categoria_Padre")):
                     continue
                 padre_key = str(row["Categoria_Padre"]).strip().upper().replace(" ", "_")
@@ -187,11 +229,18 @@ class ExcelCompiler:
                 contador += 1
 
             print(f"[SUCCESS] Productos específicos inyectados: {contador} ítems.")
-        except Exception as e:
-            print(f"[WARN] Falló procesamiento de '{sheet_name}': {e}")
+        except Exception as exc:
+            print(f"[WARN] Falló procesamiento de '{sheet_name}': {exc}")
 
     def _procesar_ajustes(self, excel_file: pd.ExcelFile) -> List[Dict[str, Any]]:
-        """Procesa la Hoja 2: Reglas de Ajuste Dinámico."""
+        """Procesa y compila las reglas condicionales de ajuste dinámico de margen.
+
+        Args:
+            excel_file: Objeto ExcelFile del libro maestro abierto.
+
+        Returns:
+            Lista de reglas estructuradas con sus respectivas condiciones compuestas.
+        """
         sheet_name = "Ajustes"
         if sheet_name not in excel_file.sheet_names:
             print(f"[WARN] Hoja '{sheet_name}' no encontrada.")
@@ -203,7 +252,7 @@ class ExcelCompiler:
             df["Id_Ajuste"] = df["Id_Ajuste"].ffill().astype(int)
             df = df.dropna(subset=["Producto", "Variable", "Condicion"])
 
-            for _, row in df.iterrows():
+            for row in df.to_dict(orient="records"):
                 id_ajuste = int(row["Id_Ajuste"])
                 prod_key = str(row["Producto"]).strip().upper().replace(" ", "_")
                 val_ref_raw = str(row["Valor_Referencia"]).strip() if pd.notna(row.get("Valor_Referencia")) else ""
@@ -232,38 +281,36 @@ class ExcelCompiler:
                 })
 
             print(f"[SUCCESS] Reglas de ajuste compiladas: {len(dict_ajustes)} reglas.")
-        except Exception as e:
-            print(f"[WARN] Error al procesar '{sheet_name}': {e}")
+        except Exception as exc:
+            print(f"[WARN] Error al procesar '{sheet_name}': {exc}")
 
         return list(dict_ajustes.values())
 
     def compilar_todo(self) -> None:
-        """Ejecuta la canalización completa de compilación de las 5 hojas."""
+        """Ejecuta el pipeline completo de compilación y persiste los artefactos JSON."""
         if not self.excel_path.exists():
             raise FileNotFoundError(f"Tarifario maestro no encontrado en: {self.excel_path}")
 
         print("==================================================")
-        print("PIPELINE DE COMPILACION MULTICAPA DE TARIFARIO")
+        print("PIPELINE DE COMPILACIÓN MULTICAPA DE TARIFARIO")
         print("==================================================")
         print(f"[INFO] Leyendo archivo maestro: {self.excel_path.name}")
 
         excel_file = pd.ExcelFile(self.excel_path)
 
-        # Pipeline secuencial de extracción
         filtros = self._procesar_filtros(excel_file)
         categorias = self._procesar_categorias(excel_file)
         matrices_finales = self._procesar_margenes_base(excel_file, categorias)
         self._procesar_productos_especificos(excel_file, matrices_finales, filtros)
         ajustes_finales = self._procesar_ajustes(excel_file)
 
-        # Persistencia en disco de artefactos JSON
         self.config_dir.mkdir(parents=True, exist_ok=True)
 
-        with open(self.matrices_json_path, "w", encoding="utf-8") as f:
-            json.dump(matrices_finales, f, ensure_ascii=False, indent=2)
+        with open(self.matrices_json_path, "w", encoding="utf-8") as file:
+            json.dump(matrices_finales, file, ensure_ascii=False, indent=2)
 
-        with open(self.ajustes_json_path, "w", encoding="utf-8") as f:
-            json.dump(ajustes_finales, f, ensure_ascii=False, indent=2)
+        with open(self.ajustes_json_path, "w", encoding="utf-8") as file:
+            json.dump(ajustes_finales, file, ensure_ascii=False, indent=2)
 
         print("--------------------------------------------------")
         print(f"[SUCCESS] Artefacto de matrices exportado: {self.matrices_json_path.name}")

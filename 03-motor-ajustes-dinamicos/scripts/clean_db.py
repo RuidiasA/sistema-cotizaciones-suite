@@ -1,15 +1,15 @@
 """Módulo ETL para el saneamiento y curación del Data Lake histórico.
 
 Resuelve registros huérfanos o sin proveedor asignado ("ANONIMO", "NAN")
-mediante la imputación cruzada basada en firmas de texto únicas.
+mediante imputación cruzada basada en firmas de texto descriptivas.
 """
 
 import re
 from pathlib import Path
 from typing import Dict, Set
+
 import pandas as pd
 
-# Definición de rutas relativas basadas en la estructura del proyecto
 BASE_DIR: Path = Path(__file__).resolve().parent.parent
 INPUT_DIR: Path = BASE_DIR / "data" / "input"
 
@@ -20,23 +20,21 @@ INVALID_PROV_TOKENS: Set[str] = {"ANONIMO", "ANÓNIMO", "NAN", "", "NONE"}
 
 
 def sanar_data_lake() -> None:
-    """Ejecuta la canalización de curación sobre el archivo maestro de datos."""
+    """Ejecuta la canalización de curación e imputación sobre el Data Lake maestro."""
     if not FILE_ORIGINAL.exists():
         print(f"[ERROR] Archivo origen no encontrado: {FILE_ORIGINAL}")
         return
 
     print("==================================================")
-    print("ETL DATA LAKE: SANAMIENTO Y CURACION DE REGISTROS")
+    print("ETL DATA LAKE: SANEAMIENTO Y CURACIÓN DE REGISTROS")
     print("==================================================")
 
     print(f"[INFO] Cargando dataset: {FILE_ORIGINAL.name}")
     df: pd.DataFrame = pd.read_excel(FILE_ORIGINAL)
 
-    # Respaldo preventivo de seguridad
     df.to_excel(FILE_BACKUP, index=False)
     print(f"[INFO] Backup de seguridad generado en: {FILE_BACKUP.name}")
 
-    # Normalización de columnas temporales para procesamiento en memoria
     df["_desc_clean"] = df["Descripcion / Articulo"].astype(str).str.strip()
     df["_prov_norm"] = (
         df["Proveedor"]
@@ -44,26 +42,18 @@ def sanar_data_lake() -> None:
         .apply(lambda x: re.sub(r"\s+", " ", x).strip().upper())
     )
 
-    # Aislar registros con proveedores válidos para mapeo de referencia
     df_validos = df[~df["_prov_norm"].isin(INVALID_PROV_TOKENS)]
 
     mapa_desc_prov: Dict[str, str] = {}
-    for _, row in df_validos.iterrows():
-        desc: str = row["_desc_clean"]
-        prov_real: str = str(row["Proveedor"]).strip()
+    for desc, prov_real in zip(df_validos["_desc_clean"], df_validos["Proveedor"]):
+        prov_str = str(prov_real).strip()
+        # Prioriza la cadena de mayor longitud para preservar razones sociales completas
+        if desc not in mapa_desc_prov or len(prov_str) > len(mapa_desc_prov[desc]):
+            mapa_desc_prov[desc] = prov_str
 
-        # Priorizar la cadena de mayor longitud para evitar abreviaciones
-        if desc in mapa_desc_prov:
-            if len(prov_real) > len(mapa_desc_prov[desc]):
-                mapa_desc_prov[desc] = prov_real
-        else:
-            mapa_desc_prov[desc] = prov_real
-
-    # Imputación vectorizada de registros inválidos mediante el mapa de referencia
     mascara_invalida = df["_prov_norm"].isin(INVALID_PROV_TOKENS)
     proveedores_recuperados = df.loc[mascara_invalida, "_desc_clean"].map(mapa_desc_prov)
     
-    # Contar únicamente los registros que efectivamente fueron corregidos
     registros_reparados: int = int(proveedores_recuperados.notna().sum())
 
     if registros_reparados > 0:
@@ -71,10 +61,7 @@ def sanar_data_lake() -> None:
             df.loc[mascara_invalida, "Proveedor"]
         )
 
-    # Limpieza de columnas temporales de cálculo
     df.drop(columns=["_desc_clean", "_prov_norm"], inplace=True)
-
-    # Persistencia de los datos saneados
     df.to_excel(FILE_ORIGINAL, index=False)
 
     print("--------------------------------------------------")

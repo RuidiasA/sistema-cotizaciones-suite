@@ -9,6 +9,7 @@ from pathlib import Path
 import sys
 import unicodedata
 from typing import Any, Dict, List, Union
+
 import pandas as pd
 
 # Conexión dinámica con el motor de clasificación del Módulo 02
@@ -22,21 +23,43 @@ from src.limpiador import clasificar_producto_estricto
 
 
 def cargar_json(path: Path) -> Union[Dict[str, Any], List[Any]]:
-    """Carga de forma segura un archivo JSON desde el disco."""
+    """Carga de forma segura un archivo JSON desde el disco.
+
+    Args:
+        path: Ruta hacia el archivo JSON.
+
+    Returns:
+        Estructura de datos deserializada (dict o list).
+    """
     if path.exists():
-        with open(path, "r", encoding="utf-8") as f:
-            return json.load(f)
+        with open(path, "r", encoding="utf-8") as file:
+            return json.load(file)
     return {}
 
 
 def _normalizar_texto(texto: str) -> str:
-    """Remueve tildes, convierte a minúsculas y elimina espacios extras."""
+    """Normaliza texto eliminando acentos, caracteres diacríticos y espacios redundantes.
+
+    Args:
+        texto: Cadena de texto a procesar.
+
+    Returns:
+        Texto en minúsculas sin tildes.
+    """
     texto_norm = unicodedata.normalize("NFD", str(texto).strip().lower())
     return "".join(c for c in texto_norm if unicodedata.category(c) != "Mn")
 
 
-def _interpolary_margen_piso(cantidad: int, escala_margenes: Dict[str, Any]) -> float:
-    """Calcula el margen base aplicando la regla comercial de Piso / Escalón Duro."""
+def _interpolar_margen_piso(cantidad: int, escala_margenes: Dict[str, Any]) -> float:
+    """Calcula el margen base aplicando el algoritmo de escalón duro (Piso Comercial).
+
+    Args:
+        cantidad: Volumen de unidades cotizadas.
+        escala_margenes: Mapeo de porcentajes por tramo de cantidad.
+
+    Returns:
+        Margen porcentual base.
+    """
     cantidades_ordenadas = sorted([int(q) for q in escala_margenes.keys()])
     if not cantidades_ordenadas:
         return 0.0
@@ -55,7 +78,16 @@ def _interpolary_margen_piso(cantidad: int, escala_margenes: Dict[str, Any]) -> 
 
 
 def _evaluar_condicion_regla(cond: Dict[str, Any], cantidad: int, texto_norm: str) -> bool:
-    """Evalúa si un registro cumple una condición individual de una regla de ajuste."""
+    """Evalúa si un registro satisface una condición unitaria de una regla de ajuste.
+
+    Args:
+        cond: Diccionario que define la variable, operador y valor de referencia.
+        cantidad: Cantidad de unidades del registro actual.
+        texto_norm: Descripción normalizada del producto.
+
+    Returns:
+        True si la condición se cumple; False en caso contrario.
+    """
     var = cond.get("variable", "")
     op = cond.get("condicion", "")
     ref = cond.get("valor_referencia", "")
@@ -93,13 +125,20 @@ def _evaluar_condicion_regla(cond: Dict[str, Any], cantidad: int, texto_norm: st
 def ejecutar_auditoria_global(
     db_path: Path, matrices_path: Path, ajustes_path: Path, output_path: Path
 ) -> None:
-    """Procesa el dataset histórico y genera el reporte de tolerancia comercial."""
+    """Procesa el dataset histórico y genera el reporte de tolerancia comercial.
+
+    Args:
+        db_path: Ruta del Data Lake histórico de entrada.
+        matrices_path: Ruta del artefacto JSON de márgenes base.
+        ajustes_path: Ruta del artefacto JSON de reglas condicionales.
+        output_path: Ruta destino del archivo Excel de auditoría.
+    """
     if not db_path.exists():
         print(f"[ERROR] Archivo origen no encontrado: {db_path}")
         return
 
     print("==================================================")
-    print("AUDITORIA COMERCIAL: CLASIFICADOR CENTRALIZADO (MÓDULO 02)")
+    print("AUDITORÍA COMERCIAL: CLASIFICADOR CENTRALIZADO (MÓDULO 02)")
     print("==================================================")
 
     df: pd.DataFrame = pd.read_excel(db_path)
@@ -108,22 +147,21 @@ def ejecutar_auditoria_global(
 
     resultados: List[Dict[str, Any]] = []
 
-    for idx, row in df.iterrows():
+    # Procesamiento en memoria de alta velocidad mediante diccionarios
+    for idx, row in enumerate(df.to_dict(orient="records"), start=2):
         desc: str = str(row["Descripcion / Articulo"])
         costo_prov: float = float(row["Costo Prov"])
         precio_cli_original: float = float(row["Precio Cli"])
         cantidad: int = int(row["Cantidad Detectada"])
         proveedor: str = str(row.get("Proveedor", "ANONIMO")).strip().upper()
 
-        # Clasificación centralizada desde el Módulo 02
         matched_key = clasificar_producto_estricto(desc, costo_prov) or "MERCHANDISING_GENERAL"
 
         margin_scale = matrices.get(matched_key, {}).get("margenes", {})
-        margen_calculado = _interpolary_margen_piso(cantidad, margin_scale)
+        margen_calculado = _interpolar_margen_piso(cantidad, margin_scale)
 
         texto_norm = _normalizar_texto(desc)
 
-        # Evaluación de Reglas de Ajuste Dinámico
         for regla in ajustes:
             if regla.get("producto") != matched_key and regla.get("producto") != "TODOS":
                 continue
@@ -148,7 +186,7 @@ def ejecutar_auditoria_global(
         fuera_tolerancia = "SI" if abs(diferencia) > 2.0 else "NO"
 
         resultados.append({
-            "Fila_Excel": idx + 2,
+            "Fila_Excel": idx,
             "Proveedor": proveedor,
             "Arquetipo": matched_key,
             "Cantidad": cantidad,
@@ -157,7 +195,7 @@ def ejecutar_auditoria_global(
             "Precio_Calculado": precio_calculado,
             "Diferencia": diferencia,
             "Fuera_de_Tolerancia": fuera_tolerancia,
-            "Descripcion": desc
+            "Descripcion": desc,
         })
 
     df_res = pd.DataFrame(resultados)

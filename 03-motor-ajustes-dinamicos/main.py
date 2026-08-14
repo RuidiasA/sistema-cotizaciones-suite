@@ -11,7 +11,6 @@ import time
 from src.audit import ejecutar_auditoria_global
 from src.compiler import ExcelCompiler
 
-# Definición de rutas base estandarizadas
 BASE_DIR: Path = Path(__file__).resolve().parent
 CONFIG_DIR: Path = BASE_DIR / "config"
 DATA_DIR: Path = BASE_DIR / "data"
@@ -25,8 +24,8 @@ DATA_OUTPUT: Path = DATA_DIR / "output" / "auditoria_global.xlsx"
 
 
 def main() -> None:
-    """Orquesta el pipeline de compilación y auditoría del Módulo 03."""
-    tiempo_inicio = time.perf_counter()
+    """Orquesta el pipeline secuencial de compilación y auditoría del módulo."""
+    tiempo_inicio: float = time.perf_counter()
 
     print("==================================================")
     print("MOTOR DE AJUSTES DINÁMICOS - COMPILACIÓN Y AUDITORÍA")
@@ -37,24 +36,22 @@ def main() -> None:
         sys.exit(1)
 
     try:
-        # Paso 1: Compilación de Tarifario Maestro
         print("\n[INFO] FASE 1: Compilando Tarifario Maestro Multicapa...")
         compiler = ExcelCompiler(EXCEL_REGLAS, CONFIG_DIR)
         compiler.compilar_todo()
 
-        # Paso 2: Auditoría de Tolerancia Comercial
         print("\n[INFO] FASE 2: Ejecutando Auditoría Global (Tolerancia ±2.00 PEN)...")
         ejecutar_auditoria_global(DATA_INPUT, MATRICES_JSON, AJUSTES_JSON, DATA_OUTPUT)
 
-        tiempo_total = time.perf_counter() - tiempo_inicio
+        tiempo_total: float = time.perf_counter() - tiempo_inicio
 
         print("\n--------------------------------------------------")
         print("[SUCCESS] Pipeline del Módulo 03 completado exitosamente.")
         print(f"[STATUS] Tiempo total de procesamiento RAM: {tiempo_total:.2f} segundos.")
         print("==================================================")
 
-    except Exception as e:
-        print(f"\n[ERROR] Fallo crítico durante la ejecución del Módulo 03: {e}")
+    except Exception as exc:
+        print(f"\n[ERROR] Fallo crítico durante la ejecución del Módulo 03: {exc}")
         sys.exit(1)
 
 

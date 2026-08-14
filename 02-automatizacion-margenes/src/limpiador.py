@@ -1,13 +1,12 @@
 """Módulo de Limpieza Textual y Clasificación Dinámica de Arquetipos.
 
-Clasifica los productos según la taxonomía comercial exacta de 30 subcategorías,
-evaluando la prenda, el material y el costo del proveedor.
+Clasifica los productos según la taxonomía comercial de 30 subcategorías,
+evaluando tokens de prenda, variantes de material y costo base del proveedor.
 """
 
-from typing import Dict, Optional, Any
+from typing import Any, Dict, List, Optional
 import pandas as pd
 
-# Mapeo exhaustivo de las 30 subclaves comerciales exactas
 CONFIG_PRODUCTOS: Dict[str, Dict[str, Any]] = {
     # --- TEXTIL: CAMISAS ---
     "CAMISA_DENIM": {
@@ -242,35 +241,39 @@ CONFIG_PRODUCTOS: Dict[str, Dict[str, Any]] = {
 
 
 def clasificar_producto_estricto(descripcion: Any, costo_prov: float = 0.0) -> Optional[str]:
-    """Clasifica el texto evaluando prenda, material y costo del proveedor."""
+    """Clasifica un producto evaluando tokens de prenda, variantes de material y costo base.
+
+    Args:
+        descripcion: Texto descriptivo del artículo.
+        costo_prov: Costo unitario reportado por el proveedor o taller.
+
+    Returns:
+        Clave técnica del arquetipo comercial coincidente o None si la descripción es nula.
+    """
     if not descripcion or pd.isna(descripcion):
         return None
 
     desc_lower = str(descripcion).lower().strip()
     desc_head = " ".join(desc_lower[:250].split()[:8])
 
-    # 1. Colador especial para Tomatodos/Termos
+    # Colador financiero especial para Drinkware
     if any(kw in desc_head for kw in ["tomatodo", "termo", "thermo", "mug", "vaso termico"]):
         return "MERCH_TOMATODO_TERMO_COMERCIAL" if float(costo_prov) < 8.0 else "MERCH_TOMATODO_TERMO"
 
-    # 2. Evaluación de Arquetipos por Prenda + Material (para Textiles)
     for arquetipo, config in CONFIG_PRODUCTOS.items():
         if arquetipo in ["MERCH_TOMATODO_TERMO_COMERCIAL", "MERCH_TOMATODO_TERMO", "MERCHANDISING_GENERAL"]:
             continue
 
-        filtros_p = config.get("filtros_prenda", [])
-        filtros_m = config.get("filtros_material", [])
+        filtros_p: List[str] = config.get("filtros_prenda", [])
+        filtros_m: List[str] = config.get("filtros_material", [])
 
-        # Si coincide la prenda
         if filtros_p and any(p in desc_head for p in filtros_p):
-            # Si exige material específico, debe coincidir
             if filtros_m:
                 if any(m in desc_lower for m in filtros_m):
                     return arquetipo
             else:
                 return arquetipo
 
-    # 3. Fallback a Empaques / General
     if any(kw in desc_lower[:30] for kw in ["caja", "tarjeta", "estuche"]):
         return "MERCHANDISING_GENERAL"
 
